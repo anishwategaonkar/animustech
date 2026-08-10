@@ -270,12 +270,15 @@
      Hover and keyboard focus both turn the card. */
   .flip{
     perspective:1400px;
-    height:330px;
     border-radius:var(--radius);
     outline:none;
+    display:flex;
   }
   .flip__inner{
-    position:relative;width:100%;height:100%;
+    flex:1;
+    /* both faces occupy the same grid cell, so the card sizes itself to
+       whichever face is taller. no fixed height to outgrow. */
+    display:grid;
     transform-style:preserve-3d;
     transition:transform .75s cubic-bezier(.2,.7,.3,1);
   }
@@ -284,12 +287,12 @@
   .flip:focus-visible{box-shadow:0 0 0 3px var(--accent-dim);}
 
   .flip__face{
-    position:absolute;inset:0;
+    grid-area:1 / 1;
     -webkit-backface-visibility:hidden;backface-visibility:hidden;
     background-color:var(--surface);background-image:var(--gloss);
     border:1px solid var(--border);border-radius:var(--radius);
     box-shadow:var(--gloss-edge);
-    padding:30px;overflow:hidden;
+    padding:30px;
     display:flex;flex-direction:column;
     transition:border-color .2s ease;
   }
@@ -508,7 +511,6 @@
   @media (max-width:980px){
     .contact__grid{grid-template-columns:1fr;gap:40px;}
     .grid-3,.steps,.pipeline,.benefits{grid-template-columns:repeat(2,1fr);}
-    .flip{height:320px;}
     .grid-cards > *{flex-basis:calc((100% - 22px) / 2);}
     .footer__top{grid-template-columns:1fr 1fr;}
   }
@@ -532,7 +534,6 @@
     .hero{padding:132px 0 78px;}
     .section{padding:74px 0;}
     .grid-3,.steps,.pipeline,.benefits{grid-template-columns:1fr;}
-    .flip{height:290px;}
     .grid-cards > *{flex-basis:100%;}
     .field-row{grid-template-columns:1fr;}
     .footer__top{grid-template-columns:1fr;gap:32px;}
