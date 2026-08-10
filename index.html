@@ -245,24 +245,12 @@
   .grid-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:52px;}
   .grid-cards > *{flex:0 1 calc((100% - 44px) / 3);min-width:0;}
 
-  .card{
-    background-color:var(--surface);background-image:var(--gloss);
-    border:1px solid var(--border);box-shadow:var(--gloss-edge);
-    border-radius:var(--radius);padding:30px;position:relative;
-    transition:border-color .2s ease,transform .2s ease,background-color .2s ease,box-shadow .2s ease;
-  }
-  .card:hover{
-    border-color:var(--border-lit);transform:translateY(-3px);background-color:var(--surface-2);
-    box-shadow:var(--gloss-edge-lit),0 20px 42px -24px rgba(0,0,0,.75);
-  }
   .card__icon{
     width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
     background:linear-gradient(180deg,rgba(157,148,224,.20),rgba(157,148,224,.07));
     border:1px solid var(--accent-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.11);
     color:var(--accent);margin-bottom:19px;
   }
-  .card h3{font-size:1.13rem;margin-bottom:11px;}
-  .card p{color:var(--text-2);font-size:.96rem;}
   .card__list{margin-top:17px;display:grid;gap:9px;}
 
   /* ---------- flip cards (key services) ----------
@@ -296,7 +284,10 @@
     display:flex;flex-direction:column;
     transition:border-color .2s ease;
   }
-  .flip:hover .flip__face{border-color:var(--border-lit);}
+  .flip:hover .flip__face,
+  .flip:focus-visible .flip__face{border-color:var(--border-lit);}
+  .flip{transition:transform .25s ease;}
+  .flip:hover{transform:translateY(-3px);}
 
   .flip__front{justify-content:center;}
   .flip__front h3{font-size:1.22rem;}
@@ -880,57 +871,70 @@
     </div>
 
     <div class="grid-3">
-      <article class="card reveal">
-        <div class="card__icon" aria-hidden="true">
-          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+      <article class="flip reveal" tabindex="0">
+        <div class="flip__inner">
+          <div class="flip__face flip__front">
+            <div class="card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+            <h3>Software &amp; technology</h3>
+            <span class="flip__hint" aria-hidden="true">Hover for details
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+          <div class="flip__face flip__back">
+            <h3 class="flip__back-title">Software &amp; technology</h3>
+            <p>Engineering, data, product, design, QA, DevOps and SRE, for product companies, SaaS teams, GCCs and services firms. We read a stack seriously and do not confuse keyword matches with capability.</p>
+            <ul class="card__list">
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Backend, frontend, full stack, mobile</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Data engineering, ML, analytics</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Cloud, platform, security</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Product &amp; engineering leadership</li>
+            </ul>
+          </div>
         </div>
-        <h3>Software &amp; technology</h3>
-        <p>
-          Engineering, data, product, design, QA, DevOps and SRE, for product companies, SaaS
-          teams, GCCs and services firms. We read a stack seriously and do not confuse keyword
-          matches with capability.
-        </p>
-        <ul class="card__list">
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Backend, frontend, full stack, mobile</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Data engineering, ML, analytics</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Cloud, platform, security</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Product &amp; engineering leadership</li>
-        </ul>
       </article>
 
-      <article class="card reveal">
-        <div class="card__icon" aria-hidden="true">
-          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V9l6 4v8z"/><path d="M3 21h18"/></svg>
+      <article class="flip reveal" tabindex="0">
+        <div class="flip__inner">
+          <div class="flip__face flip__front">
+            <div class="card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V9l6 4v8z"/><path d="M3 21h18"/></svg></div>
+            <h3>Manufacturing &amp; engineering</h3>
+            <span class="flip__hint" aria-hidden="true">Hover for details
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+          <div class="flip__face flip__back">
+            <h3 class="flip__back-title">Manufacturing &amp; engineering</h3>
+            <p>Pune sits in one of India's densest industrial corridors, and plant hiring has its own rules, from shift realities and location constraints to safety discipline and joining ratios that punish sloppy screening.</p>
+            <ul class="card__list">
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Design, R&amp;D, NPD</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Production, quality, maintenance</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Supply chain, sourcing, SCM</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Plant &amp; operations leadership</li>
+            </ul>
+          </div>
         </div>
-        <h3>Manufacturing &amp; engineering</h3>
-        <p>
-          Pune sits in one of India's densest industrial corridors, and plant hiring has its own
-          rules, from shift realities and location constraints to safety discipline and joining
-          ratios that punish sloppy screening.
-        </p>
-        <ul class="card__list">
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Design, R&amp;D, NPD</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Production, quality, maintenance</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Supply chain, sourcing, SCM</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Plant &amp; operations leadership</li>
-        </ul>
       </article>
 
-      <article class="card reveal">
-        <div class="card__icon" aria-hidden="true">
-          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <article class="flip reveal" tabindex="0">
+        <div class="flip__inner">
+          <div class="flip__face flip__front">
+            <div class="card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+            <h3>D2C &amp; consumer brands</h3>
+            <span class="flip__hint" aria-hidden="true">Hover for details
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+          <div class="flip__face flip__back">
+            <h3 class="flip__back-title">D2C &amp; consumer brands</h3>
+            <p>Fast moving brands need people who can own a number without a playbook. We look for ownership and comfort with ambiguity, not just a familiar logo on the CV.</p>
+            <ul class="card__list">
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Growth, performance marketing, CRM</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Category &amp; brand management</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Supply chain, ops, warehousing</li>
+            <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Founder's office &amp; leadership</li>
+            </ul>
+          </div>
         </div>
-        <h3>D2C &amp; consumer brands</h3>
-        <p>
-          Fast moving brands need people who can own a number without a playbook. We look for
-          ownership and comfort with ambiguity, not just a familiar logo on the CV.
-        </p>
-        <ul class="card__list">
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Growth, performance marketing, CRM</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Category &amp; brand management</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Supply chain, ops, warehousing</li>
-          <li><svg class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Founder's office &amp; leadership</li>
-        </ul>
       </article>
     </div>
   </div>
