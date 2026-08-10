@@ -176,8 +176,17 @@
   .header__inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px;}
 
   .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.13rem;letter-spacing:-.03em;flex:0 0 auto;}
-  /* Brand mark: two interlocking rings, capability meeting culture */
-  .logo__mark{height:34px;width:auto;flex:0 0 auto;display:block;overflow:visible;}
+  /* Brand mark: two interlocking rings, capability meeting culture.
+     Square box so the hover orbit stays inside its own footprint. */
+  .logo__mark{
+    height:42px;width:42px;flex:0 0 auto;display:block;overflow:visible;
+    transform-origin:50% 50%;
+    /* when the hover animation is removed the mark unwinds back to rest
+       instead of snapping, so gold always settles on the left again */
+    transition:transform .6s cubic-bezier(.4,0,.2,1);
+  }
+  @keyframes logoOrbit{ from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  .logo:hover .logo__mark{animation:logoOrbit 6s linear infinite;}
   .logo__sub{color:var(--text-3);font-weight:500;font-size:.72rem;letter-spacing:.14em;
     text-transform:uppercase;display:block;margin-top:-3px;}
 
@@ -442,6 +451,7 @@
       opacity:1;transform:none;filter:none;transition:none;
     }
     .progress__bar{transition:none;}
+    .logo__mark{animation:none;}
   }
 
   /* ---------- responsive ---------- */
@@ -492,7 +502,7 @@
 <header class="header" id="header">
   <div class="wrap header__inner">
     <a href="#top" class="logo" aria-label="Animus Tech home">
-      <svg class="logo__mark" viewBox="0 0 54 40" aria-hidden="true">
+      <svg class="logo__mark" viewBox="0.5 -6.5 53 53" aria-hidden="true">
         <defs>
           <linearGradient id="ringRightH" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#c6c0f0"/><stop offset=".45" stop-color="#9d94e0"/><stop offset="1" stop-color="#7a70c4"/>
@@ -1039,7 +1049,7 @@
     <div class="footer__top">
       <div>
         <a href="#top" class="logo">
-          <svg class="logo__mark" viewBox="0 0 54 40" aria-hidden="true">
+          <svg class="logo__mark" viewBox="0.5 -6.5 53 53" aria-hidden="true">
             <defs>
               <linearGradient id="ringRightF" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="#c6c0f0"/><stop offset=".45" stop-color="#9d94e0"/><stop offset="1" stop-color="#7a70c4"/>
