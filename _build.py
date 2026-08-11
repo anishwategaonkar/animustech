@@ -55,6 +55,9 @@ def org_schema():
             "IT recruitment", "D2C recruitment", "Candidate assessment",
             "Culture fit interviewing",
         ],
+        "sameAs": [
+            "https://www.linkedin.com/company/animustechnologies",
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Recruitment services",
