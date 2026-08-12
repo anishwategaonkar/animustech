@@ -113,6 +113,30 @@ PAGES = [
          ("Less noise", "Fewer resumes, higher signal. Less scrolling, less second guessing, fewer interview slots wasted."),
        ]), alt=True) +
 
+   sec("Proof", "How a recent search actually ran",
+       "One real search, start to finish, with the actual numbers.",
+       cards([
+         ("8 candidates",
+          "Screened in two deliberate batches of four for a single hire. Not twenty CVs forwarded and left with you to sort."),
+         ("10 days",
+          "From intake to a signed offer, across three interview rounds, the last of them with the board."),
+         ("25 days",
+          "Intake to the person actually starting. The other 15 days were their notice period, which no agency can compress."),
+       ]) +
+       prose([
+         "The role was a sales associate with an electronics background and industrial sales exposure. "
+         "Eight candidates is not a large number, and that is the point. Batching four at a time meant the "
+         "client reviewed a small set, gave feedback, and we adjusted before the second batch rather than "
+         "burying them in profiles and hoping something landed.",
+         "One of those candidates is worth describing. Their CV was a single page listing education, a "
+         "company name and an internship name. No responsibilities, no achievements, nothing a keyword "
+         "search could match against. A recruiter filtering on terms would never have seen them, because "
+         "keyword search scores the document rather than the person. Semantic screening surfaced them "
+         "anyway, and a recruiter then made the call on whether they were right for the role.",
+       ]) +
+       links("Read more:", [("How our AI screening works", "/#ai"),
+                            ("AI assessment as a service", "/services/ai-candidate-assessment/")])) +
+
    sec("What we do", "Recruitment services we offer in Pune", "",
        cards([
          ('<a href="/services/permanent-recruitment/">Permanent recruitment</a>',
