@@ -209,8 +209,10 @@ def render(p):
     return PAGE.format(
         site=SITE, header=HEADER, footer=FOOTER, schema=schema_html,
         crumb_html=crumb_html(p["crumbs"]),
-        title=html.escape(p["title"], quote=True),
-        desc=html.escape(p["desc"], quote=True),
+        # unescape first: some titles/descs already contain entities like &amp;,
+        # and escaping those again produces &amp;amp; in the rendered title
+        title=html.escape(html.unescape(p["title"]), quote=True),
+        desc=html.escape(html.unescape(p["desc"]), quote=True),
         url=p["url"], eyebrow=p["eyebrow"], h1=p["h1"], lead=p["lead"],
         body=p["body"],
         cta_title=p.get("cta_title", "Let's talk about the role"),
