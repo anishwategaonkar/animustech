@@ -116,8 +116,8 @@ PAGES = [
    sec("Proof", "How a recent search actually ran",
        "One real search, start to finish, with the actual numbers.",
        cards([
-         ("8 candidates",
-          "Screened in two deliberate batches of four for a single hire. Not twenty CVs forwarded and left with you to sort."),
+         ("40+ screened, 8 sent",
+          "We read more than forty profiles. The client saw eight, in two batches of four. The work happens before your inbox, not in it."),
          ("10 days",
           "From intake to a signed offer, across three interview rounds, the last of them with the board."),
          ("25 days",
@@ -125,9 +125,11 @@ PAGES = [
        ]) +
        prose([
          "The role was a sales associate with an electronics background and industrial sales exposure. "
-         "Eight candidates is not a large number, and that is the point. Batching four at a time meant the "
-         "client reviewed a small set, gave feedback, and we adjusted before the second batch rather than "
-         "burying them in profiles and hoping something landed.",
+         "More than forty profiles were screened to produce a shortlist of eight, and the person who "
+         "joined came from the second batch of four. That ratio is the whole argument: eight submittals "
+         "per hire, against an industry norm where ten to twenty is common and some agencies send far "
+         "more. Batching four at a time meant the client reviewed a small set, gave feedback, and we "
+         "adjusted before the second batch rather than burying them in profiles and hoping something landed.",
          "One of those candidates is worth describing. Their CV was a single page listing education, a "
          "company name and an internship name. No responsibilities, no achievements, nothing a keyword "
          "search could match against. A recruiter filtering on terms would never have seen them, because "
@@ -226,6 +228,100 @@ PAGES = [
        ]) +
        links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
                            ("Hiring advisory", "/services/hiring-advisory/")])),
+},
+
+# ------------------------------------------- 2b. HOW WE WORK ---------------
+{
+ "url": "/how-we-work/",
+ "title": "How We Work | Animus Tech",
+ "desc": "Our process, our numbers, and what we commit to in writing. 40+ screened, 8 shared, 1 hired. A written update every Friday, progress or not.",
+ "crumbs": [("Home", "/"), ("How we work", None)],
+ "eyebrow": "Process &amp; commitments",
+ "h1": "How We Work",
+ "lead": ("Every recruitment agency says quality and speed. Almost none of them show you a "
+          "number. This page is our process, the numbers from our work so far, and what we "
+          "commit to in writing, including what we need from you for any of it to hold."),
+ "body":
+   sec("The numbers", "What a shortlist actually means here",
+       "Fewer resumes only means rigour if you can see what was filtered out. So here is the whole funnel.",
+       cards([
+         ("40+", "Profiles screened against the scorecard agreed at intake. Every one read, not just the first fifty returned by a search."),
+         ("8", "Shared with the client, in two deliberate batches of four."),
+         ("1", "Hired, from the second batch. Eight submittals per hire."),
+       ]) +
+       prose([
+         "Eight submittals to one hire. The common industry range is ten to twenty per hire, and "
+         "plenty of agencies send considerably more, because when you are paid only on placement "
+         "the rational move is to flood several clients and see what sticks. The cost of that "
+         "model is not paid by the agency. It is paid by the hiring manager reading forty CVs on "
+         "a Sunday.",
+         "We batch instead. Four profiles, then a real conversation about what was right and wrong "
+         "about them, then four more shaped by that feedback. It is slower to start and faster to "
+         "finish, and it means the second batch is genuinely better than the first rather than "
+         "just longer.",
+         "<strong>On sample size:</strong> this is one completed search. We are a new firm and we "
+         "would rather show you one real funnel than quote an industry statistic we did not "
+         "measure. These numbers will be updated as more searches close, including the ones that "
+         "go badly.",
+       ]), alt=True) +
+
+   sec("Our commitments", "What we commit to, in writing", "",
+       cards([
+         ("A written update every Friday",
+          "Progress or no progress. A week with nothing to report is itself information, and you should not have to chase us for it."),
+         ("An honest read at intake",
+          "If we think the compensation band will not clear the market, we tell you in week one, not week six. It is a harder conversation early and a much cheaper one."),
+         ("We will tell you if the role is wrong",
+          "If the job description will not attract who you actually need, we say so before sourcing starts. You are paying us for judgement, not agreement."),
+         ("Reservations included",
+          "Every shortlist carries a written view on each candidate, with the concerns stated. A shortlist where everyone looks perfect is a shortlist that has not been thought about."),
+       ])) +
+
+   sec("The honest part", "Where hiring actually slows down",
+       "Most delay in recruitment is not sourcing. It is the two sides not staying in step.",
+       prose([
+         "Search timelines slip for reasons that have very little to do with finding people. The "
+         "mandate changes halfway through. The scorecard agreed at intake quietly becomes a "
+         "different role. Feedback on a batch takes eleven days, by which point two of the four "
+         "have accepted something else. An input nobody thought to mention at intake, a shift "
+         "pattern, a travel expectation, a reporting line, surfaces at final interview and "
+         "invalidates half the pipeline.",
+         "None of that is anyone behaving badly. Hiring managers are busy and roles genuinely "
+         "evolve. But it is why we will not promise you a fixed number of days and pretend the "
+         "outcome rests entirely on us. What we will promise is that when something slips, you "
+         "hear about it on Friday with the cause named plainly, whether the cause is on our side "
+         "or yours, and with a proposed fix attached.",
+         "That is the part we control completely, and it is the part we hold ourselves to. A "
+         "process followed honestly survives a mandate change. A promise of speed does not.",
+       ]), alt=True) +
+
+   sec("What we need from you", "The other half of the process", "",
+       rolegrid([
+         ("At intake", ["45 minutes with the actual hiring manager, not a forwarded JD",
+                        "What success looks like in year one",
+                        "The real compensation band, including flexibility",
+                        "Any non-negotiable: shift, location, travel, reporting line"]),
+         ("During the search", ["Feedback on a batch within 3 working days",
+                                "A named decision maker who can say yes",
+                                "Interview slots held in advance, not found later",
+                                "Early warning if the mandate changes"]),
+         ("At offer", ["A decision within the agreed window",
+                       "Offer released promptly once verbally agreed",
+                       "Someone from the team in contact during notice",
+                       "A joining day that is actually ready"]),
+       ]) +
+       prose([
+         "None of this is unusual. It is written down because writing it down is what stops a "
+         "search quietly drifting, and because a client who cannot commit to three-day feedback "
+         "is better off knowing that at intake than at week eight.",
+       ]) +
+       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+                           ("Cost of a bad hire calculator", "/tools/cost-of-a-bad-hire-calculator/"),
+                           ("Hiring advisory", "/services/hiring-advisory/")])),
+ "cta_title": "Want this run on your role?",
+ "cta_lead": ("Tell us what you are hiring for. You will get an honest read on the market, a "
+              "realistic timeline, and a straight answer on whether we are the right firm for it, "
+              "within one working day."),
 },
 
 # ------------------------------------------------- 3. MANUFACTURING ---------
