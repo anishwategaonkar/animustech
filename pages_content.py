@@ -424,6 +424,38 @@ PAGES = [
          ("Product &amp; quality", ["Product management", "Product design and UX", "QA and automation", "Technical program management"]),
        ])) +
 
+   sec("Our method", "Three questions that separate owners from passengers",
+       "You do not need to be an engineer to screen engineers. You do need a method.",
+       prose([
+         "Most non-technical recruiters compensate for not understanding the work by matching "
+         "keywords, which is exactly why hiring managers receive shortlists full of people whose "
+         "CVs contain the right words and whose experience does not. We screen differently, and "
+         "the method is simple enough that you can use it yourself in your own interviews.",
+       ]) +
+       rolegrid([
+         ("1. Was it a live project?",
+          ["Shipped and used by real users, or a college project?",
+           "Or a team-built product where the individual contribution is unclear?",
+           "A candidate who cannot draw that distinction themselves is itself the signal"]),
+         ("2. What did they personally own?",
+          ["Not what the team delivered",
+           "What this person was accountable for",
+           "Where the boundary of their responsibility actually sat"]),
+         ("3. What problem were they solving?",
+          ["Someone who owned the work states the problem in a sentence",
+           "Someone who was adjacent to it describes the technology instead",
+           "Very hard to rehearse, and it takes thirty seconds to ask"]),
+       ]) +
+       prose([
+         "The third question is the one worth stealing. Ask a candidate what problem their last "
+         "project was solving and listen to whether they answer with a problem or with a stack. "
+         "People who owned the work lead with the problem, because that is what they spent their "
+         "time thinking about. People who were near the work lead with the tools, because that is "
+         "what they can see from where they were standing.",
+         "None of this requires you to write code, and none of it can be faked by a well-written "
+         "CV. It is also why our shortlists are short: most profiles do not survive question one.",
+       ]), alt=True) +
+
    sec("Who we hire for", "Product companies, SaaS, GCCs and services firms",
        "The same title means different things across these four, and screening should reflect that.",
        cards([
