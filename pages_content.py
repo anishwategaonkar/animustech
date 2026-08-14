@@ -355,7 +355,7 @@ PAGES = [
        "We publish the searches that went long as well as the ones that went well.",
        cards([
          ("100+ screened", "For a mandate covering production, operations and dispatch, the whole plant."),
-         ("20–25 shared", "More than we would like. The reason is the point."),
+         ("20 to 25 shared", "More than we would like. The reason is the point."),
          ("~45 days", "Intake to joining, against 25 days on a search where the brief held still."),
        ]) +
        prose([
@@ -382,7 +382,7 @@ PAGES = [
 
    sec("Roles", "Roles we hire for", "",
        rolegrid([
-         ("Design, R&amp;D &amp; NPD", ["Design engineers — CAD, CAE, GD&amp;T", "NPD and product development", "Simulation and validation", "Tooling and fixture design"]),
+         ("Design, R&amp;D &amp; NPD", ["Design engineers: CAD, CAE, GD&amp;T", "NPD and product development", "Simulation and validation", "Tooling and fixture design"]),
          ("Production &amp; operations", ["Production engineers, shift in-charge", "Industrial engineering, lean, TPM", "Assembly and machine shop leadership", "Plant and manufacturing managers"]),
          ("Quality &amp; maintenance", ["QA, QC and supplier quality", "Customer quality and warranty", "Mechanical, electrical, instrumentation", "Reliability and preventive maintenance"]),
          ("Supply chain &amp; sourcing", ["Strategic sourcing, vendor development", "Production planning and materials", "Logistics and warehousing", "Costing and should-costing"]),
@@ -410,7 +410,7 @@ PAGES = [
    sec("Coverage", "Locations we cover", "",
        prose([
          "Chakan MIDC, Talegaon MIDC, Ranjangaon MIDC, Bhosari MIDC, Pimpri-Chinchwad, Hinjewadi, Shirwal, "
-         "Baramati and the wider Pune–Nashik and Pune–Mumbai industrial corridors. For plant leadership and "
+         "Baramati and the wider Pune to Nashik and Pune to Mumbai industrial corridors. For plant leadership and "
          "specialist roles we search nationally, since the local pool for some specialisms is genuinely thin.",
        ]) +
        links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
@@ -448,9 +448,9 @@ PAGES = [
 
    sec("Roles", "Roles we hire for", "",
        rolegrid([
-         ("Engineering", ["Backend, frontend, full stack", "Mobile — iOS, Android, React Native", "Architects and principal engineers", "Engineering managers and directors"]),
+         ("Engineering", ["Backend, frontend, full stack", "Mobile: iOS, Android, React Native", "Architects and principal engineers", "Engineering managers and directors"]),
          ("Data &amp; AI", ["Data engineering and platforms", "Machine learning and MLOps", "Analytics and business intelligence", "Data science"]),
-         ("Infrastructure", ["Cloud — AWS, Azure, GCP", "DevOps, SRE and platform engineering", "Security and application security", "Database and reliability"]),
+         ("Infrastructure", ["Cloud: AWS, Azure, GCP", "DevOps, SRE and platform engineering", "Security and application security", "Database and reliability"]),
          ("Product &amp; quality", ["Product management", "Product design and UX", "QA and automation", "Technical program management"]),
        ])) +
 

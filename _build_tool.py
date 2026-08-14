@@ -202,17 +202,17 @@ BODY = """
       <div class="calc__panel reveal">
         <div class="total">
           <p class="total__label">Estimated total cost</p>
-          <p class="total__n" id="oTotal">—</p>
+          <p class="total__n" id="oTotal">-</p>
           <p class="total__x" id="oX"></p>
         </div>
 
         <ul class="brk">
-          <li><span>Salary paid<small>To someone who did not work out</small></span><span id="oSalary">—</span></li>
-          <li><span>Cost to recruit them<small>Fee, ads, or internal time</small></span><span id="oHire">—</span></li>
-          <li><span>Lost output during ramp-up<small>Counted at half productivity</small></span><span id="oRamp">—</span></li>
-          <li><span>Vacancy cost<small>Work not being done at all</small></span><span id="oVac">—</span></li>
-          <li><span>Management &amp; interview time<small>Costed at the managers' own rate</small></span><span id="oMgmt">—</span></li>
-          <li><span>Cost to recruit again<small>You pay for the replacement too</small></span><span id="oRedo">—</span></li>
+          <li><span>Salary paid<small>To someone who did not work out</small></span><span id="oSalary">-</span></li>
+          <li><span>Cost to recruit them<small>Fee, ads, or internal time</small></span><span id="oHire">-</span></li>
+          <li><span>Lost output during ramp-up<small>Counted at half productivity</small></span><span id="oRamp">-</span></li>
+          <li><span>Vacancy cost<small>Work not being done at all</small></span><span id="oVac">-</span></li>
+          <li><span>Management &amp; interview time<small>Costed at the managers' own rate</small></span><span id="oMgmt">-</span></li>
+          <li><span>Cost to recruit again<small>You pay for the replacement too</small></span><span id="oRedo">-</span></li>
         </ul>
 
         <p class="note">
