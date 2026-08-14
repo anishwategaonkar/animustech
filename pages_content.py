@@ -351,6 +351,35 @@ PAGES = [
          ("Process discipline", "An engineer from an unstructured shop floor moving into a tier-1 supplier with audited processes is a real transition. It is screenable, and it is usually not screened."),
        ]), alt=True) +
 
+   sec("Proof", "A factory manager search, and what mandate drift costs",
+       "We publish the searches that went long as well as the ones that went well.",
+       cards([
+         ("100+ screened", "For a mandate covering production, operations and dispatch, the whole plant."),
+         ("20–25 shared", "More than we would like. The reason is the point."),
+         ("~45 days", "Intake to joining, against 25 days on a search where the brief held still."),
+       ]) +
+       prose([
+         "Nearly every applicant for a factory manager role is a production manager who says "
+         "they ran the factory. Both CVs use identical vocabulary, so neither a keyword search "
+         "nor a quick human skim can separate them. The way to tell is to ask about the "
+         "interfaces: dispatch scheduling, and how they handled the trade-off between hitting "
+         "production targets and meeting despatch commitments. A production person goes thin "
+         "there. Someone who ran the plant does not.",
+         "That verification is most of the work on a role like this, and it is the part a client "
+         "cannot do from a stack of CVs.",
+         "<strong>Now the uncomfortable number.</strong> We shared twenty to twenty-five profiles "
+         "on this search. On a sales role earlier the same year we shared eight. Same recruiter, "
+         "same method, roughly three times the submittals and nearly twice the timeline.",
+         "The difference was not effort or skill. The mandate changed mid-search. When the "
+         "definition of the role moves, work already done stops counting, and the funnel widens "
+         "again from the top. This is the clearest evidence we have for something we say "
+         "elsewhere on this site: intake discipline, not sourcing effort, is what decides what a "
+         "search costs. It is also why we will not promise you a fixed number of days and pretend "
+         "the outcome rests entirely on us.",
+       ]) +
+       links("More on this:", [("How we work, and what we commit to", "/how-we-work/")]),
+       alt=True) +
+
    sec("Roles", "Roles we hire for", "",
        rolegrid([
          ("Design, R&amp;D &amp; NPD", ["Design engineers — CAD, CAE, GD&amp;T", "NPD and product development", "Simulation and validation", "Tooling and fixture design"]),
@@ -522,6 +551,33 @@ PAGES = [
          "within a week whether it worked because the money was visibly gone.",
          "Both CVs say performance marketing. Only one of them has done the job you are hiring for. We screen "
          "for what someone owned and what happened when it went wrong, rather than where they did it.",
+       ]), alt=True) +
+
+   sec("Proof", "The search where the role did not exist",
+       "A bakery products brand wanted one person strong in both e-commerce and quick commerce.",
+       cards([
+         ("30+ screened", "Nobody had both. Not a sourcing failure, a fact about the market."),
+         ("5 shared", "After the brief was renegotiated on the basis of the screening data."),
+         ("2 weeks", "Start to close, including the conversation that changed the requirement."),
+       ]) +
+       prose([
+         "E-commerce and quick commerce look adjacent from the outside. In practice they are "
+         "different disciplines with different rhythms, and founders hiring for consumer brands "
+         "routinely assume one person covers both. Thirty-odd profiles in, it was clear that at "
+         "this budget that person did not exist.",
+         "So we went back to the client with the screening data in a sheet, and asked for a "
+         "budget increase and a change of requirement. That is a harder conversation than "
+         "continuing to send near-misses, and it is the one worth having. Evidence, not opinion, "
+         "and it took two weeks rather than two months.",
+         "<strong>Then the part that matters.</strong> The candidate who joined had strong "
+         "e-commerce experience. Quick commerce appeared nowhere on his CV. Not once. What his "
+         "CV did show was agency experience, and among that agency's clients was an FMCG brand. "
+         "That was worth a phone call, and the phone call found real quick-commerce exposure.",
+         "No keyword filter would have surfaced him. No boolean string, no ATS, no search on "
+         "the term itself, because the term was not in the document. He was found by reading a "
+         "client list, making an inference, and picking up the phone. Software narrows the field. "
+         "A recruiter who is actually curious closes it, and that is why a human signs off on "
+         "every shortlist we send.",
        ]), alt=True) +
 
    sec("Roles", "Roles we hire for", "",
