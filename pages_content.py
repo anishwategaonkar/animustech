@@ -457,6 +457,32 @@ PAGES = [
          "CV. It is also why our shortlists are short: most profiles do not survive question one.",
        ]), alt=True) +
 
+   sec("Proof", "Two real searches, with the funnel shown",
+       "The middle of the funnel is where the work happens, and it is the part nobody shows you.",
+       cards([
+         ("80+ screened", "Every profile read against the scorecard, not just the first page of search results."),
+         ("20 AI interviews", "Same questions, same rubric, before anyone was submitted. Half did not survive this stage."),
+         ("10 shared, 1 hired", "The client reviewed ten people who had already been interviewed once."),
+       ]) +
+       prose([
+         "That middle stage is the point. Most agencies go straight from reading a CV to sending "
+         "it, which is exactly why clients end up interviewing people who read well on paper and "
+         "fall apart in the room. Twenty of those eighty were interviewed before anyone was "
+         "submitted, and ten did not make it through. The client never saw the ten, and never "
+         "spent an hour finding out why.",
+         "<strong>A second search, a marketing manager for a SaaS startup.</strong> Twenty to "
+         "thirty profiles screened, six shared, closed in twelve days with the candidate joining "
+         "fifteen days later after notice. The first batch of four was rejected outright, and the "
+         "reason mattered more than the rejection: the client wanted someone to own product "
+         "marketing start to end, and the market kept supplying people who were good with a "
+         "settled process. Excellent executors inside a machine somebody else had built.",
+         "The person who closed had run digital marketing and built strategy. He owned the "
+         "process rather than ran it. That distinction is invisible on a CV, because every "
+         "marketing profile lists the same channels and the same tools. It is the whole job at a "
+         "startup, and it is why we send four at a time: the first four told us what the client "
+         "actually meant, and the next two were shaped by that.",
+       ]), alt=True) +
+
    sec("Who we hire for", "Product companies, SaaS, GCCs and services firms",
        "The same title means different things across these four, and screening should reflect that.",
        cards([
