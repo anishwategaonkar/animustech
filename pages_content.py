@@ -240,7 +240,8 @@ PAGES = [
  "h1": "How We Work",
  "lead": ("Every recruitment agency says quality and speed. Almost none of them show you a "
           "number. This page is our process, the numbers from our work so far, and what we "
-          "commit to in writing, including what we need from you for any of it to hold."),
+          "commit to in writing, including what we need from you for any of it to hold. "
+          "We work with companies across India."),
  "body":
    sec("The numbers", "What a shortlist actually means here",
        "Fewer resumes only means rigour if you can see what was filtered out. So here is the whole funnel.",
@@ -396,11 +397,11 @@ PAGES = [
 # ---------------------------------------------------- 4. IT / SOFTWARE ------
 {
  "url": "/industries/it-software-recruitment-pune/",
- "title": "IT Recruitment Consultancy in Pune | Animus Tech",
- "desc": "IT and software recruitment in Pune. Backend, frontend, data, ML, cloud, DevOps and engineering leadership for product companies, SaaS teams and GCCs.",
+ "title": "IT &amp; Software Recruitment | Animus Tech",
+ "desc": "IT and software recruitment across India. Backend, frontend, data, ML, cloud, DevOps and engineering leadership for product companies, SaaS teams and GCCs.",
  "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), ("IT &amp; software recruitment", None)],
- "eyebrow": "Hinjewadi · Kharadi · Magarpatta · Baner",
- "h1": "IT &amp; Software Recruitment in Pune",
+ "eyebrow": "India wide · Pune based",
+ "h1": "IT &amp; Software Recruitment",
  "lead": ("Engineering, data, product, design, QA, DevOps and SRE for product companies, SaaS teams, GCCs and "
           "services firms. We read a stack seriously and do not confuse keyword matches with capability."),
  "body":
@@ -542,8 +543,8 @@ PAGES += [
 
 service_page(
  "/services/permanent-recruitment/",
- "Permanent Recruitment Agency in Pune | Animus Tech",
- "End to end permanent recruitment in Pune. AI sourcing, ranked shortlists with written rationale, and support through offer, notice period and joining.",
+ "Permanent Recruitment Services | Animus Tech",
+ "End to end permanent recruitment across India. AI sourcing, ranked shortlists with written rationale, and support through offer, notice period and joining.",
  "Permanent Recruitment", "Service",
  "End to end hiring for full time roles, from role definition through to offer acceptance and joining.",
  ["Our core engagement. We take a role from an initial conversation with the hiring manager through to the "
@@ -563,8 +564,8 @@ service_page(
 
 service_page(
  "/services/executive-search/",
- "Executive Search Firm in Pune | Animus Tech",
- "Confidential executive search in Pune for senior and specialist roles. AI mapped talent landscape, discreet human led approach, deep reference checks.",
+ "Executive Search &amp; Senior Hiring | Animus Tech",
+ "Confidential executive search across India for senior and specialist roles. AI mapped talent landscape, discreet human led approach, deep reference checks.",
  "Leadership &amp; Executive Search", "Service",
  "Confidential search for senior and specialist roles where the pool is small and mostly not looking.",
  ["Senior search is a different exercise from filling a vacancy. The people you want are employed, performing, "
@@ -583,8 +584,8 @@ service_page(
 
 service_page(
  "/services/bulk-hiring/",
- "Bulk Hiring &amp; Volume Recruitment in Pune | Animus Tech",
- "Volume and project hiring in Pune. AI screening at scale, campus and walk-in drives, weekly pipeline reporting. For new plants, new shifts and rapid scale ups.",
+ "Bulk Hiring &amp; Volume Recruitment | Animus Tech",
+ "Volume and project hiring across India. AI screening at scale, campus and walk-in drives, weekly pipeline reporting. For new plants, shifts and scale ups.",
  "Volume &amp; Project Hiring", "Service",
  "Structured drives when you need many people in one window, whether that is a new plant, a new shift, festive season or a funding led scale up.",
  ["Volume hiring fails on logistics more often than on sourcing. Getting three hundred applicants is not hard. "
@@ -626,7 +627,7 @@ service_page(
 service_page(
  "/services/hiring-advisory/",
  "Hiring Advisory &amp; Salary Benchmarking | Animus Tech",
- "Job description and scorecard design, interview loop design, and honest compensation benchmarks for the Pune market.",
+ "Job description and scorecard design, interview loop design, and honest compensation benchmarks for your market.",
  "Hiring Advisory", "Service",
  "Job descriptions that attract the right people, interview loops that actually discriminate, and honest salary benchmarks for your market.",
  ["Most hiring problems are design problems. A job description written to sound impressive attracts a hundred "
