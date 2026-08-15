@@ -32,7 +32,7 @@ def org_schema():
         "url": SITE + "/",
         "logo": f"{SITE}/logo-dark.svg",
         "image": f"{SITE}/og-image.png",
-        "email": "animus@animustech.in",
+        "email": "admin@animustech.in",
         "telephone": "+91-94225-15047",
         "priceRange": "$$",
         "address": {
