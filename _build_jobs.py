@@ -18,6 +18,39 @@ ORG_ID = SITE + "/#organization"
 
 from jobs_data import JOBS
 
+# City -> state, for the JobPosting addressRegion. Add a city here when you post
+# in a new one, or set "region" directly on the job in jobs_data.py.
+CITY_REGION = {
+    "pune": "Maharashtra",
+    "mumbai": "Maharashtra",
+    "nashik": "Maharashtra",
+    "nagpur": "Maharashtra",
+    "aurangabad": "Maharashtra",
+    "chakan": "Maharashtra",
+    "hinjewadi": "Maharashtra",
+    "bengaluru": "Karnataka",
+    "bangalore": "Karnataka",
+    "hyderabad": "Telangana",
+    "chennai": "Tamil Nadu",
+    "coimbatore": "Tamil Nadu",
+    "hosur": "Tamil Nadu",
+    "new delhi": "Delhi",
+    "delhi": "Delhi",
+    "gurugram": "Haryana",
+    "gurgaon": "Haryana",
+    "faridabad": "Haryana",
+    "noida": "Uttar Pradesh",
+    "ghaziabad": "Uttar Pradesh",
+    "ahmedabad": "Gujarat",
+    "surat": "Gujarat",
+    "vadodara": "Gujarat",
+    "jaipur": "Rajasthan",
+    "indore": "Madhya Pradesh",
+    "kolkata": "West Bengal",
+    "kochi": "Kerala",
+    "chandigarh": "Chandigarh",
+}
+
 TODAY = datetime.date.today().isoformat()
 
 EXTRA_CSS = """
@@ -135,10 +168,16 @@ def job_schema(j):
         s["jobLocationType"] = "TELECOMMUTE"
         s["applicantLocationRequirements"] = {"@type": "Country", "name": "India"}
     else:
+        # Google matches the listing to a place using locality + region. A wrong
+        # region sends the job to the wrong city's search results, so map it from
+        # the city rather than assuming every role is in Maharashtra.
         city = j["location"].split(",")[0].strip()
-        s["jobLocation"] = {"@type": "Place", "address": {
-            "@type": "PostalAddress", "addressLocality": city,
-            "addressRegion": "Maharashtra", "addressCountry": "IN"}}
+        region = j.get("region") or CITY_REGION.get(city.lower())
+        addr = {"@type": "PostalAddress", "addressLocality": city,
+                "addressCountry": "IN"}
+        if region:
+            addr["addressRegion"] = region
+        s["jobLocation"] = {"@type": "Place", "address": addr}
     if j.get("salary_min"):
         s["baseSalary"] = {"@type": "MonetaryAmount", "currency": "INR",
           "value": {"@type": "QuantitativeValue",
