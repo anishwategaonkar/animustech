@@ -58,6 +58,7 @@ def org_schema():
         ],
         "sameAs": [
             "https://www.linkedin.com/company/animustechnologies",
+            "https://share.google/h2bshwzL9WrRjm7Wh",
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
