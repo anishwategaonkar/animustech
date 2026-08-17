@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notes on Hiring | Animus Tech</title>
-<meta name="description" content="Real numbers from our own searches, written for people doing the hiring. Agency fees, choosing a partner, and where recruitment time actually goes.">
-<link rel="canonical" href="https://animustech.in/blog/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Notes on Hiring | Animus Tech">
-<meta property="og:description" content="Real numbers from our own searches, written for people doing the hiring. Agency fees, choosing a partner, and where recruitment time actually goes.">
-<meta property="og:url" content="https://animustech.in/blog/">
+<title>Open Roles &amp; Jobs | Animus Tech</title>
+<meta name="description" content="Live roles we are actively recruiting for across software, manufacturing and consumer companies in India. Every application read by a person.">
+<link rel="canonical" href="https://animustech.in/jobs/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Open Roles &amp; Jobs | Animus Tech">
+<meta property="og:description" content="Live roles we are actively recruiting for across software, manufacturing and consumer companies in India. Every application read by a person.">
+<meta property="og:url" content="https://animustech.in/jobs/">
 <meta property="og:image" content="https://animustech.in/og-image.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 40'><rect width='54' height='40' rx='7' fill='%23141824'/><circle cx='19' cy='20' r='14' fill='none' stroke='%23dfb78e' stroke-width='3'/><circle cx='35' cy='20' r='14' fill='none' stroke='%239d94e0' stroke-width='3'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,73 +18,42 @@
 <link rel="stylesheet" href="/assets/site.css">
 
 <style>
-.post{max-width:760px;margin:0 auto}
-.post h2{font-size:clamp(1.4rem,2.6vw,1.85rem);letter-spacing:-.02em;margin:48px 0 14px;color:var(--text)}
-.post h3{font-size:1.1rem;margin:30px 0 10px;color:var(--accent-2)}
-.post p{color:var(--text-2);line-height:1.78;margin:0 0 17px;font-size:1.04rem}
-.post ul{color:var(--text-2);line-height:1.85;margin:0 0 18px;padding-left:22px}
-.post li{margin-bottom:8px}
-.post a{color:var(--accent)}
-.post strong{color:var(--text)}
-.cmp{width:100%;border-collapse:collapse;margin:26px 0;font-size:.95rem}
-.cmp th,.cmp td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border)}
-.cmp thead th{color:var(--text-3);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
-.cmp td:first-child{color:var(--text-2)}
-.cmp td:not(:first-child){color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
-.postmeta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--text-3);font-size:.86rem;margin-bottom:8px}
-.tagchip{background:var(--accent-dim);border:1px solid var(--accent-line);color:var(--accent);
-  padding:4px 11px;border-radius:999px;font-size:.76rem;letter-spacing:.02em}
-.postlist{display:grid;gap:18px;margin-top:36px}
-.postcard{background:var(--surface);border:1px solid var(--border);border-radius:15px;
-  padding:26px 28px;transition:border-color .2s,transform .2s;display:block;text-decoration:none}
-.postcard:hover{border-color:var(--border-lit);transform:translateY(-2px)}
-.postcard h2{margin:10px 0 8px;font-size:1.22rem;color:var(--text);letter-spacing:-.01em}
-.postcard p{margin:0;color:var(--text-2);font-size:.96rem;line-height:1.65}
+.jobcard{background:var(--surface);border:1px solid var(--border);border-radius:15px;
+  padding:26px 28px;display:block;text-decoration:none;transition:border-color .2s,transform .2s}
+.jobcard:hover{border-color:var(--border-lit);transform:translateY(-2px)}
+.jobcard h2{margin:12px 0 8px;font-size:1.2rem;color:var(--text);letter-spacing:-.01em}
+.jobcard p{margin:0;color:var(--text-2);font-size:.95rem;line-height:1.65}
+.joblist{display:grid;gap:18px;margin-top:36px}
+.jobmeta{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:0 0 4px}
+.chip{background:var(--accent-dim);border:1px solid var(--accent-line);color:var(--accent);
+  padding:4px 11px;border-radius:999px;font-size:.75rem;letter-spacing:.02em}
+.chip--muted{background:transparent;border-color:var(--border);color:var(--text-3)}
+.jobfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:32px 0}
+.jobfacts div{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.jobfacts dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);margin:0 0 5px}
+.jobfacts dd{margin:0;color:var(--text);font-weight:600;font-size:.98rem}
+.jobbody{max-width:760px}
+.jobbody h2{font-size:1.35rem;margin:38px 0 14px;color:var(--text);letter-spacing:-.01em}
+.jobbody p{color:var(--text-2);line-height:1.78;margin:0 0 16px}
+.jobbody ul{color:var(--text-2);line-height:1.85;padding-left:22px;margin:0 0 18px}
+.jobbody li{margin-bottom:7px}
+.emptybox{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:38px 34px;margin-top:36px;max-width:760px}
+.emptybox h2{margin:0 0 12px;font-size:1.25rem;color:var(--text)}
+.emptybox p{color:var(--text-2);line-height:1.75;margin:0 0 15px}
 </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "@id": "https://animustech.in/blog/",
-  "name": "Animus Tech blog",
-  "url": "https://animustech.in/blog/",
+  "@type": "CollectionPage",
+  "@id": "https://animustech.in/jobs/",
+  "name": "Open roles at Animus Tech",
+  "url": "https://animustech.in/jobs/",
   "publisher": {
     "@id": "https://animustech.in/#organization"
   },
-  "inLanguage": "en-IN",
-  "blogPost": [
-    {
-      "@type": "BlogPosting",
-      "headline": "What recruitment agencies actually charge in India",
-      "url": "https://animustech.in/blog/recruitment-agency-fees-india/",
-      "datePublished": "2026-08-13",
-      "author": {
-        "@type": "Person",
-        "name": "Anish Wategaonkar"
-      }
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "How to choose a recruitment agency: 9 questions to ask first",
-      "url": "https://animustech.in/blog/how-to-choose-a-recruitment-agency/",
-      "datePublished": "2026-08-13",
-      "author": {
-        "@type": "Person",
-        "name": "Anish Wategaonkar"
-      }
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "Why your search went long, and where the time actually goes",
-      "url": "https://animustech.in/blog/why-your-search-went-long/",
-      "datePublished": "2026-08-13",
-      "author": {
-        "@type": "Person",
-        "name": "Anish Wategaonkar"
-      }
-    }
-  ]
+  "inLanguage": "en-IN"
 }
 </script>
 <script type="application/ld+json">
@@ -101,7 +70,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Blog"
+      "name": "Jobs"
     }
   ]
 }
@@ -152,36 +121,57 @@
   <div class="glow glow--a" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Blog</span>
+      <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Jobs</span>
     </nav>
-    <span class="eyebrow">Writing</span>
-    <h1>Notes on hiring</h1>
-    <p class="hero__lead">
-      What we have learned running searches for software, manufacturing and consumer companies.
-      Real numbers from our own work, including the searches that went long. Written for the
-      person doing the hiring, not for other recruiters.
-    </p>
+    <span class="eyebrow">Open roles</span>
+    <h1>Jobs we are hiring for</h1>
+    <p class="hero__lead">We only list roles we are actively recruiting for. If the list is empty, it means we have nothing open right now rather than that we stopped updating the page.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="postlist">
-      <a class="postcard reveal" href="/blog/recruitment-agency-fees-india/">
-        <p class="postmeta"><span class="tagchip">Hiring costs</span><span>2026-08-13</span></p>
-        <h2>What recruitment agencies actually charge in India</h2>
-        <p>Contingency, retained and volume pricing explained, what drives the number up or down, and the questions to ask before you sign.</p>
-      </a>
-      <a class="postcard reveal" href="/blog/how-to-choose-a-recruitment-agency/">
-        <p class="postmeta"><span class="tagchip">Choosing a partner</span><span>2026-08-13</span></p>
-        <h2>How to choose a recruitment agency: 9 questions to ask first</h2>
-        <p>Most agencies sound identical in a pitch. These nine questions separate the ones who will do the work from the ones who will forward CVs.</p>
-      </a>
-      <a class="postcard reveal" href="/blog/why-your-search-went-long/">
-        <p class="postmeta"><span class="tagchip">Hiring process</span><span>2026-08-13</span></p>
-        <h2>Why your search went long, and where the time actually goes</h2>
-        <p>Most recruitment delay is not sourcing. It is the brief moving, feedback arriving late, and requirements surfacing at final round. With real numbers.</p>
-      </a></div>
+      <div class="emptybox reveal">
+        <h2>No open roles listed at the moment</h2>
+        <p>
+          We only list roles we are actively recruiting for, so this page is sometimes empty.
+          We would rather show you nothing than a stale list of positions that closed months ago.
+        </p>
+        <p>
+          If you work in software, manufacturing or consumer brands, send us your CV anyway. We
+          keep profiles on file against the mandates we take on, and we will come back to you
+          when something fits rather than when we need to fill a quota.
+        </p>
+        <p style="margin-top:24px">
+          <a href="mailto:admin@animustech.in?subject=Speculative%20application" class="btn btn--primary">Send us your CV</a>
+        </p>
+      </div></div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">For candidates</span>
+      <h2 class="section-title">What applying here is like</h2>
+      <p class="section-lead">Short version: a person reads it, and you get an answer.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal"><h3>Read against a scorecard</h3><p>Not filtered on keywords. If your experience fits but your CV does not use the expected words, we would still rather see it.</p></div>
+      <div class="benefit reveal"><h3>A human decides</h3><p>Software narrows the field. A recruiter reviews every shortlist, and nobody is rejected by software alone.</p></div>
+      <div class="benefit reveal"><h3>You hear back</h3><p>Including when the answer is no. Silence is the standard in this industry and it should not be.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Hiring, not looking</span>
+      <h2 class="section-title">Need to fill a role?</h2>
+      <p class="section-lead">We work with software, manufacturing and D2C companies across India. Tell us what you are hiring for.</p>
+      <p style="margin-top:26px"><a href="/#contact" class="btn btn--primary">Talk to us about hiring</a></p>
+      <p class="linkrow">See also: <a href="/how-we-work/">How we work</a> · <a href="/recruitment-agency-pune/">Recruitment agency in Pune</a></p>
+    </div>
   </div>
 </section>
 
