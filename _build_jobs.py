@@ -315,8 +315,8 @@ def build_apply(j, loc):
       </div>
 
       <div class="field">
-        <label for="resume">Resume (PDF or Word, optional)</label>
-        <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx">
+        <label for="resume">Resume (PDF or Word) *</label>
+        <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" required>
       </div>
 
       <button type="submit" class="btn btn--primary">
