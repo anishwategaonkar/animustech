@@ -8,7 +8,7 @@ Edit jobs_data.py, not this file.
 
 Also refreshes sitemap-jobs entries so expired roles drop out cleanly.
 """
-import os, json, html, datetime, re
+import os, json, html, datetime, re, shutil
 
 ROOT   = os.path.dirname(os.path.abspath(__file__))
 HEADER = open(os.path.join(ROOT, '_tpl_header.html')).read()
@@ -45,6 +45,11 @@ EXTRA_CSS = """
   padding:38px 34px;margin-top:36px;max-width:760px}
 .emptybox h2{margin:0 0 12px;font-size:1.25rem;color:var(--text)}
 .emptybox p{color:var(--text-2);line-height:1.75;margin:0 0 15px}
+.applyform{max-width:640px}
+.thankbox{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:44px 38px;margin-top:36px;max-width:640px;text-align:center}
+.thankbox h1{margin:0 0 14px}
+.thankbox p{color:var(--text-2);line-height:1.75;margin:0 0 22px}
 </style>
 """
 
@@ -155,7 +160,7 @@ def build_job(j):
 
     def ul(items): return "<ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
     loc = "Remote, India" if j.get("remote") else j["location"]
-    subject = f"Application: {j['title']} ({j['slug']})"
+    apply_url = f"/jobs/{j['slug']}/apply/"
 
     body = f"""
 <section class="hero hero--sub">
@@ -169,7 +174,7 @@ def build_job(j):
     <h1>{j['title']}</h1>
     <p class="hero__lead">{j['summary']}</p>
     <div class="hero__cta">
-      <a href="mailto:admin@animustech.in?subject={subject.replace(' ','%20')}" class="btn btn--primary">Apply for this role
+      <a href="{apply_url}" class="btn btn--primary">Apply for this role
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -209,7 +214,7 @@ def build_job(j):
       </p>
 
       <p style="margin-top:32px">
-        <a href="mailto:admin@animustech.in?subject={subject.replace(' ','%20')}" class="btn btn--primary">Apply for this role</a>
+        <a href="{apply_url}" class="btn btn--primary">Apply for this role</a>
       </p>
       <p class="linkrow">Posted {j['posted']} · Open until {j['valid_through']}</p>
     </article>
@@ -221,7 +226,138 @@ def build_job(j):
     desc = f"{j['title']} in {loc}. {j['summary'][:110]}"
     open(os.path.join(out, "index.html"), "w").write(
         head(f"{j['title']} in {loc.split(',')[0]} | Animus Tech", desc, url, schema) + body + TAIL)
+    build_apply(j, loc)
     return url
+
+def build_apply(j, loc):
+    """The questionnaire a candidate fills in after clicking Apply. Delivered by
+    FormSubmit to admin@animustech.in, same mechanism as the homepage contact form."""
+    url = f"/jobs/{j['slug']}/apply/"
+    subject = f"Application: {j['title']} ({j['slug']})"
+    thanks_url = f"{SITE}/jobs/{j['slug']}/apply/thank-you/"
+
+    body = f"""
+<section class="hero hero--sub">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="glow glow--a" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="crumbs__sep">/</span><a href="/jobs/">Jobs</a><span class="crumbs__sep">/</span><a href="/jobs/{j['slug']}/">{j['title']}</a><span class="crumbs__sep">/</span><span aria-current="page">Apply</span>
+    </nav>
+    <span class="eyebrow">{j['title']} · {loc}</span>
+    <h1>Apply for this role</h1>
+    <p class="hero__lead">
+      Six short questions, no account needed. A recruiter reads every application and you
+      will hear back either way.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <form action="https://formsubmit.co/admin@animustech.in" method="POST" class="applyform reveal" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="{subject}">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="{thanks_url}">
+      <input type="hidden" name="Role applied for" value="{j['title']} ({j['slug']})">
+      <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
+
+      <div class="field">
+        <label for="full_name">Full name *</label>
+        <input type="text" id="full_name" name="Full name" required placeholder="Your full name">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="Email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="Phone" required placeholder="+91">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="experience">Years of experience *</label>
+          <input type="text" id="experience" name="Years of experience" required placeholder="e.g. 5 years">
+        </div>
+        <div class="field">
+          <label for="notice">Notice period *</label>
+          <select id="notice" name="Notice period" required>
+            <option value="">Select one</option>
+            <option>Immediate / serving no notice</option>
+            <option>15 days or less</option>
+            <option>30 days</option>
+            <option>60 days</option>
+            <option>90 days</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="current_ctc">Current CTC *</label>
+          <input type="text" id="current_ctc" name="Current CTC" required placeholder="e.g. 8 LPA">
+        </div>
+        <div class="field">
+          <label for="expected_ctc">Expected CTC *</label>
+          <input type="text" id="expected_ctc" name="Expected CTC" required placeholder="e.g. 10 LPA">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="fit">Why do you think you are fit for this role? *</label>
+        <textarea id="fit" name="Why they are a fit" required placeholder="A few sentences on relevant experience and why this role makes sense for you."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="resume">Resume (PDF or Word, optional)</label>
+        <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx">
+      </div>
+
+      <button type="submit" class="btn btn--primary">
+        Submit application
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form-note">Goes straight to a recruiter. Your details are used only to assess you for this role.</p>
+    </form>
+  </div>
+</section>
+"""
+    out = os.path.join(ROOT, "jobs", j["slug"], "apply")
+    os.makedirs(out, exist_ok=True)
+    open(os.path.join(out, "index.html"), "w").write(
+        head(f"Apply: {j['title']} | Animus Tech",
+             f"Application form for {j['title']} in {loc}.", url,
+             [], extra='<meta name="robots" content="noindex,follow">') + body + TAIL)
+    build_apply_thanks(j)
+
+def build_apply_thanks(j):
+    url = f"/jobs/{j['slug']}/apply/thank-you/"
+    body = f"""
+<section class="section" style="padding-top:120px">
+  <div class="wrap">
+    <div class="thankbox reveal">
+      <h1>Application received</h1>
+      <p>
+        Thanks for applying for {j['title']}. A recruiter will read it against the scorecard
+        for this role and come back to you either way, not just if it is a yes.
+      </p>
+      <a href="/jobs/" class="btn btn--primary">See other open roles</a>
+    </div>
+  </div>
+</section>
+"""
+    out = os.path.join(ROOT, "jobs", j["slug"], "apply", "thank-you")
+    os.makedirs(out, exist_ok=True)
+    open(os.path.join(out, "index.html"), "w").write(
+        head("Application Received | Animus Tech",
+             "Your application has been received.", url,
+             [], extra='<meta name="robots" content="noindex,follow">') + body + TAIL)
 
 def build_index(live):
     url = "/jobs/"
@@ -352,8 +488,7 @@ if __name__ == "__main__":
         for d in os.listdir(jobs_dir):
             full = os.path.join(jobs_dir, d)
             if os.path.isdir(full) and d not in keep:
-                for f in os.listdir(full): os.remove(os.path.join(full, f))
-                os.rmdir(full)
+                shutil.rmtree(full)
                 print("removed expired/withdrawn:", d)
 
     for j in live:
