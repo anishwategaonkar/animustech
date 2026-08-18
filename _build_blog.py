@@ -394,7 +394,7 @@ def build_post(p):
       <span class="eyebrow">Get in touch</span>
       <h2 class="section-title">Hiring for something specific?</h2>
       <p class="section-lead">Tell us what the role is. You will get an honest read on the market, a realistic timeline, and a straight answer on whether we are the right firm for it, within one working day.</p>
-      <p style="margin-top:26px"><a href="/#contact" class="btn btn--primary">Talk to us
+      <p style="margin-top:26px"><a href="/talent-acquisition/#contact" class="btn btn--primary">Talk to us
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
     </div>
   </div>

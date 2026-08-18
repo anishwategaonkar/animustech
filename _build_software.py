@@ -21,7 +21,7 @@ ORG_ID = SITE + "/#organization"
 URL    = "/software/"
 
 TITLE = "Software Development for Manufacturing | Animus Tech"
-DESC  = ("Custom software for manufacturing and operations led businesses in Pune. "
+DESC  = ("Custom software for manufacturing and small enterprises in Pune. "
          "Project tracking, finance and invoicing, lead management and internal tools.")
 
 # ------------------------------------------------------------------ schema ---
@@ -32,7 +32,7 @@ SCHEMAS = [
   "@id": SITE + URL + "#service",
   "serviceType": "Custom software development",
   "name": "Custom software development for manufacturing",
-  "description": ("Custom software for manufacturing and operations led businesses: project "
+  "description": ("Custom software for manufacturing, small enterprises and operations led businesses: project "
                   "tracking with multiple users, finance and invoicing systems, lead "
                   "management and internal operational tools."),
   "provider": {"@id": ORG_ID},
@@ -72,7 +72,7 @@ SCHEMAS = [
      "acceptedAnswer": {"@type": "Answer", "text": a}}
     for q, a in [
       ("Do you build software for manufacturing companies?",
-       "Yes. We build custom software for manufacturing and operations led businesses, "
+       "Yes. We build custom software for manufacturing, small enterprises and operations led businesses, "
        "including project and job tracking, finance and invoicing systems, lead management "
        "and internal operational tools. We work with companies in Pune and across India."),
       ("Can the software handle multiple users with different access levels?",
@@ -124,10 +124,10 @@ BODY = """
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Software development</span>
     </nav>
-    <p class="arm-note"><a href="/">Looking for hiring instead? Go to talent acquisition</a></p>
+    <p class="arm-note"><a href="/talent-acquisition/">Looking for hiring instead? Go to talent acquisition</a></p>
     <span class="eyebrow">Software development, Pune</span>
     <h1>Software built around <span class="accent-text">how the work actually happens.</span></h1>
-    <h2 class="hero__kicker">Custom software for manufacturing and operations led businesses across India</h2>
+    <h2 class="hero__kicker">Custom software for manufacturing, small enterprises and operations led businesses across India</h2>
     <p class="hero__lead">
       Most operational software fails for the same reason most hires fail: nobody spent
       enough time understanding the job before committing to a solution. We build tools that
@@ -178,16 +178,16 @@ BODY = """
 
       <div class="builtbox reveal">
         <span class="tag">Finance and invoicing</span>
-        <h3>Vehicle service finance tracker</h3>
+        <h3>Finance tracker for small enterprises</h3>
         <p>
-          A finance system for a vehicle service operation. It raises invoices and holds
-          the complete financial history of every vehicle that comes through, so the
-          money side of a job and the job itself stay attached to each other.
+          A finance system built for small enterprises that work job by job. It raises
+          invoices and holds the complete financial history against each job, so the money
+          side of a job and the job itself stay attached to each other.
         </p>
         <p>
-          Anyone who has run a service business knows why this matters. The moment
-          invoicing lives in one place and job history lives in another, reconciliation
-          becomes somebody's whole week.
+          Anyone who has run a small operation knows why this matters. The moment invoicing
+          lives in one place and job history lives in another, reconciliation becomes
+          somebody's whole week.
         </p>
       </div>
     </div>
@@ -513,7 +513,7 @@ BODY = """
         manufacturing and D2C companies across India.
       </p>
       <p style="margin-top:26px">
-        <a href="/" class="btn btn--primary">Go to talent acquisition
+        <a href="/talent-acquisition/" class="btn btn--primary">Go to talent acquisition
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>

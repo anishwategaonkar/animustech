@@ -136,7 +136,7 @@ PAGES = [
          "keyword search scores the document rather than the person. Semantic screening surfaced them "
          "anyway, and a recruiter then made the call on whether they were right for the role.",
        ]) +
-       links("Read more:", [("How our AI screening works", "/#ai"),
+       links("Read more:", [("How our AI screening works", "/talent-acquisition/#ai"),
                             ("AI assessment as a service", "/services/ai-candidate-assessment/")])) +
 
    sec("What we do", "Recruitment services we offer in Pune", "",

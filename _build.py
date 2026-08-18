@@ -26,9 +26,10 @@ def org_schema():
         "@id": ORG_ID,
         "name": "Animus Tech",
         "alternateName": "Animus Tech Talent Acquisition",
-        "description": ("AI enabled recruitment agency and talent acquisition firm in Pune. "
-                        "AI powered sourcing, screening and assessment, combined with human "
-                        "judgement on culture fit. Hiring for software, manufacturing and D2C companies."),
+        "description": ("Pune based firm running two arms. AI enabled recruitment and talent "
+                        "acquisition for software, manufacturing and D2C companies, combining "
+                        "AI powered sourcing and screening with human judgement on culture fit. "
+                        "And custom software development for manufacturing and small enterprises."),
         "url": SITE + "/",
         "logo": f"{SITE}/logo-dark.svg",
         "image": f"{SITE}/og-image.png",
@@ -159,10 +160,10 @@ PAGE = """<!DOCTYPE html>
     <h1>{h1}</h1>
     <p class="hero__lead">{lead}</p>
     <div class="hero__cta">
-      <a href="/#contact" class="btn btn--primary">Tell us what you're hiring for
+      <a href="/talent-acquisition/#contact" class="btn btn--primary">Tell us what you're hiring for
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="/#ai" class="btn btn--ghost">See how our AI works</a>
+      <a href="/talent-acquisition/#ai" class="btn btn--ghost">See how our AI works</a>
     </div>
   </div>
 </section>
@@ -176,7 +177,7 @@ PAGE = """<!DOCTYPE html>
       <h2 class="section-title">{cta_title}</h2>
       <p class="section-lead">{cta_lead}</p>
       <p style="margin-top:26px">
-        <a href="/#contact" class="btn btn--primary">Start hiring with us
+        <a href="/talent-acquisition/#contact" class="btn btn--primary">Start hiring with us
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>
