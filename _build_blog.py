@@ -13,7 +13,7 @@ ROOT   = os.path.dirname(os.path.abspath(__file__))
 HEADER = open(os.path.join(ROOT, '_tpl_header.html')).read()
 FOOTER = open(os.path.join(ROOT, '_tpl_footer.html')).read()
 SITE   = "https://animustech.in"
-AUTHOR = "Anish Wategaonkar"
+AUTHOR = "Animus Tech"
 
 # ------------------------------------------------------------------ posts ---
 POSTS = [
@@ -355,7 +355,7 @@ def build_post(p):
        "headline": html.unescape(p["h1"]),
        "description": html.unescape(p["desc"]),
        "datePublished": p["date"], "dateModified": p["date"],
-       "author": {"@type":"Person","name":AUTHOR},
+       "author": {"@type":"Organization","name":AUTHOR},
        "publisher": org_ref(),
        "mainEntityOfPage": {"@type":"WebPage","@id": SITE+url},
        "image": SITE+"/og-image.png", "inLanguage":"en-IN"},
@@ -413,7 +413,7 @@ def build_index():
        "name":"Animus Tech blog","url":SITE+url,"publisher":org_ref(),"inLanguage":"en-IN",
        "blogPost":[{"@type":"BlogPosting","headline":html.unescape(p["h1"]),
                     "url":f"{SITE}/blog/{p['slug']}/","datePublished":p["date"],
-                    "author":{"@type":"Person","name":AUTHOR}} for p in POSTS]},
+                    "author":{"@type":"Organization","name":AUTHOR}} for p in POSTS]},
       {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":SITE+"/"},
         {"@type":"ListItem","position":2,"name":"Blog"}]},
