@@ -19,7 +19,7 @@ AUTHOR = "Anish Wategaonkar"
 POSTS = [
 {
  "slug": "recruitment-agency-fees-india",
- "date": "2026-08-13",
+ "date": "2026-08-04",
  "tag": "Hiring costs",
  "title": "Recruitment Agency Fees in India | Animus Tech",
  "h1": "What recruitment agencies actually charge in India",
@@ -121,8 +121,8 @@ is a harder conversation early and a much cheaper one.</p>
 
 {
  "slug": "how-to-choose-a-recruitment-agency",
- "date": "2026-08-13",
- "tag": "Choosing a partner",
+ "date": "2026-08-08",
+ "tag": "Why us",
  "title": "How to Choose a Recruitment Agency | Animus Tech",
  "h1": "How to choose a recruitment agency: 9 questions to ask first",
  "desc": "Most agencies sound identical in a pitch. These nine questions separate the ones who will do the work from the ones who will forward CVs.",

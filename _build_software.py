@@ -20,8 +20,8 @@ SITE   = "https://animustech.in"
 ORG_ID = SITE + "/#organization"
 URL    = "/software/"
 
-TITLE = "Software Development for Manufacturing | Animus Tech"
-DESC  = ("Custom software for manufacturing and small enterprises in Pune. "
+TITLE = "Software Development for Manufacturing India | Animus Tech"
+DESC  = ("Custom software for manufacturing and small enterprises across India. "
          "Project tracking, finance and invoicing, lead management and internal tools.")
 
 # ------------------------------------------------------------------ schema ---
@@ -37,8 +37,10 @@ SCHEMAS = [
                   "management and internal operational tools."),
   "provider": {"@id": ORG_ID},
   "areaServed": [
-      {"@type": "City", "name": "Pune"},
       {"@type": "Country", "name": "India"},
+      {"@type": "City", "name": "Pune"},
+      {"@type": "City", "name": "Mumbai"},
+      {"@type": "City", "name": "Bengaluru"},
   ],
   "url": SITE + URL,
   "hasOfferCatalog": {
@@ -74,7 +76,7 @@ SCHEMAS = [
       ("Do you build software for manufacturing companies?",
        "Yes. We build custom software for manufacturing, small enterprises and operations led businesses, "
        "including project and job tracking, finance and invoicing systems, lead management "
-       "and internal operational tools. We work with companies in Pune and across India."),
+       "and internal operational tools. We work with companies across India."),
       ("Can the software handle multiple users with different access levels?",
        "Yes. Most operational tools need this. A supervisor, an accounts person and a plant "
        "head each need a different view of the same data, and we build role based access in "
@@ -125,7 +127,7 @@ BODY = """
       <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Software development</span>
     </nav>
     <p class="arm-note"><a href="/talent-acquisition/">Looking for hiring instead? Go to talent acquisition</a></p>
-    <span class="eyebrow">Software development, Pune</span>
+    <span class="eyebrow">Software development, India</span>
     <h1>Software built around <span class="accent-text">how the work actually happens.</span></h1>
     <h2 class="hero__kicker">Custom software for manufacturing, small enterprises and operations led businesses across India</h2>
     <p class="hero__lead">
@@ -358,7 +360,7 @@ BODY = """
       <div class="benefit reveal">
         <h3>We know operational businesses</h3>
         <p>
-          We recruit for manufacturing companies across the Pune belt, so shift patterns,
+          We recruit for manufacturing companies across India, so shift patterns,
           dispatch pressure and plant floor reality are not new information to us.
         </p>
       </div>

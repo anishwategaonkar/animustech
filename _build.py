@@ -26,10 +26,11 @@ def org_schema():
         "@id": ORG_ID,
         "name": "Animus Tech",
         "alternateName": "Animus Tech Talent Acquisition",
-        "description": ("Pune based firm running two arms. AI enabled recruitment and talent "
-                        "acquisition for software, manufacturing and D2C companies, combining "
-                        "AI powered sourcing and screening with human judgement on culture fit. "
-                        "And custom software development for manufacturing and small enterprises."),
+        "description": ("Firm working across India, running two arms. AI enabled recruitment "
+                        "and talent acquisition for software, manufacturing and D2C companies, "
+                        "combining AI powered sourcing and screening with human judgement on "
+                        "culture fit. And custom software development for manufacturing and "
+                        "small enterprises."),
         "url": SITE + "/",
         "logo": f"{SITE}/logo-dark.svg",
         "image": f"{SITE}/og-image.png",
@@ -43,13 +44,16 @@ def org_schema():
             "addressCountry": "IN",
         },
         "areaServed": [
+            {"@type": "Country", "name": "India"},
             {"@type": "City", "name": "Pune"},
+            {"@type": "City", "name": "Mumbai"},
+            {"@type": "City", "name": "Bengaluru"},
+            {"@type": "City", "name": "New Delhi"},
+            {"@type": "City", "name": "Hyderabad"},
+            {"@type": "City", "name": "Chennai"},
+            {"@type": "City", "name": "Ahmedabad"},
             {"@type": "City", "name": "Pimpri-Chinchwad"},
             {"@type": "Place", "name": "Chakan Industrial Area"},
-            {"@type": "Place", "name": "Hinjewadi"},
-            {"@type": "Place", "name": "Talegaon"},
-            {"@type": "Place", "name": "Ranjangaon"},
-            {"@type": "Country", "name": "India"},
         ],
         "knowsAbout": [
             "Recruitment", "Talent acquisition", "AI resume screening",
