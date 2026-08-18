@@ -519,7 +519,7 @@ BODY = """
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>
-      <p class="linkrow">See also: <a href="/how-we-work/">How we work</a> · <a href="/jobs/">Open roles</a> · <a href="/blog/">Blog</a></p>
+      <p class="linkrow">See also: <a href="/how-we-work/">How we work</a> · <a href="/jobs/">Open roles</a></p>
     </div>
   </div>
 </section>
