@@ -19,7 +19,7 @@ AUTHOR = "Animus Tech"
 POSTS = [
 {
  "slug": "recruitment-agency-fees-india",
- "date": "2026-08-04",
+ "date": "2026-07-28",
  "tag": "Hiring costs",
  "title": "Recruitment Agency Fees in India | Animus Tech",
  "h1": "What recruitment agencies actually charge in India",
@@ -120,81 +120,94 @@ is a harder conversation early and a much cheaper one.</p>
 },
 
 {
- "slug": "how-to-choose-a-recruitment-agency",
- "date": "2026-08-08",
+ "slug": "why-choose-animus-tech",
+ "date": "2026-08-05",
  "tag": "Why us",
- "title": "How to Choose a Recruitment Agency | Animus Tech",
- "h1": "How to choose a recruitment agency: 9 questions to ask first",
- "desc": "Most agencies sound identical in a pitch. These nine questions separate the ones who will do the work from the ones who will forward CVs.",
- "lead": ("Every recruitment agency promises quality and speed. The pitch is not where the "
-          "difference shows. These are the questions that surface it, and what a good answer "
-          "sounds like."),
+ "title": "Why Choose Animus Tech | Recruitment Agency India",
+ "h1": "Why choose us, answered with numbers instead of adjectives",
+ "desc": "Every agency claims quality and speed. Here are our actual submittal ratios, timelines and the searches that ran long, so you can judge for yourself.",
+ "lead": ("Every recruitment agency promises quality and speed. Almost none will show you "
+          "what those words mean in their own numbers. Here are ours, including the search "
+          "that took nearly twice as long as it should have."),
  "body": """
-<p>Recruitment is unusual as a purchase: the thing you are buying is judgement, and judgement is
-invisible until after you have paid for it. Reputation and referrals help, but if you are
-evaluating an agency cold, these nine questions do most of the work.</p>
+<p>Choosing a recruitment partner is an unusual purchase, because the thing you are buying is
+judgement, and judgement is invisible until after you have paid for it. Pitches all sound the
+same for exactly that reason.</p>
+<p>So rather than describe ourselves, here is the evidence.</p>
 
-<h2>1. How many profiles will I see, and how many will you screen to get there?</h2>
-<p>This is the single most revealing question, because it exposes whether the agency does the
-filtering or outsources it to you. Ten to twenty submittals per hire is common in the industry.
-Some send considerably more.</p>
-<p>A good answer is a specific ratio, with the top of the funnel included. "We screened forty
-and sent you eight" describes work. "We'll send you plenty of options" describes forwarding.</p>
+<h2>You see a shortlist, not a stack</h2>
+<p>On a sales role for a manufacturing client we screened more than forty profiles. The client
+saw eight, sent in two deliberate batches of four. They hired from the second batch.</p>
+<p>The number that matters there is not the eight. It is the thirty two you never had to open.
+Screening is the work, and if we pass that work back to you by forwarding everything that
+loosely matches, you are doing our job while paying us to do it.</p>
+<p>On a marketing role for a SaaS startup the shape was the same: twenty to thirty screened,
+six shared after the first batch of four was rejected, one hired. On a D2C brand search,
+thirty plus screened, five shared, one hired.</p>
 
-<h2>2. How many other clients are you running this brief for right now?</h2>
-<p>Under contingency pricing, an agency is paid only on placement, so hedging across many
-clients with similar roles is rational. It is also the reason your search may be receiving a
-fraction of anyone's attention. Ask directly. The answer tells you where you sit in their
-portfolio.</p>
+<h2>Speed, where the role allows it</h2>
+<p>That same sales search closed in ten days across three interview rounds, the last one at
+board level. The candidate joined fifteen days later, which was their notice period. Twenty
+five days from intake to someone sitting at the desk.</p>
+<p>The marketing search ran twelve days to offer, then fifteen days of notice. Roughly
+twenty seven days intake to joining.</p>
+<p>We quote those with the notice period broken out on purpose. An agency that tells you
+twenty five days without saying that fifteen of them were the candidate's notice is
+managing your impression rather than your search.</p>
 
-<h2>3. Who does the screening, and will I speak to them?</h2>
-<p>In many firms the person who sells the engagement is not the person who runs it. That is not
-inherently wrong, but you should know before signing, and you should meet whoever will actually
-read the CVs.</p>
+<h2>The search we did not do well, and why we publish it</h2>
+<p>A factory manager search took over a hundred profiles screened and twenty to twenty five
+shared. Around forty five days to joining. Three times the submittals of the sales role and
+nearly twice the timeline.</p>
+<p>Same recruiter, same method. What changed was that the mandate moved mid search, so every
+profile screened against the original definition stopped counting.</p>
+<p>We publish that one because it is the honest counterweight to the numbers above, and
+because it is the single most useful thing we know about hiring cost. If you want a search to
+be fast and cheap, the highest leverage hour you will spend is the one before sourcing starts,
+getting the brief right. More on that in
+<a href="/blog/why-your-search-went-long/">why your search went long</a>.</p>
 
-<h2>4. What will you tell me if the compensation band will not clear the market?</h2>
-<p>Listen for whether they will tell you at all, and when. An agency that discovers this in
-week six has cost you six weeks. An agency that says it at intake is giving up the easy sale in
-exchange for being useful, which is exactly the behaviour you want.</p>
+<h2>Software narrows. A person decides.</h2>
+<p>Our AI sources, screens and assesses at a scale and speed no manual team matches. On a
+developer search it ran eighty plus profiles down through an AI interview stage to ten
+candidates, one of whom was hired.</p>
+<p>But nobody is rejected by software alone. A recruiter reviews every shortlist before it
+reaches you, because the questions that actually predict success are not keyword questions.
+On that developer search the useful ones were simple: is the project live, did you personally
+own this part, and what problem were you solving. Those separate the people who built
+something from the people who were nearby when it was built.</p>
 
-<h2>5. What happens if you think the role is wrong?</h2>
-<p>Most failed hires trace back to a role that was never properly defined rather than a
-candidate who was badly sourced. An agency that will push back on your job description before
-sourcing is worth more than one that simply executes it. You are paying for judgement, not
-agreement.</p>
+<h2>We tell you the uncomfortable thing early</h2>
+<p>If we think the compensation band will not clear the market, you hear it in week one rather
+than week six. If we think the role as written will not attract the person you actually want,
+we say so before sourcing rather than after four rejected batches.</p>
+<p>That is a harder first conversation and a much cheaper overall one. It is also the main
+reason our submittal counts stay low: we spend the disagreement upfront instead of spreading
+it across weeks of wasted screening.</p>
 
-<h2>6. How will you screen for the things the CV does not show?</h2>
-<p>Ask for the actual method, not the reassurance. For a factory manager role, for instance,
-nearly every applicant is a production manager who describes themselves as having run the
-factory, and both CVs use identical language. The way to tell them apart is to probe the
-interfaces between functions, dispatch scheduling and how they traded off production targets
-against despatch commitments. A production person goes thin there.</p>
-<p>Whatever your role, a credible agency can describe a specific technique. A weak one talks
-about "getting to know candidates".</p>
+<h2>What you can hold us to</h2>
+<ul>
+<li>A shortlist with written reasoning against a scorecard agreed at intake, not a forwarded pile.</li>
+<li>An update every Friday, including the weeks when the update is that nothing moved.</li>
+<li>An honest read on compensation, early, even when it is not what you want to hear.</li>
+<li>Reservations included with candidates we recommend, not just the flattering parts.</li>
+<li>No upfront fees, with terms confirmed in writing before any sourcing begins.</li>
+</ul>
 
-<h2>7. What is your replacement guarantee, and what voids it?</h2>
-<p>Sixty to ninety days is standard. The exclusions matter more than the headline: redundancy,
-role change, and resignation for reasons unrelated to fit are commonly excluded, and reasonably
-so. Read them before you need them.</p>
-
-<h2>8. How will you keep me informed, including when there is nothing to report?</h2>
-<p>Silence in recruitment usually means bad news being postponed. A weekly written update
-regardless of progress is a low bar, and a surprising number of agencies will not commit to
-it.</p>
-
-<h2>9. Tell me about a search that went badly.</h2>
-<p>The best question on the list, and the one most likely to be dodged. Every recruiter has
-searches that went long. Someone who can describe one honestly, name what caused it and say
-what they changed is telling you how they will behave when yours goes sideways. Someone whose
-every search has gone perfectly is either new or not being straight with you.</p>
-
-<h2>What we would answer</h2>
-<p>On a recent sales role: forty-plus profiles screened, eight shared in two batches of four,
-hired from the second batch, twenty-five days from intake to joining. On a factory manager
-search where the brief changed mid-way: a hundred-plus screened, twenty to twenty-five shared,
-about forty-five days. The second number is worse, and the reason is the point.</p>
-<p>Our answers to the rest are on <a href="/how-we-work/">how we work</a>, including what we
-commit to in writing and what we need from you for any of it to hold.</p>
+<h2>Fair questions to ask us, or anyone else</h2>
+<p>If you are comparing agencies, these four surface more than any pitch will:</p>
+<ul>
+<li>How many other clients are you running this same brief for right now?</li>
+<li>How many profiles will I see, and how many will you have screened to get there?</li>
+<li>What is your submittal to hire ratio, and can you show me a search that went badly?</li>
+<li>What happens if you decide the compensation band will not clear the market?</li>
+</ul>
+<p>The last two are the revealing ones. An agency that cannot tell you its ratio has never
+measured it, and an agency with no failed search to describe is either very new or not being
+straight with you.</p>
+<p>Our full answers, including what we need from you for any of this to hold, are on
+<a href="/how-we-work/">how we work</a>. What we charge and why is in
+<a href="/blog/recruitment-agency-fees-india/">what recruitment agencies actually charge in India</a>.</p>
 """,
  "related": [("How we work, and what we commit to", "/how-we-work/"),
              ("What recruitment agencies charge in India", "/blog/recruitment-agency-fees-india/")],
