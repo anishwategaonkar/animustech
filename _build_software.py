@@ -8,7 +8,7 @@ Shares the header, footer, stylesheet and contact mechanism with the talent
 acquisition side, so both arms look and behave like one company.
 
 HONESTY RULE, same as everywhere else on this site: only describe software that
-actually exists and works. The three tools below are real and running. Do not add
+actually exists and works. The two tools below are real and running. Do not add
 a case study for anything that is still a proposal or a pitch.
 """
 import os, json, html
@@ -110,9 +110,8 @@ EXTRA_CSS = """
 .builtbox p{color:var(--text-2);font-size:.97rem;line-height:1.75;margin-bottom:14px}
 .builtbox p:last-child{margin-bottom:0}
 .builtbox .tag{margin-bottom:14px}
-.builtgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
-@media(max-width:1000px){.builtgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.builtgrid{grid-template-columns:1fr}}
+.builtgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+@media(max-width:860px){.builtgrid{grid-template-columns:1fr}}
 </style>
 """
 
@@ -157,7 +156,7 @@ BODY = """
       <span class="eyebrow">Working software</span>
       <h2 class="section-title">What we have built and run</h2>
       <p class="section-lead">
-        Three systems in real use, carrying real data every working day. Not prototypes,
+        Two systems in real use, carrying real data every working day. Not prototypes,
         and not slideware.
       </p>
     </div>
@@ -193,20 +192,6 @@ BODY = """
         </p>
       </div>
 
-      <div class="builtbox reveal">
-        <span class="tag">Project tracking</span>
-        <h3>Project and job tracking</h3>
-        <p>
-          A multi user system where each role sees the view that matches their job. A
-          supervisor tracks progress on the floor, accounts sees what is billable, and the
-          person running the operation sees where things are stuck, all from the same data.
-        </p>
-        <p>
-          Role based access was built in from the start rather than bolted on afterwards,
-          which is the difference between a tool people trust with real numbers and one
-          they keep a private spreadsheet alongside.
-        </p>
-      </div>
     </div>
   </div>
 </section>
@@ -290,7 +275,7 @@ BODY = """
         a system your team quietly works around.
       </p>
       <p>
-        <strong>Which is why this page shows you three working tools rather than a wall of
+        <strong>Which is why this page shows you two working tools rather than a wall of
         logos.</strong> You can judge software by what it does. Adjectives are cheap.
       </p>
     </div>
