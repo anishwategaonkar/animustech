@@ -31,8 +31,9 @@
 .builtbox p{color:var(--text-2);font-size:.97rem;line-height:1.75;margin-bottom:14px}
 .builtbox p:last-child{margin-bottom:0}
 .builtbox .tag{margin-bottom:14px}
-.builtgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
-@media(max-width:860px){.builtgrid{grid-template-columns:1fr}}
+.builtgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+@media(max-width:1000px){.builtgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.builtgrid{grid-template-columns:1fr}}
 </style>
 
 <script type="application/ld+json">
@@ -227,7 +228,6 @@
       <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Software development</span>
     </nav>
     <p class="arm-note"><a href="/talent-acquisition/">Looking for hiring instead? Go to talent acquisition</a></p>
-    <span class="eyebrow">Software development, India</span>
     <h1>Software built around <span class="accent-text">how the work actually happens.</span></h1>
     <h2 class="hero__kicker">Custom software for manufacturing, small enterprises and operations led businesses across India</h2>
     <p class="hero__lead">
@@ -257,19 +257,19 @@
       <span class="eyebrow">Working software</span>
       <h2 class="section-title">What we have built and run</h2>
       <p class="section-lead">
-        Two systems we built for our own operations and use every working day. Not
-        prototypes, and not slideware. Real tools carrying real data.
+        Three systems in real use, carrying real data every working day. Not prototypes,
+        and not slideware.
       </p>
     </div>
 
     <div class="builtgrid">
       <div class="builtbox reveal">
         <span class="tag">Lead management</span>
-        <h3>Lead management system</h3>
+        <h3>Lead generation tracker</h3>
         <p>
-          Built to run marketing and sales pipeline work end to end: capturing leads,
-          tracking every touch against them, and showing what is actually moving rather
-          than what somebody remembered to update.
+          In daily use at a digital marketing agency. It runs their pipeline end to end:
+          capturing leads, tracking every touch against them, and showing what is actually
+          moving rather than what somebody remembered to update.
         </p>
         <p>
           The useful part was never the database. It was deciding what counts as a stage
@@ -280,92 +280,32 @@
 
       <div class="builtbox reveal">
         <span class="tag">Finance and invoicing</span>
-        <h3>Finance tracker for small enterprises</h3>
+        <h3>Finance tracker</h3>
         <p>
-          A finance system built for small enterprises that work job by job. It raises
+          Customised for small and medium enterprises that work job by job. It raises
           invoices and holds the complete financial history against each job, so the money
           side of a job and the job itself stay attached to each other.
         </p>
         <p>
-          Anyone who has run a small operation knows why this matters. The moment invoicing
-          lives in one place and job history lives in another, reconciliation becomes
-          somebody's whole week.
+          Anyone who has run an operation like this knows why it matters. The moment
+          invoicing lives in one place and job history lives in another, reconciliation
+          becomes somebody's whole week.
         </p>
       </div>
-    </div>
 
-    <div class="human-note reveal" style="margin-top:34px">
-      <div class="human-note__ico" aria-hidden="true">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
-      </div>
-      <div>
-        <h3>Why we only show you two</h3>
-        <p>
-          Because these are the two that exist. We would rather show you a short honest
-          list than a long padded one, which is the same standard we hold ourselves to on
-          the hiring side of the business.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHAT WE BUILD ============ -->
-<section class="section section--alt" id="what-we-build">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Services</span>
-      <h2 class="section-title">What we build</h2>
-      <p class="section-lead">
-        Operational software for businesses where the work is physical, scheduled and
-        accountable to somebody.
-      </p>
-    </div>
-
-    <div class="pipeline">
-      <div class="pill reveal">
-        <div class="pill__n">01</div>
+      <div class="builtbox reveal">
+        <span class="tag">Project tracking</span>
         <h3>Project and job tracking</h3>
         <p>
-          Multi user systems where each role sees the view that matches their job. A
-          supervisor tracks progress on the floor, accounts sees what is billable, and
-          the plant head sees where things are stuck, all from the same data.
+          A multi user system where each role sees the view that matches their job. A
+          supervisor tracks progress on the floor, accounts sees what is billable, and the
+          person running the operation sees where things are stuck, all from the same data.
         </p>
-        <ul class="pill__list">
-          <li>Role based access and permissions</li>
-          <li>Stage tracking with clear ownership</li>
-          <li>Status visible without chasing people</li>
-        </ul>
-      </div>
-
-      <div class="pill reveal">
-        <div class="pill__n">02</div>
-        <h3>Finance and invoicing</h3>
         <p>
-          Invoice generation tied to the work that produced it, with the financial
-          history kept against the job, the asset or the customer rather than scattered
-          across spreadsheets and someone's inbox.
+          Role based access was built in from the start rather than bolted on afterwards,
+          which is the difference between a tool people trust with real numbers and one
+          they keep a private spreadsheet alongside.
         </p>
-        <ul class="pill__list">
-          <li>Invoice raising and tracking</li>
-          <li>Financial history per job or asset</li>
-          <li>Reconciliation that does not eat a week</li>
-        </ul>
-      </div>
-
-      <div class="pill reveal">
-        <div class="pill__n">03</div>
-        <h3>Internal operations tools</h3>
-        <p>
-          The systems that usually live in a spreadsheet until the spreadsheet breaks.
-          Inventory movement, maintenance logs, quality records, dispatch tracking, or
-          whatever your particular version of that problem is.
-        </p>
-        <ul class="pill__list">
-          <li>Replaces fragile shared spreadsheets</li>
-          <li>Built to your process, not a template</li>
-          <li>Reporting and dashboards on top</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -436,16 +376,22 @@
   <div class="wrap">
     <div class="reveal about__lead">
       <span class="eyebrow">Why us</span>
-      <h2 class="section-title">One company, two disciplines</h2>
+      <h2 class="section-title">We are the users, not just the builders</h2>
       <p>
-        Animus Tech runs two arms: talent acquisition and software development. They sound
-        unrelated until you notice they fail for the same reason. A bad hire and a bad
-        system both come from committing before anyone understood the job properly.
+        Most software firms hand over a system and move on. We run operational software
+        ourselves, every day, which changes what you build and what you refuse to build.
+        You stop adding features nobody opens and start fixing the three screens people
+        actually live in.
       </p>
       <p>
-        On the hiring side we publish our own search data, including the searches that went
-        long and why. We hold software to the same standard, which is why this page shows
-        you two working tools rather than a wall of logos.
+        The other half of Animus Tech is talent acquisition, and that is not a coincidence.
+        Both jobs come down to the same discipline: understand how the work actually
+        happens before committing to anything. Skip that step and you get a bad hire, or
+        a system your team quietly works around.
+      </p>
+      <p>
+        <strong>Which is why this page shows you three working tools rather than a wall of
+        logos.</strong> You can judge software by what it does. Adjectives are cheap.
       </p>
     </div>
 
@@ -670,7 +616,6 @@
         <ul>
           <li><a href="/software/">Software development</a></li>
           <li><a href="/software/#what-we-built">What we have built</a></li>
-          <li><a href="/software/#what-we-build">What we build</a></li>
           <li><a href="/software/#software-approach">How we work</a></li>
           <li><a href="/software/#software-contact">Software enquiry</a></li>
         </ul>
