@@ -55,6 +55,9 @@ def org_schema():
             "Executive search", "Volume hiring", "Manufacturing recruitment",
             "IT recruitment", "D2C recruitment", "Candidate assessment",
             "Culture fit interviewing",
+            "Custom software development", "Project tracking software",
+            "Invoicing and finance software", "Lead management software",
+            "Internal operations tools",
         ],
         "sameAs": [
             "https://www.linkedin.com/company/animustechnologies",
@@ -72,6 +75,7 @@ def org_schema():
                     ("Volume and project hiring", "/services/bulk-hiring/"),
                     ("AI candidate assessment", "/services/ai-candidate-assessment/"),
                     ("Hiring advisory", "/services/hiring-advisory/"),
+                    ("Custom software development", "/software/"),
                 ]
             ],
         },

@@ -329,6 +329,27 @@
   }
   .about__close p{color:var(--text-2);font-size:1.02rem;max-width:560px;}
 
+  /* ---------- two arms ---------- */
+  .arms{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px;}
+  .arm{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:34px 32px 30px;display:block;text-decoration:none;
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .arm:hover{border-color:var(--border-lit);transform:translateY(-3px);}
+  .arm__ico{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(180deg,rgba(157,148,224,.20),rgba(157,148,224,.07));
+    border:1px solid var(--accent-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.11);
+    color:var(--accent);margin-bottom:20px;
+  }
+  .arm h3{font-size:1.3rem;margin-bottom:12px;color:var(--text);letter-spacing:-.015em;}
+  .arm p{color:var(--text-2);font-size:.97rem;line-height:1.72;margin-bottom:20px;}
+  .arm__cta{
+    display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:600;
+    color:var(--accent);
+  }
+
   /* ---------- process ---------- */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px;counter-reset:s;}
   .step{position:relative;padding-top:28px;border-top:2px solid var(--border);}
@@ -454,6 +475,7 @@
   @media (max-width:980px){
     .contact__grid{grid-template-columns:1fr;gap:40px;}
     .grid-3,.steps,.pipeline,.benefits{grid-template-columns:repeat(2,1fr);}
+    .arms{grid-template-columns:1fr;}
     .grid-cards > *{flex-basis:calc((100% - 22px) / 2);}
     .footer__top{grid-template-columns:1fr 1fr;}
   }
@@ -516,7 +538,8 @@
   letter-spacing:-.005em;line-height:1.45;margin:22px 0 0;max-width:46ch}
 .hero__kicker + .hero__lead{margin-top:20px;padding-top:20px;
   border-top:1px solid var(--border)}
-.footer__top{grid-template-columns:1.5fr 1fr 1fr 1fr}
+.footer__top{grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:34px}
+@media(max-width:1080px){.footer__top{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:900px){.footer__top{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.footer__top{grid-template-columns:1fr}}
 /* subpage: breathing room between the section lead and the body prose */
