@@ -290,6 +290,109 @@ you.</p>
  "related": [("How we work, and what we commit to", "/how-we-work/"),
              ("Manufacturing recruitment in Pune", "/industries/manufacturing-recruitment-pune/")],
 },
+{
+ "slug": "what-drives-the-cost-of-custom-software",
+ "date": "2026-08-21",
+ "tag": "Software costs",
+ "arm": "software",
+ "title": "What Drives the Cost of Custom Software | Animus Tech",
+ "h1": "What actually drives the cost of custom software",
+ "desc": "Nobody quotes a number at the first conversation, and anyone who does is guessing. Here is what genuinely moves the price of a build, and how to keep it down.",
+ "lead": ("The first question every business owner asks is what it will cost. The honest answer "
+          "at that point is a range, because the number is decided by things nobody has "
+          "established yet. This is what those things are, so you can work out roughly where "
+          "your project sits before anyone quotes you."),
+ "body": """
+<p>If a development firm gives you a firm price in the first meeting, they are doing one of two
+things. Either they have a template they intend to bend your business around, or they have
+padded the number enough to survive whatever they discover later. Neither is good for you.</p>
+
+<p>What follows is what actually moves the cost. None of it is mysterious, and you can estimate
+most of it yourself before you speak to anybody.</p>
+
+<h2>1. How many workflows the system has to carry</h2>
+
+<p>This is the single biggest driver, and it is the one most people underestimate. A tool that
+tracks jobs through five stages is a different size of problem to one that tracks jobs, raises
+invoices against them, manages materials, and reports on profitability per job.</p>
+
+<p>Each additional workflow is not just more screens. It is more states things can be in, more
+rules about what is allowed when, and more ways the data can end up inconsistent. Cost tends to
+rise faster than the count of features suggests.</p>
+
+<p>The practical implication: a system covering one process end to end costs considerably less
+than one covering three processes partly, and it is usually more useful on day one.</p>
+
+<h2>2. Whether it has to talk to something you already run</h2>
+
+<p>A standalone tool is straightforward. A tool that has to exchange data with your accounting
+software, or read from a machine on the floor, or push into a portal a customer insists on, is
+a different matter.</p>
+
+<p>Integrations are where estimates go wrong, because the difficulty depends entirely on what
+the other system allows. Some expose clean, documented interfaces. Others expect a human with a
+login and offer nothing else. You cannot tell which you are dealing with until someone checks,
+which is why an honest quote depends on that check happening first.</p>
+
+<p>If cost matters more than convenience, a clean export that your accountant imports is
+usually a fraction of the price of a live two way integration, and for many businesses it is
+genuinely enough.</p>
+
+<h2>3. How many people use it, and how different they are</h2>
+
+<p>Ten people doing the same job need one interface. Ten people across four roles, where the
+supervisor sees things the operator must not, need permissions, and permissions need thinking
+about. Roles multiply the design work more than headcount does.</p>
+
+<p>Where people use it matters too. A tool used at a desk is simpler than one used on a shop
+floor on a shared tablet with wet hands, which has real consequences for how much can be on a
+screen and how much typing you can reasonably ask for.</p>
+
+<h2>4. How clear the process already is</h2>
+
+<p>This is the driver nobody expects, and it is the one you have most control over.</p>
+
+<p>If the way work moves through your business is well understood and consistent, building
+software for it is mostly execution. If different people do the same job differently, or the
+rules live in one person's memory and turn out to have exceptions nobody mentioned, then part
+of the project becomes deciding what the process actually is.</p>
+
+<p>That decision has to be made by somebody. It is cheaper and better when you make it, not when
+a developer guesses. Before you get quotes, it is worth writing down how the work moves,
+including the exceptions. You will find disagreements, and finding them then is much cheaper
+than finding them in testing.</p>
+
+<h2>5. Data you already have</h2>
+
+<p>Years of history in a spreadsheet has to go somewhere. If it is clean and consistent, moving
+it is routine. If the same customer appears four ways, dates are typed in three formats, and
+some rows have notes in the amount column, then cleaning it is a project of its own.</p>
+
+<p>You can reduce this cost yourself, and you are better placed to do it than anyone else,
+because you know which of the four spellings is the real customer.</p>
+
+<h2>What does not drive cost as much as people think</h2>
+
+<p>Visual design, for most operational tools. These are systems people use every day at work,
+where clarity and speed matter far more than distinctiveness. A plain interface that is obvious
+beats a striking one that needs explaining.</p>
+
+<p>The technology choice, within reason. Arguments about frameworks matter much less to your
+outcome than whether the person building it understood your process.</p>
+
+<h2>How to get a realistic number</h2>
+
+<p>Come to the conversation with the process written down, the exceptions listed, a clear view
+of who will use it and where, and honesty about what state your existing data is in. Ask for the
+cost of one workflow built completely rather than everything at once. You will get a tighter
+number, a shorter timeline, and something in real use sooner.</p>
+
+<p>And ask what is deliberately excluded from the quote. That answer tells you more about
+whether a firm has understood your problem than the price does.</p>
+""",
+ "related": [("Custom software development in Pune", "/software/custom-software-development-pune/"),
+             ("Manufacturing software", "/software/manufacturing-software/")],
+},
 ]
 
 # --------------------------------------------------------------- rendering ---
@@ -431,12 +534,30 @@ def build_index():
         {"@type":"ListItem","position":1,"name":"Home","item":SITE+"/"},
         {"@type":"ListItem","position":2,"name":"Blog"}]},
     ]
-    cards = "".join(f"""
+    def cards_for(arm):
+        return "".join(f"""
       <a class="postcard reveal" href="/blog/{p['slug']}/">
         <p class="postmeta"><span class="tagchip">{p['tag']}</span><span>{p['date']}</span></p>
-        <h2>{p['h1']}</h2>
+        <h3>{p['h1']}</h3>
         <p>{p['desc']}</p>
-      </a>""" for p in POSTS)
+      </a>""" for p in POSTS if p.get("arm", "hiring") == arm)
+
+    def group(arm, title, blurb):
+        inner = cards_for(arm)
+        if not inner:
+            return ""
+        return f"""
+    <div class="reveal" style="margin-bottom:22px">
+      <h2 class="section-title" style="font-size:clamp(1.3rem,2.2vw,1.7rem)">{title}</h2>
+      <p class="section-lead">{blurb}</p>
+    </div>
+    <div class="postlist" style="margin-bottom:54px">{inner}</div>"""
+
+    cards = (group("hiring", "On hiring",
+                   "Recruitment, assessment and what searches actually cost in time and money.")
+             + group("software", "On building software",
+                     "Custom systems for operations led businesses, and what makes them "
+                     "succeed or quietly fail."))
     body = f"""
 <section class="hero hero--sub">
   <div class="hero__grid" aria-hidden="true"></div>
@@ -446,26 +567,26 @@ def build_index():
       <a href="/">Home</a><span class="crumbs__sep">/</span><span aria-current="page">Blog</span>
     </nav>
     <span class="eyebrow">Writing</span>
-    <h1>Notes on hiring</h1>
+    <h1>Notes on hiring and building</h1>
     <p class="hero__lead">
-      What we have learned running searches for software, manufacturing and consumer companies.
-      Real numbers from our own work, including the searches that went long. Written for the
-      person doing the hiring, not for other recruiters.
+      What we have learned running searches, and building the systems businesses run on.
+      Real numbers from our own work, including the searches that went long and the builds
+      that taught us something. Written for the person doing the work, not for other agencies.
     </p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="postlist">{cards}</div>
+{cards}
   </div>
 </section>
 """
     out = os.path.join(ROOT, "blog")
     os.makedirs(out, exist_ok=True)
     open(os.path.join(out, "index.html"), "w").write(
-        head("Notes on Hiring | Animus Tech",
-             "Real numbers from our own searches, written for people doing the hiring. Agency fees, choosing a partner, and where recruitment time actually goes.",
+        head("Notes on Hiring and Building Software | Animus Tech",
+             "Real numbers from our own searches and builds. Agency fees, choosing a hiring partner, where recruitment time goes, and what drives the cost of custom software.",
              url, schema) + body + TAIL)
     return url
 

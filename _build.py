@@ -98,6 +98,8 @@ def org_schema():
                          "/software/custom-software-development-pune/"),
                         ("Manufacturing software development",
                          "/software/manufacturing-software/"),
+                        ("Custom AI development", "/software/ai-solutions/"),
+                        ("Internal tools development", "/software/internal-tools/"),
                     ]
                 ],
             },

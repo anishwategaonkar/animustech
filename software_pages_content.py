@@ -278,3 +278,244 @@ PAGES.append({
         ]),
     ),
 })
+
+
+# ================================================================ /software/ai-solutions/
+AI_FAQ = [
+    ("Is this real AI or a wrapper around ChatGPT?",
+     "Both descriptions miss the point. Most useful business AI does involve a language model, "
+     "ours included. What decides whether it works is everything around the model: what you feed "
+     "it, how you constrain it, what happens when it is unsure, and whether a person checks the "
+     "output before it matters. That is the engineering, and it is what we have spent our own "
+     "time on."),
+    ("What if the AI gets something wrong?",
+     "It will, and any firm telling you otherwise has not run one in production. The question is "
+     "what happens next. In our own system nothing is rejected by software alone, every score "
+     "carries written reasoning a person can argue with, and disagreements between the AI and "
+     "the human are surfaced rather than hidden. We build client systems the same way. AI that "
+     "cannot show its working is not usable for decisions that matter."),
+    ("Do we need a lot of data to start?",
+     "Usually less than people assume. Reading documents, extracting fields, classifying and "
+     "routing work do not require you to have a large historical dataset. Where you would need "
+     "real volume is training something bespoke on your own patterns, and for most small and "
+     "mid-size businesses that is not the useful starting point."),
+    ("Where does AI genuinely not help?",
+     "Where the rules are already clear and consistent. If a decision can be written as a rule, "
+     "write it as a rule. It will be cheaper, faster, and it will never surprise you. AI earns "
+     "its place on messy inputs and judgement heavy work, not on arithmetic."),
+    ("Can it run on our own systems?",
+     "Depends what the work is and how sensitive the data is. Some of it can run against your "
+     "own infrastructure, some depends on external model providers. We will tell you plainly "
+     "which parts sit where before you commit, because for some businesses that answer is the "
+     "deciding factor."),
+]
+
+PAGES.append({
+    "url": "/software/ai-solutions/",
+    "title": "Custom AI Development for Business | Animus Tech",
+    "desc": ("Custom AI for document screening, workflow automation and internal assistants. "
+             "Built by a team running its own AI system in production every working day."),
+    "crumbs": [("Home", "/"), ("Software", "/software/"), ("AI solutions", None)],
+    "eyebrow": "Custom AI development",
+    "h1": "Custom AI that does a real job",
+    "lead": ("Most AI pitches are demos. Ours is a system we run our own business on: sourcing, "
+             "screening and assessing candidates every working day, at a volume no manual team "
+             "could match. We build the same kind of thing for other businesses."),
+    "service": "Custom AI development",
+    "cta_title": "Tell us what needs deciding, sorted or read",
+    "cta_lead": ("Describe the work that is eating people's time. We will come back within one "
+                 "working day with an honest view, including whether AI is the right tool for "
+                 "it at all."),
+    "faq": AI_FAQ,
+    "body": (
+        sec("Proof first",
+            "We run AI in production, on our own P&L",
+            "Not a pilot, not a demo built for a pitch.",
+            prose([
+                "Our recruitment arm runs on AI we built. It reads every profile that comes in "
+                "rather than the first fifty, scores each one against the criteria agreed at "
+                "intake, and writes out its reasoning including the gaps worth asking about. It "
+                "searches on meaning rather than keywords, so it surfaces people whose "
+                "experience fits even when their CV never uses the client's terminology.",
+                "Around that sit the smaller pieces that make it usable day to day: job "
+                "descriptions drafted from a scorecard, structured interview support, candidate "
+                "fitment evaluation against how a specific team actually operates, search across "
+                "LinkedIn and Naukri, and a Chrome extension that screens a CV in the browser "
+                "where a recruiter is already working.",
+                "None of that is a case study we commissioned. It is the operational software of "
+                "a business with revenue attached, which means we have had to live with every "
+                "decision in it. That is a materially different experience from shipping an AI "
+                "project and moving on.",
+            ])),
+        sec("What we build",
+            "Four things AI is genuinely good at",
+            "We would rather be specific about where it works than sell you a category.",
+            rolegrid([
+                ("Reading documents",
+                 ["CVs, invoices, forms, reports", "Extracting fields reliably",
+                  "Scoring against your criteria", "Written reasoning, not just a number"]),
+                ("Automating workflow steps",
+                 ["Classifying and routing work", "Drafting from a template and context",
+                  "Flagging exceptions for a human", "Removing the copy and paste"]),
+                ("Internal assistants",
+                 ["Questions answered from your own documents", "Grounded in your data, not the web",
+                  "Access controlled by role", "Answers that cite where they came from"]),
+                ("Browser and workflow extensions",
+                 ["Working where your team already works", "No new system to log into",
+                  "Screening and summarising in place", "Adopted because it saves time"]),
+            ]), alt=True),
+        sec("How we think about it",
+            "The model is the easy part",
+            "",
+            prose([
+                "Getting a language model to produce something plausible takes an afternoon. "
+                "Getting a system you can run a business on takes considerably longer, and almost "
+                "none of the difficulty is in the model itself.",
+                "It is in deciding what the thing is actually allowed to conclude. What happens "
+                "when it is unsure. Whether a person sees the output before it matters, and "
+                "whether that person is given enough reasoning to disagree usefully. Whether the "
+                "output is consistent enough that two similar inputs on different days get "
+                "treated the same way.",
+                "We learned that by running one. Our own system ranks and narrows, a recruiter "
+                "reviews, and nobody is rejected by software alone. Where the AI and the human "
+                "disagree, we surface it, because that disagreement is usually the most "
+                "informative signal in the whole process. We build client systems on the same "
+                "principle.",
+            ])),
+        sec("When to say no",
+            "We will tell you when AI is the wrong answer",
+            "",
+            cards([
+                ("If a rule would do the job",
+                 "Write the rule. It is cheaper, faster, and it will never surprise you at the "
+                 "worst possible moment."),
+                ("If the process is not agreed",
+                 "AI applied to a process nobody has settled just automates the disagreement. "
+                 "Fix the process first."),
+                ("If nobody will check the output",
+                 "Automation nobody reviews is a risk with a schedule attached. If there is no "
+                 "capacity to check it, we would rather not build it."),
+            ]), alt=True),
+        links("See also:", [
+            ("Custom software development in Pune", "/software/custom-software-development-pune/"),
+            ("Internal tools", "/software/internal-tools/"),
+            ("What we have built", "/software/#what-we-built"),
+        ]),
+    ),
+})
+
+
+# ============================================================== /software/internal-tools/
+TOOLS_FAQ = [
+    ("How is this different from Zoho, HubSpot or a template CRM?",
+     "Those are excellent when your process matches what they assume. The trouble starts when it "
+     "does not, and you end up using a field called something else to mean the thing you "
+     "actually track, with a note in the description explaining the workaround. If you recognise "
+     "that, a tool built around your process is worth pricing. If you do not, keep the template. "
+     "We will say so."),
+    ("Can it replace our spreadsheets entirely?",
+     "For the process we build, yes, and that is the point. What we would not do is try to "
+     "replace every spreadsheet in the business at once. Some of them are genuinely fine, and a "
+     "spreadsheet used by one person for analysis is not the problem. The ones worth replacing "
+     "are the ones several people depend on and nobody fully trusts."),
+    ("What happens when we need a change later?",
+     "You ask, and we build it, or you take the code to someone else and they do. You own it "
+     "either way. Most changes after launch are small and come from real use rather than from "
+     "anyone's original plan, which is why we do not try to specify everything upfront."),
+    ("Who hosts it and what does that cost?",
+     "Usually a small monthly hosting cost, which for a tool used by a handful of people is "
+     "modest. We will set out exactly what it will be before you commit, and it is yours to "
+     "move elsewhere whenever you like."),
+    ("Will our team actually use it?",
+     "Only if it saves them time on day one. Tools fail when they add data entry and give "
+     "nothing back, so we build for the two or three screens people genuinely live in and "
+     "resist adding the rest. If a screen does not earn its place, it should not exist."),
+]
+
+PAGES.append({
+    "url": "/software/internal-tools/",
+    "title": "Internal Tools & Custom CRM Development | Animus Tech",
+    "desc": ("Custom internal tools for operations led businesses in India. Lead management, "
+             "invoicing, job tracking and reporting, built around how your team already works."),
+    "crumbs": [("Home", "/"), ("Software", "/software/"), ("Internal tools", None)],
+    "eyebrow": "Internal operations tools",
+    "h1": "Internal tools built around your process",
+    "lead": ("Lead management, invoicing, job tracking and the reporting that sits on top. The "
+             "unglamorous software a business actually runs on, built to fit how your team "
+             "already works rather than a template they have to bend around."),
+    "service": "Internal tools development",
+    "cta_title": "Tell us what needs building",
+    "cta_lead": ("Describe the sheet or the process that is causing trouble. We will come back "
+                 "within one working day with an honest view."),
+    "faq": TOOLS_FAQ,
+    "body": (
+        sec("What these are",
+            "The software nobody demos, and everybody depends on",
+            "Internal tools are not the interesting part of a business. They are the part that "
+            "quietly decides how much time it takes to run.",
+            prose([
+                "Nobody buys a company because its lead tracker is good. But an operations team "
+                "that cannot see which jobs are stuck, or a finance function reconciling "
+                "invoices against job history by hand every month, is losing hours that never "
+                "appear on any report. It just feels like being busy.",
+                "The tools we build are deliberately narrow. A lead system that will not let a "
+                "record sit without a next action. An invoicing tool that keeps the money "
+                "attached to the work it came from. A job tracker that shows what is stuck and "
+                "for how long without anyone having to ask. Reporting that is a handful of "
+                "numbers people actually open, rather than a dashboard built to look thorough.",
+            ])),
+        sec("Proof",
+            "Two systems, in daily use, carrying real data",
+            "These are ours and our clients', running now.",
+            cards([
+                ("Lead generation tracker",
+                 "In daily use at a digital marketing agency, running their pipeline end to end. "
+                 "The useful part was never the database. It was deciding what counts as a stage "
+                 "change, and making the tool refuse to let a record sit in limbo without a next "
+                 "action against it."),
+                ("Finance tracker",
+                 "Built for a small enterprise that works job by job. It raises invoices and "
+                 "holds the complete financial history against each job, so the money side and "
+                 "the work side stay attached to each other."),
+                ("Our own operations",
+                 "We run our recruitment business on tools we built. That is a different "
+                 "discipline from handing something over and moving on. You find out fast which "
+                 "screens people live in and which ones were built to look complete."),
+            ]), alt=True),
+        sec("What we build",
+            "Where internal tools usually earn their cost",
+            "",
+            rolegrid([
+                ("Lead and enquiry management",
+                 ["Capture from every channel", "Every touch recorded against a record",
+                  "Stage changes that mean something", "Nothing sitting without a next action"]),
+                ("Invoicing and finance",
+                 ["Invoices raised from the work", "Financial history attached to each job",
+                  "Payment status visible", "Clean export to your accountant"]),
+                ("Job and project tracking",
+                 ["Stage and owner on every job", "What is stuck, and for how long",
+                  "Full history, not just current state", "Visible without asking anyone"]),
+                ("Reporting and dashboards",
+                 ["A few numbers that matter", "Job or client level profitability",
+                  "Where time is actually going", "No report nobody opens"]),
+            ])),
+        sec("The honest version",
+            "Sometimes you should buy, not build",
+            "",
+            prose([
+                "If your process is standard, a template product is cheaper, better supported "
+                "and available today. We will tell you that rather than quote you for a build "
+                "you did not need.",
+                "Custom earns its cost when the way you work is genuinely specific, when the "
+                "workarounds required to fit a template are themselves becoming the problem, or "
+                "when the thing you need to track simply does not exist as a field in anything "
+                "off the shelf. That is a real situation for a lot of operations led businesses, "
+                "and it is the one we build for.",
+            ]), alt=True),
+        links("See also:", [
+            ("Manufacturing software", "/software/manufacturing-software/"),
+            ("Custom AI development", "/software/ai-solutions/"),
+            ("Custom software development in Pune", "/software/custom-software-development-pune/"),
+        ]),
+    ),
+})
