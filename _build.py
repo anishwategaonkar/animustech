@@ -65,7 +65,7 @@ def org_schema():
             "Internal operations tools",
         ],
         "sameAs": [
-            "https://www.linkedin.com/company/animustechnologies",
+            "https://www.linkedin.com/company/animus-technologies",
             "https://share.google/h2bshwzL9WrRjm7Wh",
         ],
         "hasOfferCatalog": {

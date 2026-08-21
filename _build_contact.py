@@ -139,7 +139,7 @@ BODY = """
             </div>
             <div>
               <div class="contact-item__label">LinkedIn</div>
-              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animustechnologies" target="_blank" rel="noopener">linkedin.com/company/animustechnologies</a></div>
+              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animus-technologies" target="_blank" rel="noopener">linkedin.com/company/animus-technologies</a></div>
             </div>
           </div>
         </div>
