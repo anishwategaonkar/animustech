@@ -22,7 +22,9 @@ ORG_ID = f"{SITE}/#organization"
 def org_schema():
     return {
         "@context": "https://schema.org",
-        "@type": "EmploymentAgency",
+        # Two arms, so two types. Both are LocalBusiness subtypes, which keeps
+        # the local signals that a plain Organization would lose.
+        "@type": ["EmploymentAgency", "ProfessionalService"],
         "@id": ORG_ID,
         "name": "Animus Tech",
         "alternateName": "Animus Tech Talent Acquisition",
@@ -68,22 +70,38 @@ def org_schema():
             "https://www.linkedin.com/company/animus_tech",
             "https://share.google/h2bshwzL9WrRjm7Wh",
         ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Recruitment services",
-            "itemListElement": [
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
-                 "url": f"{SITE}{u}"}}
-                for n, u in [
-                    ("Permanent recruitment", "/services/permanent-recruitment/"),
-                    ("Leadership and executive search", "/services/executive-search/"),
-                    ("Volume and project hiring", "/services/bulk-hiring/"),
-                    ("AI candidate assessment", "/services/ai-candidate-assessment/"),
-                    ("Hiring advisory", "/services/hiring-advisory/"),
-                    ("Custom software development", "/software/"),
-                ]
-            ],
-        },
+        "hasOfferCatalog": [
+            {
+                "@type": "OfferCatalog",
+                "name": "Recruitment and talent acquisition",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
+                     "url": f"{SITE}{u}"}}
+                    for n, u in [
+                        ("Permanent recruitment", "/services/permanent-recruitment/"),
+                        ("Leadership and executive search", "/services/executive-search/"),
+                        ("Volume and project hiring", "/services/bulk-hiring/"),
+                        ("AI candidate assessment", "/services/ai-candidate-assessment/"),
+                        ("Hiring advisory", "/services/hiring-advisory/"),
+                    ]
+                ],
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Custom software development",
+                "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
+                     "url": f"{SITE}{u}"}}
+                    for n, u in [
+                        ("Custom software development", "/software/"),
+                        ("Custom software development in Pune",
+                         "/software/custom-software-development-pune/"),
+                        ("Manufacturing software development",
+                         "/software/manufacturing-software/"),
+                    ]
+                ],
+            },
+        ],
     }
 
 def breadcrumbs(crumbs):

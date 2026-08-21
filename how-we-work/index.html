@@ -23,7 +23,10 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EmploymentAgency",
+  "@type": [
+    "EmploymentAgency",
+    "ProfessionalService"
+  ],
   "@id": "https://animustech.in/#organization",
   "name": "Animus Tech",
   "alternateName": "Animus Tech Talent Acquisition",
@@ -103,60 +106,84 @@
     "https://www.linkedin.com/company/animus_tech",
     "https://share.google/h2bshwzL9WrRjm7Wh"
   ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Recruitment services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Permanent recruitment",
-          "url": "https://animustech.in/services/permanent-recruitment/"
+  "hasOfferCatalog": [
+    {
+      "@type": "OfferCatalog",
+      "name": "Recruitment and talent acquisition",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Permanent recruitment",
+            "url": "https://animustech.in/services/permanent-recruitment/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Leadership and executive search",
+            "url": "https://animustech.in/services/executive-search/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Volume and project hiring",
+            "url": "https://animustech.in/services/bulk-hiring/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI candidate assessment",
+            "url": "https://animustech.in/services/ai-candidate-assessment/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hiring advisory",
+            "url": "https://animustech.in/services/hiring-advisory/"
+          }
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Leadership and executive search",
-          "url": "https://animustech.in/services/executive-search/"
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Custom software development",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom software development",
+            "url": "https://animustech.in/software/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom software development in Pune",
+            "url": "https://animustech.in/software/custom-software-development-pune/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Manufacturing software development",
+            "url": "https://animustech.in/software/manufacturing-software/"
+          }
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Volume and project hiring",
-          "url": "https://animustech.in/services/bulk-hiring/"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI candidate assessment",
-          "url": "https://animustech.in/services/ai-candidate-assessment/"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Hiring advisory",
-          "url": "https://animustech.in/services/hiring-advisory/"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Custom software development",
-          "url": "https://animustech.in/software/"
-        }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
