@@ -143,7 +143,7 @@ BODY = """
     </div>
     <ul class="hero__meta">
       <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> You own the code and the data</li>
-      <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Small first version, in real use fast</li>
+      <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> A complete working system, in real use fast</li>
       <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Built by the people who run it</li>
     </ul>
   </div>
@@ -201,10 +201,10 @@ BODY = """
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">How we work</span>
-      <h2 class="section-title">Small first, then real</h2>
+      <h2 class="section-title">One workflow, complete, then the next</h2>
       <p class="section-lead">
-        The most expensive software mistake is building the whole thing before anyone has
-        used any of it.
+        The most expensive software mistake is building everything at once, before anyone
+        has used any of it. We build one process properly, start to end, and put it to work.
       </p>
     </div>
 
@@ -218,10 +218,11 @@ BODY = """
         </p>
       </div>
       <div class="step reveal">
-        <h3>Scope the first version small</h3>
+        <h3>Take one process, whole</h3>
         <p>
-          We agree the smallest thing that would genuinely be useful, and we write down what
-          is deliberately not in it. Both halves of that matter.
+          We agree the workflow that is costing you most and build the whole of it, start to
+          end, rather than a piece of several. We also write down what is deliberately not in
+          scope yet. Both halves of that matter.
         </p>
       </div>
       <div class="step reveal">

@@ -26,7 +26,8 @@ PAGES.append({
     "h1": "Custom software development company in Pune",
     "lead": ("We build the operational software small businesses actually run on. Job tracking, "
              "invoicing, lead management and internal tools, fitted to the process you already "
-             "have. Small first version, in real use fast, and you own the code and the data."),
+             "have. A complete working system, in real use fast, and you own the code and "
+             "the data."),
     "service": "Custom software development",
     "cta_title": "Tell us what needs building",
     "cta_lead": ("Describe the problem rather than the solution. We will come back within one "
@@ -37,13 +38,14 @@ PAGES.append({
          "It depends almost entirely on scope, and the honest answer at first contact is a range "
          "rather than a number. What moves the figure is how many distinct workflows the tool has "
          "to carry, whether it needs to talk to systems you already run, and how many people use "
-         "it. We scope a small first version deliberately, so the first cost is a fraction of a "
-         "full build and you find out whether the thing works before committing further."),
-        ("How long does a first version take?",
-         "Weeks, not quarters. We agree the smallest version that is genuinely useful, put it in "
-         "front of real users on real data, and extend from there. A build that runs six months "
-         "before anyone touches it is the most expensive mistake in this category, and it is the "
-         "one we design against."),
+         "it. We start with one workflow built completely rather than several built partly, so "
+         "the first cost is a fraction of an everything-at-once build and you have a working "
+         "system before you commit to the next piece."),
+        ("How long does the first system take?",
+         "Weeks, not quarters. We take the process that is costing you most, build the whole of "
+         "it start to end, and put it in front of real users on real data. A build that runs six "
+         "months before anyone touches it is the most expensive mistake in this category, and it "
+         "is the one we design against."),
         ("Do we own the software you build?",
          "Yes. You own the code and the data, and we commit to that in writing before any work "
          "starts. There is no lock-in and no dependency on us to keep it running. If you later "
@@ -71,6 +73,14 @@ PAGES.append({
                 "None of that is really a spreadsheet problem. It is a problem of nobody having "
                 "written down how the work actually happens. It stays invisible until it costs "
                 "you a client, or a week of reconciliation.",
+                "Usually the process itself is sound. What is holding it together is a workaround: "
+                "a sheet only one person truly understands, tabs that have to be updated in a "
+                "particular order, a colour code that means something to whoever invented it. It "
+                "works, in the sense that the business runs. But it is slow, it is hard to hand "
+                "over, there is no history worth the name, and nobody can see the real position "
+                "without asking someone. That is the point at which a proper system pays for "
+                "itself, and it is exactly what we build: the whole process, start to end, "
+                "not another patch on top of the last one.",
                 "Pune has a very large number of businesses in exactly that position. Engineering "
                 "firms, job shops, service and maintenance operations, agencies, distributors. "
                 "Big enough that the informal system is straining, not big enough to want an "
@@ -113,16 +123,17 @@ PAGES.append({
                  "actually live in."),
             ])),
         sec("How we work",
-            "Small first, then real",
-            "The most expensive software mistake is building the whole thing before anyone has "
-            "used any of it.",
+            "One workflow, complete, then the next",
+            "The most expensive software mistake is building everything at once, before anyone "
+            "has used any of it.",
             prose([
                 "<strong>Understand the process.</strong> We sit with the people who do the work "
                 "and map how it actually happens, including the workarounds nobody documented. "
                 "That is usually where the real requirement is hiding.",
-                "<strong>Scope the first version small.</strong> We agree the smallest thing that "
-                "would genuinely be useful, and write down what is deliberately left out, so "
-                "nobody discovers the gap in month three.",
+                "<strong>Take one process, whole.</strong> We agree the workflow costing you most "
+                "and build the whole of it, start to end, rather than a piece of several. We also "
+                "write down what is deliberately not in scope yet, so nobody discovers the gap in "
+                "month three.",
                 "<strong>Put it in real use.</strong> On real data, with the people who will live "
                 "in it. Real use surfaces problems no amount of specification review will.",
                 "<strong>Extend from evidence.</strong> We add what people actually reach for and "
@@ -249,9 +260,10 @@ PAGES.append({
                  "Production, quality, maintenance, supply chain. We have spent a lot of time "
                  "inside manufacturing operations understanding how they actually run, which is "
                  "the same understanding a useful tool depends on."),
-                ("Small first, then real",
-                 "A working first version in weeks, extended from what people reach for. Not a "
-                 "six month build that ships the wrong thing."),
+                ("One workflow, complete",
+                 "The whole of one process, working start to end, in weeks. Then extended from "
+                 "what people actually reach for. Not a six month build that ships the wrong "
+                 "thing."),
                 ("You own the code and the data",
                  "Committed in writing before anything is built. No lock-in."),
             ]), alt=True),
