@@ -25,6 +25,30 @@ DESC  = ("Custom software for manufacturing and small enterprises across India. 
          "Project tracking, finance and invoicing, lead management and internal tools.")
 
 # ------------------------------------------------------------------ schema ---
+SW_FAQ = [
+    ("Do you build software for manufacturing companies?",
+     "Yes. We build custom software for manufacturing, small enterprises and operations led "
+     "businesses, including project and job tracking, finance and invoicing systems, lead "
+     "management and internal operational tools. We work with companies across India."),
+    ("Can the software handle multiple users with different access levels?",
+     "Yes. Most operational tools need this. A supervisor, an accounts person and a plant head "
+     "each need a different view of the same data, and we build role based access in from the "
+     "start rather than adding it later."),
+    ("Do we own the software you build for us?",
+     "Yes. You own the code and the data. We agree this in writing before any work starts, so "
+     "there is no ambiguity about it later."),
+    ("Why does a recruitment firm build software?",
+     "Because we built ours first. We needed tools to run our own operations, built them, and "
+     "found the same gaps sitting unaddressed in the businesses we hire for. The two arms share "
+     "one thing: we spend the time to understand how the work actually happens before we build "
+     "or hire for it."),
+    ("How long does a project take?",
+     "It depends entirely on scope, and we will not quote a timeline before we understand yours. "
+     "What we will do is take one workflow and build the whole of it, start to end, so you have "
+     "a complete working system in real use in weeks rather than waiting months to see "
+     "anything."),
+]
+
 SCHEMAS = [
 {
   "@context": "https://schema.org",
@@ -72,28 +96,7 @@ SCHEMAS = [
   "mainEntity": [
     {"@type": "Question", "name": q,
      "acceptedAnswer": {"@type": "Answer", "text": a}}
-    for q, a in [
-      ("Do you build software for manufacturing companies?",
-       "Yes. We build custom software for manufacturing, small enterprises and operations led businesses, "
-       "including project and job tracking, finance and invoicing systems, lead management "
-       "and internal operational tools. We work with companies across India."),
-      ("Can the software handle multiple users with different access levels?",
-       "Yes. Most operational tools need this. A supervisor, an accounts person and a plant "
-       "head each need a different view of the same data, and we build role based access in "
-       "from the start rather than adding it later."),
-      ("Do we own the software you build for us?",
-       "Yes. You own the code and the data. We agree this in writing before any work starts, "
-       "so there is no ambiguity about it later."),
-      ("Why does a recruitment firm build software?",
-       "Because we built ours first. We needed tools to run our own operations, built them, "
-       "and found the same gaps sitting unaddressed in the businesses we hire for. The two "
-       "arms share one thing: we spend the time to understand how the work actually happens "
-       "before we build or hire for it."),
-      ("How long does a project take?",
-       "It depends entirely on scope, and we will not quote a timeline before we understand "
-       "yours. What we will do is scope the first working version deliberately small, so you "
-       "have something in real use in weeks rather than waiting months to see anything."),
-    ]
+    for q, a in SW_FAQ
   ],
 },
 ]
@@ -436,6 +439,17 @@ BODY = """
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Common questions</span>
+      <h2 class="section-title">Questions we get asked</h2>
+      <div class="faq" style="margin-top:24px">FAQ_ITEMS</div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CROSS LINK ============ -->
 <section class="section section--alt">
   <div class="wrap">
@@ -511,5 +525,8 @@ if __name__ == "__main__":
             title=html.escape(html.unescape(TITLE), quote=True),
             desc=html.escape(html.unescape(DESC), quote=True),
             site=SITE, url=URL, extra_css=EXTRA_CSS, schema=schema_html,
-            header=HEADER, footer=FOOTER, body=BODY))
+            header=HEADER, footer=FOOTER,
+            body=BODY.replace("FAQ_ITEMS", "".join(
+                f"<details><summary>{q}</summary><p>{a}</p></details>"
+                for q, a in SW_FAQ))))
     print("wrote", URL + "index.html")

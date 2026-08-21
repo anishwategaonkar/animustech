@@ -606,19 +606,37 @@ PAGES = [
 
 
 # ================================================== SERVICE PAGES (compact) ==
-def service_page(url, title, desc, h1, eyebrow, lead, what, when, get, service_name):
-    return {
+def service_page(url, title, desc, h1, eyebrow, lead, what, when, get, service_name,
+                 how=None, how_title="How we actually run it", faq=None, also=None):
+    """Build a service page.
+
+    `how` and `faq` are optional and were added later. Without them these pages
+    sat around 470 words against 1,000+ on the industry pages, competing for
+    commercial terms on a third of the depth. `faq` also produces FAQPage
+    markup via _build.py, which most of the site was missing.
+    """
+    extra = ""
+    if how:
+        extra += sec("Method", how_title, "", prose(how))
+    if faq:
+        extra += sec("Common questions", "Questions we get asked", "", faq_html(faq), alt=True)
+
+    page = {
         "url": url, "title": title, "desc": desc, "h1": h1, "eyebrow": eyebrow, "lead": lead,
         "service": service_name,
         "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), (h1, None)],
         "body":
             sec("What it is", "What this covers", "", prose(what), alt=True) +
             sec("When you need it", "When companies come to us for this", "", cards(when)) +
-            sec("What you get", "What you get", "", rolegrid(get) +
-                links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
-                                    ("Talent acquisition firm in Pune", "/talent-acquisition-firm-pune/")]),
-                alt=True),
+            sec("What you get", "What you get", "", rolegrid(get), alt=True) +
+            extra +
+            sec("", "", "", links("See also:", also or [
+                ("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+                ("Talent acquisition firm in Pune", "/talent-acquisition-firm-pune/")])),
     }
+    if faq:
+        page["faq"] = faq
+    return page
 
 
 PAGES += [
@@ -642,7 +660,40 @@ service_page(
   ("During search", ["Semantic AI sourcing", "Every profile screened", "Skill assessment", "Culture fit interview"]),
   ("On shortlist", ["Ranked candidates", "Written rationale for each", "Flagged gaps and questions", "Assessment scores"]),
   ("Through close", ["Scheduling and feedback", "Offer negotiation", "Notice period engagement", "Onboarding contact"])],
- "Permanent recruitment"),
+ "Permanent recruitment",
+ how=["The intake conversation is the part that decides everything else, and it is the part most "
+      "agencies skip. We want the hiring manager, not only HR, because the person who will live "
+      "with this hire knows things that never make it into a job description: what the last "
+      "person in the seat got right, what the team will not tolerate, which of the listed "
+      "requirements is real and which was added by somebody defending a preference.",
+      "That conversation becomes a written scorecard. It is the document our AI screens against, "
+      "the thing interviewers score, and the reference point when someone asks in week six why a "
+      "candidate ranked where they did. Without it, screening is just someone's taste applied "
+      "inconsistently.",
+      "If we think the role is not fillable as written, we say so at intake rather than six weeks "
+      "in. Usually that means the compensation is below market for the experience being asked "
+      "for, the location rules out most of the pool, or the combination of skills exists in "
+      "perhaps a dozen people nationally. Being told that in week one is worth more than a "
+      "pipeline of near misses.",
+      "Then we stay involved through notice. In India a signed offer is not a hire, and the gap "
+      "between the two is where searches quietly fail. We keep contact through the notice period "
+      "and into the first weeks, because a counter-offer accepted in week eight costs you the "
+      "entire search."],
+ faq=[("How many candidates will we see?",
+       "Usually four to eight for a standard role. The point of screening every profile rather "
+       "than the first fifty is that a large pool gets read properly and a short list reaches "
+       "you, instead of the sorting being passed to your team."),
+      ("How quickly does the first shortlist arrive?",
+       "Typically five to seven working days from intake for most roles. Senior and niche "
+       "searches take longer because the pool is smaller and the approach is slower. We give a "
+       "realistic estimate at intake rather than a standard promise."),
+      ("Is there a replacement guarantee?",
+       "Yes, agreed up front and set out in writing before any work begins. The period varies "
+       "with the seniority of the role."),
+      ("What do you need from us?",
+       "An hour with the hiring manager at the start, feedback on candidates within a couple of "
+       "days, and interview slots that do not sit two weeks out. Searches lose good candidates "
+       "to slow processes more often than to better offers.")]),
 
 service_page(
  "/services/executive-search/",
@@ -662,7 +713,43 @@ service_page(
   ("Approach", ["Discreet, human led outreach", "Confidential positioning", "Candidate motivation assessment", "No mass mailing"]),
   ("Assessment", ["Structured leadership interview", "Culture fit against your actual norms", "Deep reference checks", "Written view with reservations"]),
   ("Close", ["Offer structuring support", "Counter-offer management", "Notice period engagement", "Onboarding through month three"])],
- "Executive search"),
+ "Executive search",
+ how=["For a leadership role the applications are not the pool. The thirty or forty people who "
+      "could genuinely do the job are employed, being looked after, and will not respond to a "
+      "posting. So the work is not filtering. It is knowing who those people are, forming a view "
+      "on which are approachable and worth approaching, and having a conversation good enough "
+      "that they engage.",
+      "Mapping used to take a researcher weeks and was always partial. Our AI builds the "
+      "landscape systematically: who holds equivalent scope, at what size of business, with what "
+      "trajectory, including the people two organisations away who are the obvious next step and "
+      "would never surface in a keyword search. The approach itself stays entirely human, "
+      "because at this level it has to be.",
+      "A meaningful share of senior searches are confidential in both directions. You may be "
+      "replacing someone who does not yet know. The candidate may be a sitting leader whose "
+      "board would react badly to hearing they took a call. We run these without naming you "
+      "until someone is genuinely engaged and you have agreed, and we do not circulate profiles "
+      "beyond the people you specify.",
+      "Assessment at this level is about scope and judgement rather than skills tests. The size "
+      "of team or P&amp;L actually owned rather than nominally reported into, decisions made under "
+      "real constraint, and what happened afterwards. We ask about what went wrong, because the "
+      "answer to that is far more diagnostic than any success story."],
+ faq=[("Is executive search retained?",
+       "Yes. The work is mapping a market and running a discreet approach, which happens whether "
+       "or not a hire results, so it is not contingency work. Fees are staged against milestones "
+       "and agreed in writing before we start."),
+      ("Can you run a search without naming our company?",
+       "Yes. We approach candidates on an unnamed basis and disclose you only once someone is "
+       "genuinely engaged and you have agreed to it. If the search is confidential because of a "
+       "sensitive exit, tell us at intake, because it changes the sequencing of everything "
+       "including references."),
+      ("How long does a senior search take?",
+       "Longer than a standard role, typically six to ten weeks to offer, because both the "
+       "approach and the decision cycle are slower at this level. Notice periods then add "
+       "further time. We estimate at intake based on how large the credible pool actually is."),
+      ("How deep do references go?",
+       "Beyond the two names offered, with the candidate's knowledge and consent, and sequenced "
+       "so nobody's current position is put at risk. At this level the difference between a good "
+       "hire and an expensive one is rarely visible in interview.")]),
 
 service_page(
  "/services/bulk-hiring/",
@@ -683,7 +770,40 @@ service_page(
   ("At scale", ["AI screening on consistent criteria", "Campus and walk-in drives", "Assessment batteries", "High volume scheduling"]),
   ("Reporting", ["Weekly pipeline numbers", "Funnel conversion at each stage", "Offer and acceptance tracking", "Early warning on shortfalls"]),
   ("Joining", ["Offer to joining engagement", "Drop-off risk flagging", "Backup pipeline maintained", "Joining day support"])],
- "Volume hiring"),
+ "Volume hiring",
+ how=["A drive that needs thirty joiners does not need thirty offers. Working backwards through "
+      "realistic acceptance and joining ratios, it usually needs closer to forty-five offers, "
+      "well over a hundred final interviews, and several hundred screened candidates, inside a "
+      "window fixed by a production date somebody else set.",
+      "Most drives miss because that arithmetic was never done at the start. The shortfall only "
+      "becomes visible in the last fortnight, when there is no time left to correct it. So we do "
+      "it first: agree the target, work back through the funnel using ratios realistic for the "
+      "role and location, and set weekly numbers for every stage.",
+      "You then get one report a week against those numbers. Candidates screened, interviews "
+      "completed, offers released, acceptances, confirmed joiners, and drop-offs with reasons. "
+      "The reasons matter more than the headline. If six people declined over shift timing, that "
+      "is fixable, and it is fixable in week three but not in week nine.",
+      "Screening is the bottleneck in every volume drive. A human team reading eight hundred "
+      "applications properly is a fortnight of work you do not have, so in practice the pool "
+      "gets skimmed and quality drops exactly when you can least afford it. A bad volume hire is "
+      "not one bad hire, it is a pattern repeated thirty times. AI reads the whole pool against "
+      "the same criteria, which is what makes the funnel arithmetic work at all."],
+ faq=[("What is the minimum size for a volume engagement?",
+       "There is no hard floor, but the structure starts paying for itself somewhere around ten "
+       "to fifteen hires in a defined window. Below that, standard permanent recruitment is "
+       "usually the better fit and we will say so."),
+      ("Do you run campus drives?",
+       "Yes, where the roles suit fresher intake. Every attendee goes through the same scored "
+       "assessment, which makes the intake genuinely comparable rather than dependent on which "
+       "panel someone happened to sit in front of."),
+      ("Can you guarantee the headcount lands on time?",
+       "No one honestly can, and anyone who does is managing your expectations rather than your "
+       "pipeline. What we do is make the arithmetic visible from week one and report against it "
+       "weekly, so a shortfall surfaces while there is still time to act."),
+      ("How do you keep joining ratios up?",
+       "By screening for the things that actually cause drop-off before offer rather than after: "
+       "commute and shift workability, counter-offer exposure, family and relocation "
+       "constraints. Then by staying in contact through the notice period.")]),
 
 service_page(
  "/services/ai-candidate-assessment/",
@@ -704,7 +824,39 @@ service_page(
   ("Culture fit", ["Structured interview", "Interviewed against your actual norms", "Behavioural history, not hypotheticals", "Reservations documented"]),
   ("Report", ["Written report per candidate", "Score with reasoning", "Flagged gaps and risks", "Recommended interview questions"]),
   ("Turnaround", ["Typically 3 to 5 working days", "Scales to large pipelines", "No sourcing engagement required", "Priced per candidate"])],
- "AI candidate assessment"),
+ "AI candidate assessment",
+ how=["The problem this solves is rarely a shortage of candidates. It is twelve plausible people, "
+      "four interviewers with different opinions, no consistent basis for comparison, and a "
+      "decision that ends up going to whoever interviewed most confidently on the day.",
+      "So we apply the same evaluation to all of them. Every profile is parsed against criteria "
+      "we agree with you at the start rather than a generic template, scored, ranked, with the "
+      "reasoning written out and the gaps and inconsistencies flagged explicitly. Then a role "
+      "specific assessment, scored on an identical rubric for every candidate. That consistency "
+      "is the entire point: no panel fatigue, and no difference between the person assessed on "
+      "Monday and the one assessed on Friday.",
+      "Then a recruiter runs a structured culture fit interview against how your team actually "
+      "operates, not the values on the wall. How someone handles disagreement, how much "
+      "structure they need, what is genuinely motivating the move. That part is not automated "
+      "and will not be.",
+      "Where our AI and our recruiter disagree about someone, we say so and explain both "
+      "positions. In our experience that disagreement is the most useful signal in the whole "
+      "process, and burying it to look decisive helps nobody. Reports are written to survive a "
+      "hiring meeting: if someone asks why candidate three ranked above candidate five, the "
+      "answer is in the document rather than in somebody's memory of an interview three weeks "
+      "ago."],
+ faq=[("Do you need to take over our hiring process?",
+       "No. This runs standalone. You keep your pipeline, your interviewers and your decision. "
+       "We supply the assessment layer."),
+      ("How quickly do reports come back?",
+       "The screening layer is fast because it is not gated on human reading time. The interview "
+       "and assessment depend on candidate availability. We agree a turnaround at the start."),
+      ("Can you assess candidates we are about to reject?",
+       "Yes, and it is often worth doing. A consistent rubric applied to the whole pool "
+       "regularly surfaces someone a keyword based first pass had already screened out."),
+      ("What is actually in the report?",
+       "A score on each agreed criterion with the reasoning behind it, the skills assessment "
+       "result, a view on culture fit with reservations stated plainly, and a recommendation. "
+       "Including, where relevant, that we are not confident.")]),
 
 service_page(
  "/services/hiring-advisory/",
@@ -725,6 +877,36 @@ service_page(
   ("Interview design", ["Loop that discriminates", "Structured questions per competency", "Interviewer briefing", "Decision framework"]),
   ("Compensation", ["Pune market benchmarks", "Band recommendation by level", "Honest read on whether it will clear", "Equity and variable structuring"]),
   ("Process", ["Funnel diagnosis", "Drop-off analysis", "Candidate experience review", "Offer to joining protection"])],
- "Hiring advisory"),
+ "Hiring advisory",
+ how=["When a role has been open four months the instinct is to add another agency. Usually that "
+      "is not the constraint. In our experience it is stuck for one of three reasons, and none "
+      "of them is solved by more CVs.",
+      "<strong>The job description describes someone who does not exist.</strong> Requirements "
+      "accumulate. Every stakeholder adds one and nothing is ever removed, until the brief asks "
+      "for a combination of depth and breadth that perhaps four people in the country have, none "
+      "of whom will move for what is on offer.",
+      "<strong>The compensation is off the market.</strong> Often by less than people assume, but "
+      "consistently enough that every good candidate is lost at the same stage. That pattern is "
+      "visible in the data if anyone looks.",
+      "<strong>The interview loop is not discriminating.</strong> Five rounds that assess roughly "
+      "the same thing, plus one that assesses nothing, and a decision that comes down to whoever "
+      "interviewed most confidently. Slow, exhausting for candidates, and it loses the good ones "
+      "to faster processes. In competitive markets, process speed regularly beats a better offer.",
+      "So we start by working out which of the three it is, because the fix is different in each "
+      "case and doing all three at once is usually unnecessary."],
+ faq=[("Do we have to use you for the search afterwards?",
+       "No. Advisory is a standalone engagement and the scorecard and job description are yours "
+       "to use with any agency or your own internal team."),
+      ("How current are your salary benchmarks?",
+       "They are drawn from live search activity, meaning what candidates in that role, level "
+       "and location are actually accepting, rather than annual survey data which tends to lag "
+       "the market it describes."),
+      ("Can you audit our whole hiring process rather than one role?",
+       "Yes. That is a larger engagement covering the roles in your hiring plan, loop design "
+       "across them, and where your funnel is losing people."),
+      ("What if the answer is that we should not hire?",
+       "We will say so. Sometimes the honest conclusion is that the role should be split, that "
+       "you should hire a level down and develop, or that the work belongs to someone you "
+       "already employ. That is a better outcome than a search that was never going to work.")]),
 
 ]
