@@ -358,7 +358,7 @@ BODY = """
             </div>
             <div>
               <div class="contact-item__label">LinkedIn</div>
-              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animus-technologies" target="_blank" rel="noopener">linkedin.com/company/animus-technologies</a></div>
+              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animus_tech" target="_blank" rel="noopener">linkedin.com/company/animus_tech</a></div>
             </div>
           </div>
         </div>
@@ -368,7 +368,7 @@ BODY = """
         <input type="hidden" name="_subject" value="New software enquiry from animustech.in">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://animustech.in/software/#software-contact">
+        <input type="hidden" name="_next" value="https://animustech.in/contact/thank-you/?src=software">
         <input type="hidden" name="Enquiry type" value="Software development">
         <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
 

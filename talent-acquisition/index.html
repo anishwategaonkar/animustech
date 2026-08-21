@@ -49,6 +49,25 @@
   ]
 }
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDB1N7YPE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JDB1N7YPE9');
+
+  // Enquiry conversions. Every form redirects to a thank-you page, so the
+  // arrival on that page is the conversion. ?src= tells us which form it was.
+  (function () {
+    if (location.pathname.indexOf('thank-you') === -1) return;
+    var src = new URLSearchParams(location.search).get('src') || 'contact';
+    gtag('event', 'generate_lead', {
+      form_source: src,
+      page_path: location.pathname
+    });
+  })();
+</script>
 </head>
 <body>
 
@@ -524,7 +543,7 @@
             </div>
             <div>
               <div class="contact-item__label">LinkedIn</div>
-              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animus-technologies" target="_blank" rel="noopener">linkedin.com/company/animus-technologies</a></div>
+              <div class="contact-item__val"><a href="https://www.linkedin.com/company/animus_tech" target="_blank" rel="noopener">linkedin.com/company/animus_tech</a></div>
             </div>
           </div>
 
@@ -548,7 +567,7 @@
         <input type="hidden" name="_subject" value="New enquiry from animustech.in">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://animustech.in/#contact">
+        <input type="hidden" name="_next" value="https://animustech.in/contact/thank-you/?src=hiring">
         <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
 
         <div class="field-row">

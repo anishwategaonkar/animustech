@@ -100,7 +100,7 @@
     "Internal operations tools"
   ],
   "sameAs": [
-    "https://www.linkedin.com/company/animus-technologies",
+    "https://www.linkedin.com/company/animus_tech",
     "https://share.google/h2bshwzL9WrRjm7Wh"
   ],
   "hasOfferCatalog": {
@@ -200,6 +200,25 @@
   },
   "url": "https://animustech.in/services/hiring-advisory/"
 }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDB1N7YPE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JDB1N7YPE9');
+
+  // Enquiry conversions. Every form redirects to a thank-you page, so the
+  // arrival on that page is the conversion. ?src= tells us which form it was.
+  (function () {
+    if (location.pathname.indexOf('thank-you') === -1) return;
+    var src = new URLSearchParams(location.search).get('src') || 'contact';
+    gtag('event', 'generate_lead', {
+      form_source: src,
+      page_path: location.pathname
+    });
+  })();
 </script>
 </head>
 <body>

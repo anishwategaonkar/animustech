@@ -298,7 +298,7 @@ def build_apply(j, loc):
       <input type="hidden" name="_subject" value="{subject}">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="{thanks_url}">
+      <input type="hidden" name="_next" value="{thanks_url}?src=job-application">
       <input type="hidden" name="Role applied for" value="{j['title']} ({j['slug']})">
       <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
 
