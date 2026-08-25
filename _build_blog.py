@@ -393,6 +393,91 @@ whether a firm has understood your problem than the price does.</p>
  "related": [("Custom software development in Pune", "/software/custom-software-development-pune/"),
              ("Manufacturing software", "/software/manufacturing-software/")],
 },
+
+{
+ "slug": "how-ai-screening-actually-works",
+ "date": "2026-08-25",
+ "tag": "AI & screening",
+ "title": "How AI Screening Actually Works | Animus Tech",
+ "h1": "How AI screening actually works, and what it still can't judge",
+ "desc": "What our AI interview stage actually filters, with real funnel numbers, and the three questions no algorithm can ask instead of a person.",
+ "lead": ("Every agency now says AI-powered somewhere on its homepage. Almost none say what the "
+          "AI actually does, where it stops, or what still needs a person. Here is ours, with "
+          "the real numbers from one search."),
+ "body": """
+<h2>Where AI actually sits in the process</h2>
+<p>On a backend developer search this year, the funnel ran like this: 80 plus resumes screened,
+20 taken through an AI interview stage, 10 shared with the client, 1 hired. Ten submittals for
+one hire, and a stage in the middle that most agencies do not have at all.</p>
+<p>Most recruitment still runs CV screen straight to submittal. That is exactly why clients end
+up with candidates who read well on paper and interview badly. Adding a stage in between, an AI
+interview before a human ever reviews the shortlist, is what let half of the 20 who cleared the
+resume screen get filtered out before anyone's time was spent on them.</p>
+
+<h2>The developer search: what the AI interview stage filtered</h2>
+<p>That halving is the actual story. The AI interview did not replace judgement. It asked every
+one of those 20 people the same questions, in the same order, scored against the same rubric,
+with no fatigue and no drift over a long day of screening. What survived went to a recruiter,
+not straight to the client.</p>
+<p>Ten of the twenty did not clear that stage. The point of publishing that number is not to
+show the AI being clever. It is to show that the filtering happened before a human's time got
+spent on it, and that a person still reviewed everyone who came through the other side.</p>
+
+<h2>What AI can judge, and what it cannot</h2>
+<p>An AI interview is good at consistency. Every candidate gets the same questions in the same
+order, scored against the same rubric, with no favouritism toward whoever interviewed last and
+no drop in attention on the fifteenth call of the day. That is a genuine advantage over a human
+doing back to back screens.</p>
+<p>What it cannot do reliably is tell a fluent talker from someone who actually did the work.
+That distinction matters most in technical hiring, where the vocabulary sounds identical whether
+or not the person shipped anything.</p>
+
+<h2>The three-question method for the part AI cannot reach</h2>
+<p>Lokesh, who runs the search side of Animus Tech, is not from an engineering background and
+closes backend and frontend roles anyway. He took recruitment-tech courses to learn which
+skills actually matter per role, then built a verification method that does not require writing
+code himself. It checks three things, in order.</p>
+<ul>
+<li><strong>Live project, or not.</strong> Was this shipped and used, or a college assignment, or
+a team product where this candidate's own piece is unclear? Someone who cannot draw that
+distinction himself is a flag on its own.</li>
+<li><strong>What was actually owned.</strong> Not what the team delivered around them. What this
+person was personally accountable for.</li>
+<li><strong>The problem statement.</strong> What problem was the project solving? Someone who
+owned the work states it in a sentence. Someone who was adjacent to it describes the technology
+instead.</li>
+</ul>
+<p>That last question is the cheapest, highest-signal filter available, and it is very hard to
+fake convincingly across a real conversation. It is also something any hiring manager can ask
+themselves in thirty seconds, AI tooling or not.</p>
+
+<h2>The keyword problem AI alone does not solve</h2>
+<p>On an unrelated search, a candidate surfaced whose CV was, in Lokesh's words, not a resume
+but a page consisting of education, company name and internship name. No responsibilities
+listed, no achievements, nothing for a keyword match to grab onto. A pure keyword system, human
+or automated, would have skipped that CV entirely, regardless of who the person actually was.</p>
+<p>An AI interview stage does not fix this by itself. It only gets a chance to evaluate someone
+once that person has already been pulled into the funnel. Sourcing that goes wider than keyword
+matching, and a recruiter willing to look past a thin CV, still has to happen upstream of any AI
+stage. Tooling narrows a pool that already exists. It does not go looking for the pool.</p>
+
+<h2>What we actually commit to</h2>
+<p>Our AI sources, screens and interviews at a scale no manual team matches. But nobody is
+rejected by software alone. A recruiter reviews every shortlist before it reaches you, because
+the questions that predict success on the job, like the problem-statement question above, are
+not the kind an algorithm asks well on its own.</p>
+<p>That is the honest version of AI-powered: tooling narrows the field fast and consistently,
+and a person makes the calls that require judgement. If an agency tells you AI does the whole
+job, ask to see the funnel. If they cannot show you one, they probably do not have a real stage,
+just a label.</p>
+<p>More on how we structure a search end to end is on <a href="/how-we-work/">how we work</a>,
+and what we look for role by role is on our
+<a href="/talent-acquisition/">talent acquisition</a> page. For software roles specifically, see
+<a href="/industries/it-software-recruitment-pune/">IT and software recruitment in Pune</a>.</p>
+""",
+ "related": [("How we work, and what we commit to", "/how-we-work/"),
+             ("IT and software recruitment in Pune", "/industries/it-software-recruitment-pune/")],
+},
 ]
 
 # --------------------------------------------------------------- rendering ---

@@ -149,7 +149,7 @@
 
   <url>
     <loc>https://animustech.in/blog/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -176,8 +176,15 @@
   </url>
 
   <url>
+    <loc>https://animustech.in/blog/how-ai-screening-actually-works/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://animustech.in/jobs/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
