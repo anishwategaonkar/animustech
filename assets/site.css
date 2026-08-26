@@ -546,3 +546,12 @@
 .section-lead + .prose,.reveal + .prose{margin-top:26px}
 .prose + .benefits,.prose + .rolegrid{margin-top:38px}
 .section-lead{max-width:66ch}
+
+  /* ---------- candidate band on the homepage ---------- */
+  .candidateband{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:38px 36px;display:flex;align-items:center;justify-content:space-between;
+    gap:32px;flex-wrap:wrap;
+  }
+  .candidateband .section-title{margin-bottom:12px;}
+  @media(max-width:760px){.candidateband{flex-direction:column;align-items:flex-start;}}
