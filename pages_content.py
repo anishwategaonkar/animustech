@@ -317,7 +317,6 @@ PAGES = [
          "is better off knowing that at intake than at week eight.",
        ]) +
        links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
-                           ("Cost of a bad hire calculator", "/tools/cost-of-a-bad-hire-calculator/"),
                            ("Hiring advisory", "/services/hiring-advisory/")])),
  "cta_title": "Want this run on your role?",
  "cta_lead": ("Tell us what you are hiring for. You will get an honest read on the market, a "

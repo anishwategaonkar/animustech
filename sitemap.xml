@@ -139,14 +139,6 @@
   </url>
 
   <!-- ===== Company ===== -->
-
-  <url>
-    <loc>https://animustech.in/tools/cost-of-a-bad-hire-calculator/</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://animustech.in/blog/</loc>
     <lastmod>2026-08-25</lastmod>
@@ -184,7 +176,7 @@
 
   <url>
     <loc>https://animustech.in/jobs/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
