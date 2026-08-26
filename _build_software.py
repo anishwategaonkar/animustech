@@ -115,6 +115,33 @@ EXTRA_CSS = """
 .builtbox .tag{margin-bottom:14px}
 .builtgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
 @media(max-width:860px){.builtgrid{grid-template-columns:1fr}}
+.builtbox--open{cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit;
+  transition:border-color .2s ease,transform .2s ease}
+.builtbox--open:hover{border-color:var(--border-lit);transform:translateY(-2px)}
+.builtbox__more{display:inline-flex;align-items:center;gap:7px;margin-top:16px;
+  color:var(--accent);font-size:.9rem;font-weight:600}
+
+/* case study overlay */
+.cs{position:fixed;inset:0;z-index:200;display:none;padding:28px 20px;overflow-y:auto;
+  background:rgba(10,12,20,.82);backdrop-filter:blur(6px)}
+.cs.is-open{display:block}
+.cs__panel{max-width:940px;margin:0 auto;background:var(--bg-2);border:1px solid var(--border);
+  border-radius:18px;padding:38px 38px 34px;position:relative}
+@media(max-width:640px){.cs__panel{padding:28px 22px}}
+.cs__close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:10px;
+  background:var(--surface);border:1px solid var(--border);color:var(--text-2);cursor:pointer;
+  font-size:1.2rem;line-height:1;display:grid;place-items:center}
+.cs__close:hover{color:var(--text);border-color:var(--border-lit)}
+.cs h2{font-size:1.6rem;margin:10px 0 8px}
+.cs__sub{color:var(--text-3);font-size:.92rem;margin-bottom:22px}
+.cs p{color:var(--text-2);line-height:1.78;margin:0 0 16px}
+.cs h3{font-size:1.05rem;margin:28px 0 12px;color:var(--text)}
+.cs ul{color:var(--text-2);line-height:1.8;padding-left:20px;margin:0 0 16px;list-style:disc}
+.cs li{margin-bottom:8px}
+.cs__shots{display:grid;gap:18px;margin:26px 0 8px}
+.cs__shot{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
+.cs__shot img{width:100%;height:auto;display:block}
+.cs__cap{font-size:.85rem;color:var(--text-3);padding:10px 14px;border-top:1px solid var(--border)}
 </style>
 """
 
@@ -165,20 +192,23 @@ BODY = """
     </div>
 
     <div class="builtgrid">
-      <div class="builtbox reveal">
+      <button type="button" class="builtbox builtbox--open reveal" data-cs="leadflow">
         <span class="tag">Lead management</span>
         <h3>Lead generation tracker</h3>
         <p>
-          In daily use at a digital marketing agency. It runs their pipeline end to end:
-          capturing leads, tracking every touch against them, and showing what is actually
-          moving rather than what somebody remembered to update.
+          One system, deployed across several industries. It runs a sales pipeline end to
+          end: capturing leads, tracking every touch against them, drafting the next message,
+          and showing what is actually moving rather than what somebody remembered to update.
         </p>
         <p>
           The useful part was never the database. It was deciding what counts as a stage
           change, and making the tool refuse to let a record sit in limbo without a next
           action against it.
         </p>
-      </div>
+        <span class="builtbox__more">See it working
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </button>
 
       <div class="builtbox reveal">
         <span class="tag">Finance and invoicing</span>
@@ -469,6 +499,89 @@ BODY = """
     </div>
   </div>
 </section>
+
+<!-- ============ CASE STUDY: LEAD TRACKER ============ -->
+<div class="cs" id="cs-leadflow" role="dialog" aria-modal="true" aria-labelledby="cs-leadflow-t">
+  <div class="cs__panel">
+    <button type="button" class="cs__close" aria-label="Close">&times;</button>
+    <span class="tag">Lead management</span>
+    <h2 id="cs-leadflow-t">Lead generation tracker</h2>
+    <p class="cs__sub">One codebase, deployed across several industries. Screenshots are from our own instance.</p>
+
+    <p>
+      Most teams run their pipeline in a spreadsheet until it quietly stops telling the
+      truth. Rows go stale, nobody remembers who was chased and when, and the follow up that
+      actually mattered gets missed while three easy ones get done twice.
+    </p>
+    <p>
+      This tool exists to stop that. Every prospect sits in a named stage with a next action
+      and a clock against it, so the list you open in the morning is ordered by what is
+      genuinely overdue rather than by what you added last.
+    </p>
+
+    <h3>What it does</h3>
+    <ul>
+      <li><strong>Writes the next message for you.</strong> Copy message produces a message
+      for that specific prospect, based on the stage they are at and the conversation so far.
+      Not a template with a name swapped in.</li>
+      <li><strong>Keeps the person one click away.</strong> Copy LinkedIn and Open both go
+      straight to that prospect's profile, so nobody is hunting for the right tab.</li>
+      <li><strong>Tracks the stage itself.</strong> The system follows where each conversation
+      has reached and updates the status on request, rather than relying on someone
+      remembering to change a dropdown.</li>
+      <li><strong>Shows the clock, not just the record.</strong> Every row carries how long it
+      has been waiting, and anything overdue is surfaced instead of buried.</li>
+      <li><strong>Takes data in bulk.</strong> Add a lead by hand or import a CSV, with column
+      names matched automatically.</li>
+    </ul>
+
+    <div class="cs__shots">
+      <figure class="cs__shot">
+        <img src="/assets/img/leadflow-dashboard.jpg" alt="Pipeline dashboard showing total leads, untouched leads, leads in outreach, and a sortable table of companies with stage and urgency score" loading="lazy" width="1400" height="713">
+        <figcaption class="cs__cap">The morning view: what is live, what is untouched, and what is urgent.</figcaption>
+      </figure>
+      <figure class="cs__shot">
+        <img src="/assets/img/leadflow-pipeline.jpg" alt="Lead pipeline table with a stage dropdown per prospect, next action, working notes and copy message controls" loading="lazy" width="1400" height="713">
+        <figcaption class="cs__cap">Each prospect with its stage, next action, notes and a one click message.</figcaption>
+      </figure>
+      <figure class="cs__shot">
+        <img src="/assets/img/leadflow-addlead.jpg" alt="Add lead form with fields for name, title, company, industry, location, contact details and stage" loading="lazy" width="1400" height="713">
+        <figcaption class="cs__cap">Adding a lead by hand. CSV import handles the bulk case.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Why it is built this way</h3>
+    <p>
+      The hard part of a pipeline tool is not storing records, it is refusing to let one sit
+      without a next action. Everything here is arranged around that single rule, which is why
+      the same system works whether the pipeline is recruitment mandates, agency clients or
+      anything else sold one relationship at a time.
+    </p>
+    <p style="margin-top:26px">
+      <a href="#software-contact" class="btn btn--primary cs__cta">Talk to us about something similar</a>
+    </p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var open = null;
+  function show(el){ open = el; el.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+  function hide(){ if (!open) return; open.classList.remove('is-open'); document.body.style.overflow = ''; open = null; }
+  document.querySelectorAll('[data-cs]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var t = document.getElementById('cs-' + btn.getAttribute('data-cs'));
+      if (t) show(t);
+    });
+  });
+  document.querySelectorAll('.cs').forEach(function (m) {
+    m.addEventListener('click', function (e) {
+      if (e.target === m || e.target.closest('.cs__close') || e.target.closest('.cs__cta')) hide();
+    });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+})();
+</script>
 """
 
 # ------------------------------------------------------------------- build ---
