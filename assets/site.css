@@ -570,15 +570,28 @@
   main,.header,.footer{position:relative;z-index:2}
   @media (max-width:760px){ body::after{display:none} }
 
-  /* ---------- decision rows, no boxes ---------- */
-  .decisions{margin:26px 0 6px;border-top:1px solid var(--border)}
-  .dec{display:grid;grid-template-columns:200px 1fr;gap:28px;
-    padding:26px 0;border-bottom:1px solid var(--border);align-items:start}
-  @media(max-width:720px){.dec{grid-template-columns:1fr;gap:14px}}
-  .dec__label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--text-3);padding-top:3px}
-  .dec__shot{border:1px solid var(--border);border-radius:8px;overflow:hidden;
-    background:#0d1018;margin-bottom:14px}
-  .dec__shot img{width:100%;height:auto;max-height:210px;object-fit:cover;object-position:top left;display:block}
-  .dec b{display:block;color:var(--text);font-size:1.02rem;font-weight:600;margin-bottom:6px}
-  .dec span{display:block;color:var(--text-2);font-size:.93rem;line-height:1.7}
+  /* ---------- one slide at a time, driven by scroll ---------- */
+  .slides{margin:30px 0 10px;position:relative}
+  .slide{
+    min-height:62vh;display:flex;flex-direction:column;justify-content:center;
+    opacity:.12;transform:translateY(18px);
+    transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1);
+  }
+  .slide.is-on{opacity:1;transform:none}
+  .slide__head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+  .slide__n{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--accent)}
+  .slide__label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--text-3)}
+  .slide__shot{border:1px solid var(--border);border-radius:10px;overflow:hidden;
+    background:#0d1018;margin-bottom:20px}
+  .slide__shot img{width:100%;height:auto;max-height:280px;object-fit:cover;
+    object-position:top left;display:block}
+  .slide b{display:block;color:var(--text);font-size:1.2rem;font-weight:600;margin-bottom:8px;
+    letter-spacing:-.01em}
+  .slide span{display:block;color:var(--text-2);font-size:1rem;line-height:1.75;max-width:60ch}
+  .slidebar{position:sticky;bottom:14px;display:flex;gap:7px;justify-content:center;
+    padding:10px 0 2px;pointer-events:none}
+  .slidebar i{width:26px;height:3px;border-radius:2px;background:var(--border-lit);
+    transition:background .35s ease}
+  .slidebar i.is-on{background:var(--accent)}
+  @media(max-width:640px){ .slide{min-height:auto;padding:34px 0} }

@@ -138,20 +138,6 @@ EXTRA_CSS = """
 .cs h3{font-size:1.05rem;margin:28px 0 12px;color:var(--text)}
 .cs ul{color:var(--text-2);line-height:1.8;padding-left:20px;margin:0 0 16px;list-style:disc}
 .cs li{margin-bottom:8px}
-/* illustrated feature grid */
-.featgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:22px 0 10px}
-@media(max-width:720px){.featgrid{grid-template-columns:1fr}}
-.feat{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;
-  padding:16px 16px 18px;transition:border-color .2s ease,transform .2s ease}
-.feat:hover{border-color:var(--accent-line);transform:translateY(-2px)}
-.feat__shot{border:1px solid var(--border);border-radius:10px;overflow:hidden;
-  background:#0d1018;display:grid;place-items:center;height:132px}
-.feat__shot img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:8px}
-.feat__shot--tall img{object-fit:cover;object-position:top center;padding:0}
-.feat figcaption{position:relative;padding:16px 4px 0 46px}
-.feat__arrow{position:absolute;left:2px;top:12px;width:34px;height:24px;color:var(--accent-2);opacity:.85}
-.feat b{display:block;color:var(--text);font-size:1rem;margin-bottom:6px}
-.feat span{display:block;color:var(--text-2);font-size:.9rem;line-height:1.65}
 .cs__shots{display:grid;gap:18px;margin:26px 0 8px}
 .cs__shot{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
 .cs__shot img{width:100%;height:auto;display:block}
@@ -534,39 +520,51 @@ BODY = """
     </p>
 
     <h3>What it does</h3>
-    <div class="decisions">
-      <div class="dec">
-        <div class="dec__label">Messaging</div>
-        <div>
-          <div class="dec__shot"><img src="/assets/img/feat-message.jpg" alt="Copy message, Copy LinkedIn and Open buttons on a prospect row" loading="lazy" width="1580" height="148"></div>
-          <b>The message is already written</b>
-          <span>Built for that prospect, at that stage, from the conversation so far. Their profile is the click next to it.</span>
+    <div class="slides" id="cs-slides">
+      <div class="slide is-on" data-slide="1">
+        <div class="slide__head">
+          <span class="slide__n">01 / 04</span>
+          <span class="slide__label">Messaging</span>
         </div>
+        <div class="slide__shot"><img src="/assets/img/feat-message.jpg" alt="Copy message, Copy LinkedIn and Open buttons on a prospect row" loading="lazy" width="1580" height="148"></div>
+        <b>The message is already written</b>
+        <span>Built for that prospect, at that stage, from the conversation so far. Their profile is the click next to it.</span>
       </div>
-      <div class="dec">
-        <div class="dec__label">Stage tracking</div>
-        <div>
-          <div class="dec__shot"><img src="/assets/img/feat-stage.jpg" alt="Stage dropdown reading Loop Completed" loading="lazy" width="860" height="240"></div>
-          <b>The stage moves itself</b>
-          <span>It follows where the conversation actually reached. Nobody has to remember to change a dropdown.</span>
+      <div class="slide" data-slide="2">
+        <div class="slide__head">
+          <span class="slide__n">02 / 04</span>
+          <span class="slide__label">Stage tracking</span>
         </div>
+        <div class="slide__shot"><img src="/assets/img/feat-stage.jpg" alt="Stage dropdown reading Loop Completed" loading="lazy" width="860" height="240"></div>
+        <b>The stage moves itself</b>
+        <span>It follows where the conversation actually reached. Nobody has to remember to change a dropdown.</span>
       </div>
-      <div class="dec">
-        <div class="dec__label">Timing</div>
-        <div>
-          <div class="dec__shot"><img src="/assets/img/feat-clock.jpg" alt="Red warning text reading no answer in 34 days 10 hours" loading="lazy" width="680" height="76"></div>
-          <b>Nothing goes quiet unnoticed</b>
-          <span>Every row carries its own clock. Overdue is surfaced, not buried under whatever you added last.</span>
+      <div class="slide" data-slide="3">
+        <div class="slide__head">
+          <span class="slide__n">03 / 04</span>
+          <span class="slide__label">Timing</span>
         </div>
+        <div class="slide__shot"><img src="/assets/img/feat-clock.jpg" alt="Red warning text reading no answer in 34 days 10 hours" loading="lazy" width="680" height="76"></div>
+        <b>Nothing goes quiet unnoticed</b>
+        <span>Every row carries its own clock. Overdue is surfaced, not buried under whatever you added last.</span>
       </div>
-      <div class="dec">
-        <div class="dec__label">Signals</div>
-        <div>
-          <div class="dec__shot"><img src="/assets/img/feat-notes.jpg" alt="Notes cell listing hiring signals found for a prospect" loading="lazy" width="680" height="560"></div>
-          <b>It brings you the reason</b>
-          <span>The signals it found, in plain words, so you open the row already knowing why this one is worth a call.</span>
+      <div class="slide" data-slide="4">
+        <div class="slide__head">
+          <span class="slide__n">04 / 04</span>
+          <span class="slide__label">Signals</span>
         </div>
+        <div class="slide__shot"><img src="/assets/img/feat-notes.jpg" alt="Notes cell listing hiring signals found for a prospect" loading="lazy" width="680" height="560"></div>
+        <b>It brings you the reason</b>
+        <span>The signals it found, in plain words, so you open the row already knowing why this one is worth a call.</span>
       </div>
+      <div class="slidebar" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="cs__shots">
+      <figure class="cs__shot">
+        <img src="/assets/img/leadflow-dashboard.jpg" alt="Pipeline dashboard showing total leads, untouched leads, leads in outreach, and a sortable table of companies with stage and urgency score" loading="lazy" width="1400" height="713">
+        <figcaption class="cs__cap">The whole thing, in one screen.</figcaption>
+      </figure>
     </div>
 
     <h3>Why it is built this way</h3>
@@ -599,6 +597,26 @@ BODY = """
     });
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+
+  var wrapEl = document.getElementById('cs-slides');
+  if (wrapEl && 'IntersectionObserver' in window) {
+    var slides = [].slice.call(wrapEl.querySelectorAll('.slide'));
+    var dots   = [].slice.call(wrapEl.querySelectorAll('.slidebar i'));
+    var root   = document.getElementById('cs-leadflow');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var i = slides.indexOf(en.target);
+        if (i < 0) return;
+        if (en.isIntersecting) {
+          en.target.classList.add('is-on');
+          dots.forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
+        } else {
+          en.target.classList.remove('is-on');
+        }
+      });
+    }, { root: root, rootMargin: '-38% 0px -38% 0px', threshold: 0 });
+    slides.forEach(function (sl) { io.observe(sl); });
+  }
 })();
 </script>
 """
