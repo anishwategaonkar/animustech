@@ -477,6 +477,113 @@ and what we look for role by role is on our
  "related": [("How we work, and what we commit to", "/how-we-work/"),
              ("IT and software recruitment in Pune", "/industries/it-software-recruitment-pune/")],
 },
+
+{
+ "slug": "contingency-vs-retained-search",
+ "date": "2026-09-01",
+ "tag": "Hiring model",
+ "title": "Contingency vs Retained Recruiting | Animus Tech",
+ "h1": "Contingency vs retained search: which one fits your role",
+ "desc": "Contingency spreads a search across agencies. Retained buys one agency, undivided. How to tell which your role needs, with real search data.",
+ "lead": ("Most buyers choose between contingency and retained on price, which is the wrong "
+          "axis. The real question is whether the market actually has the person you are "
+          "describing, and two of our own searches show what happens when it does not."),
+ "body": """
+<h2>The two models, briefly</h2>
+<p>Contingency means an agency runs your brief alongside several other clients at the same time,
+and is only committed to your search for as long as it looks winnable relative to everything
+else on their desk. Retained means one agency works your brief and nobody else's, for as long as
+it takes. Full detail on how each is structured is in
+<a href="/blog/recruitment-agency-fees-india/">what recruitment agencies actually charge in
+India</a>. Here we are asking a narrower question: which one should you actually pick for the
+role in front of you.</p>
+<p>Most people answer that question by comparing structures on paper. The better question is
+whether the market actually has the person you are describing, and whether you will find that
+out before or after you have burned three weeks discovering it the hard way.</p>
+
+<h2>What genuine scarcity looks like from the inside</h2>
+<p>A factory manager brief we ran asked for someone who owned production, operations and
+dispatch, the whole plant end to end. What the market kept sending back were production people
+who had learned to describe themselves as though they ran the factory. In Anish's own words,
+candidates were inflating their numbers, their scale, their scope.</p>
+<p>The only way to tell the two apart was to interview past the fluent part of the CV. A
+production person talks confidently about the line. Ask about dispatch scheduling, or the
+trade-off between hitting a production target and honouring a dispatch commitment, and the
+answer thins out fast. That distinction is not visible on paper, and no keyword search finds it,
+because both kinds of candidate use the same vocabulary.</p>
+<p>The numbers on that search: <strong>100+ profiles screened, 20 to 25 shared, one hired, about
+45 days intake to joining</strong>, against a mandate that also shifted partway through. That is
+roughly three times the submittals and nearly twice the timeline of a comparable role where the
+brief held still. Neither the volume nor the timeline was a failure. It was what an honestly
+scarce role takes to fill properly, and it is exactly the profile that argues for one agency's
+full attention rather than a search competing for the recruiter's time against five other open
+roles.</p>
+
+<h2>Sometimes the missing skill is not on any CV at all</h2>
+<p>A bakery products brand needed one person strong in both e-commerce and quick commerce.
+Dozens of profiles later, nobody had both. That is a market fact, not a sourcing gap, and it is
+exactly the situation where an agency under time pressure sends the closest approximation and
+calls it done.</p>
+<p>Instead of doing that, we went back to the client with the screening data and asked for a
+revised requirement rather than force a match that did not exist. Then the search turned on
+something a CV cannot show: a candidate with strong e-commerce experience had no quick commerce
+listed anywhere on his resume, but had worked at an agency whose client list included an FMCG
+brand. A phone call confirmed real quick-commerce exposure that no keyword filter would ever have
+surfaced. He closed the role.</p>
+<p>That search ran <strong>30+ screened, 5 shared, 1 hired, in about two weeks</strong>, faster
+than the factory manager search despite being at least as scarce a combination. The difference
+was not which model the search ran under. It was that the search stayed open to the client
+rather than trying to force a match that did not exist, which is the behaviour that comes from an
+agency staying with a role rather than moving on to the next easier one.</p>
+<p>Worth noticing: this particular search was fast precisely because the candidate was found
+through a human inference, an agency client list read carefully, and confirmed on a phone call,
+rather than through more searching. Volume of profiles screened is not what solved it. Curiosity
+about a detail that was not on the page did. That is a service, not a database query, and it is
+the part of a search that a recruiter juggling several other briefs has the least time to spend
+on.</p>
+
+<h2>A shorter test than picking a model on paper</h2>
+<p>Rather than start from how each model is structured, start from these four questions about
+the role itself:</p>
+<ul>
+<li><strong>How many people in the country can genuinely do this, end to end?</strong> If the
+honest answer is "quite a few," an open search across multiple agencies is fine. If it is "I am
+not sure anyone has done exactly this," the role needs one agency's undivided focus.</li>
+<li><strong>Is the role confidential?</strong> Replacing someone still in post, or hiring for a
+function the company has not announced, cannot be run as an open search across multiple agencies
+without risking a leak.</li>
+<li><strong>Can you tell a real answer from an inflated one on paper alone?</strong> The factory
+manager search shows what happens when you cannot: the market supplies confident-sounding
+near-misses, and screening them out is most of the work.</li>
+<li><strong>Would a wrong hire be expensive to unwind?</strong> Senior or single-threaded roles,
+where one person owns a number or a function, carry more risk if the hire is wrong, so the
+search is worth an agency's exclusive attention.</li>
+</ul>
+<p>Three or four "yes" answers points to one agency working your brief exclusively. One or none
+points to running it more openly, and insisting on exclusivity you do not need just adds a step
+without adding a better outcome.</p>
+<p>There is also a middle case worth naming honestly: a role that looks ordinary on the brief and
+turns out to be scarce once screening starts, the way the factory manager role did. Neither
+approach protects you from that by itself. What protects you is an agency that tells you in week
+one, based on what the first batch of screening actually showed, rather than waiting until week
+five to admit the pipeline is thin.</p>
+
+<h2>What we tell clients before they decide</h2>
+<p>We do not default every brief to the more demanding arrangement. If a role looks like it will
+draw real supply, an open search is the honest recommendation, and we say so. If the early
+screening looks like the factory manager search, confident-sounding candidates who do not hold up
+under a second question, we say that too, in week one rather than after a few rejected batches.
+That read is based on what we see in the first round of screening, not a guess made before anyone
+has looked at the market.</p>
+<p>The pattern across both searches above is the same one we keep coming back to: the arrangement
+matters less than whether someone is honest with you about what the market actually contains.
+More on what that looks like day to day is on <a href="/how-we-work/">how we work</a>, and on how
+delay shows up when a role is genuinely hard to fill is in
+<a href="/blog/why-your-search-went-long/">why your search went long</a>.</p>
+""",
+ "related": [("How we work, and what we commit to", "/how-we-work/"),
+             ("Why your search went long", "/blog/why-your-search-went-long/")],
+},
 ]
 
 # --------------------------------------------------------------- rendering ---
