@@ -521,50 +521,39 @@ BODY = """
 
     <h3>What it does</h3>
     <div class="slides" id="cs-slides">
-      <div class="slide is-on" data-slide="1">
-        <div class="slide__head">
-          <span class="slide__n">01 / 04</span>
-          <span class="slide__label">Messaging</span>
+      <div class="slide" data-slide="1">
+        <figure class="slide__shot"><img src="/assets/img/lf-today.jpg" alt="Daily queue showing ninety two actions due, each follow up with the message already drafted and buttons to copy it, open the profile and mark it sent" loading="lazy" width="1500" height="812"></figure>
+        <div class="slide__body">
+          <div class="slide__head">
+            <span class="slide__n">01</span>
+            <span class="slide__label">Daily queue</span>
+          </div>
+          <b>The day is already sorted</b>
+          <span>Ninety two actions due, ordered by what is furthest past its window. Each one arrives with the follow up already written for that person, the profile a click away, and one button to mark it sent.</span>
         </div>
-        <div class="slide__shot"><img src="/assets/img/feat-message.jpg" alt="Copy message, Copy LinkedIn and Open buttons on a prospect row" loading="lazy" width="1580" height="148"></div>
-        <b>The message is already written</b>
-        <span>Built for that prospect, at that stage, from the conversation so far. Their profile is the click next to it.</span>
       </div>
-      <div class="slide" data-slide="2">
-        <div class="slide__head">
-          <span class="slide__n">02 / 04</span>
-          <span class="slide__label">Stage tracking</span>
+      <div class="slide slide--flip" data-slide="2">
+        <figure class="slide__shot"><img src="/assets/img/lf-multichannel.jpg" alt="Multi channel view combining Apollo email sequences and Outflo LinkedIn campaigns with per campaign reply rates" loading="lazy" width="1500" height="850"></figure>
+        <div class="slide__body">
+          <div class="slide__head">
+            <span class="slide__n">02</span>
+            <span class="slide__label">One pipeline</span>
+          </div>
+          <b>Email and LinkedIn stop being two lists</b>
+          <span>Sequences live in Apollo, campaigns live in Outflo, and nobody can see who is in both. This pulls them into one view with reply rates per campaign, so a person never gets the same pitch twice from two directions.</span>
         </div>
-        <div class="slide__shot"><img src="/assets/img/feat-stage.jpg" alt="Stage dropdown reading Loop Completed" loading="lazy" width="860" height="240"></div>
-        <b>The stage moves itself</b>
-        <span>It follows where the conversation actually reached. Nobody has to remember to change a dropdown.</span>
       </div>
       <div class="slide" data-slide="3">
-        <div class="slide__head">
-          <span class="slide__n">03 / 04</span>
-          <span class="slide__label">Timing</span>
+        <figure class="slide__shot"><img src="/assets/img/lf-sections.jpg" alt="Section navigation listing Today, Funding Leads, Outreach, Funding Outreach and Multi channel with live counts" loading="lazy" width="1500" height="725"></figure>
+        <div class="slide__body">
+          <div class="slide__head">
+            <span class="slide__n">03</span>
+            <span class="slide__label">Everything in one window</span>
+          </div>
+          <b>Five pipelines, one place to look</b>
+          <span>Today, funding leads, outreach, funding outreach and multi channel, each with a live count. The number next to a section is the number of things waiting, so the choice of what to open is made for you.</span>
         </div>
-        <div class="slide__shot"><img src="/assets/img/feat-clock.jpg" alt="Red warning text reading no answer in 34 days 10 hours" loading="lazy" width="680" height="76"></div>
-        <b>Nothing goes quiet unnoticed</b>
-        <span>Every row carries its own clock. Overdue is surfaced, not buried under whatever you added last.</span>
       </div>
-      <div class="slide" data-slide="4">
-        <div class="slide__head">
-          <span class="slide__n">04 / 04</span>
-          <span class="slide__label">Signals</span>
-        </div>
-        <div class="slide__shot"><img src="/assets/img/feat-notes.jpg" alt="Notes cell listing hiring signals found for a prospect" loading="lazy" width="680" height="560"></div>
-        <b>It brings you the reason</b>
-        <span>The signals it found, in plain words, so you open the row already knowing why this one is worth a call.</span>
-      </div>
-      <div class="slidebar" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
-    </div>
-
-    <div class="cs__shots">
-      <figure class="cs__shot">
-        <img src="/assets/img/leadflow-dashboard.jpg" alt="Pipeline dashboard showing total leads, untouched leads, leads in outreach, and a sortable table of companies with stage and urgency score" loading="lazy" width="1400" height="713">
-        <figcaption class="cs__cap">The whole thing, in one screen.</figcaption>
-      </figure>
     </div>
 
     <h3>Why it is built this way</h3>
@@ -601,7 +590,6 @@ BODY = """
   var wrapEl = document.getElementById('cs-slides');
   if (wrapEl && 'IntersectionObserver' in window) {
     var slides = [].slice.call(wrapEl.querySelectorAll('.slide'));
-    var dots   = [].slice.call(wrapEl.querySelectorAll('.slidebar i'));
     var root   = document.getElementById('cs-leadflow');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -609,9 +597,6 @@ BODY = """
         if (i < 0) return;
         if (en.isIntersecting) {
           en.target.classList.add('is-on');
-          dots.forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
-        } else {
-          en.target.classList.remove('is-on');
         }
       });
     }, { root: root, rootMargin: '-38% 0px -38% 0px', threshold: 0 });
