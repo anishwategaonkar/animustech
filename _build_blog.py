@@ -584,6 +584,127 @@ delay shows up when a role is genuinely hard to fill is in
  "related": [("How we work, and what we commit to", "/how-we-work/"),
              ("Why your search went long", "/blog/why-your-search-went-long/")],
 },
+{
+ "slug": "two-candidates-same-resume",
+ "date": "2026-09-07",
+ "tag": "Screening",
+ "title": "Two Candidates, the Same Resume | Animus Tech",
+ "h1": "Two candidates, the same resume. What actually separates them",
+ "desc": "Two people list the same years, the same titles and the same tools. One is right for the role and one is not. Here is what the difference is, and the questions that surface it.",
+ "lead": ("Put two shortlisted resumes side by side and they are often indistinguishable. Same "
+          "years, same titles, same tools, same channels. One of those people will do the job "
+          "and the other will not. The difference is real, it is consistent, and it is never "
+          "written on the page."),
+ "body": """
+<h2>A resume is a claim, not evidence</h2>
+<p>Every resume describes what a team delivered while implying the writer delivered it. That is
+not dishonesty, it is the format. There is nowhere on a resume to write "I inherited this system
+and kept it running" as opposed to "I built this system", and the second sounds better, so
+everyone writes something closer to the second.</p>
+<p>Which means the document cannot separate the two candidates for you. Neither can a keyword
+search, because both of them use identical vocabulary. The separation has to happen in
+conversation, and it happens faster than most hiring managers expect once you know what you are
+listening for.</p>
+<p>Across the searches we have run, the same distinction keeps appearing in different clothes.</p>
+
+<h2>1. The process owner and the process runner</h2>
+<p>A SaaS startup asked us for a marketing manager to own their product marketing end to end. We
+screened twenty to thirty profiles and sent a first batch of four. The client rejected all
+four.</p>
+<p>The reason was more useful than the rejection. Every one of them was excellent with settled
+process. They executed well inside a machine somebody else had built. Give them a working funnel,
+a defined budget and an established reporting line, and they perform. At a startup none of that
+exists yet, so the job is building the machine, and the resumes of the two types are
+identical.</p>
+<p>The person who eventually closed the role was strong on digital marketing and on strategy. He
+had decided what to do and then done it. Twelve days to close, fifteen days notice, roughly
+twenty-seven days from intake to joining.</p>
+<p><strong>The question that surfaces it:</strong> "Was this already running when you arrived, or
+did you start it?" Then, more usefully: "What did you stop doing, and why?" People who inherited
+a system rarely have an answer to the second question. People who owned one always do, because
+killing things is most of what ownership feels like.</p>
+
+<h2>2. The factory manager and the production manager with ambition</h2>
+<p>On a genuine factory manager mandate, production plus operations plus dispatch, what kept
+arriving were production people. Candidates described headcount, output and scope in terms that
+made a line sound like a plant. We screened more than a hundred profiles to share twenty to
+twenty-five.</p>
+<p>The real work in that search was not sourcing. It was verification. A production person can
+talk fluently and accurately about their line for as long as you let them. Ask about dispatch
+scheduling, or how they handled the trade-off between a production target and a despatch
+commitment, and the answer thins out.</p>
+<p><strong>The question that surfaces it:</strong> ask about the interfaces between functions,
+not about the function itself. Ownership shows up at the seams. Anyone can describe the middle of
+their own job.</p>
+
+<h2>3. The engineer who shipped it and the engineer who was nearby</h2>
+<p>The same problem exists in software, where it is usually assumed to require technical
+interviewing to solve. It does not require an engineering background. It requires a method.</p>
+<p>Three checks, in order:</p>
+<ul>
+<li><strong>Was this live?</strong> Shipped and used by real people, or a college project, or a
+product built by a team where this person's own contribution is unclear? A candidate who cannot
+draw that distinction himself has told you something already.</li>
+<li><strong>What were they personally accountable for?</strong> Not what the team delivered. What
+would have broken if they had not turned up.</li>
+<li><strong>What problem was it solving?</strong> This is the cheapest and highest-signal filter
+available. Someone who owned the work states the problem in a sentence. Someone who was adjacent
+to it describes the technology instead.</li>
+</ul>
+<p>A hiring manager can run all three in about thirty seconds, and they are very hard to fake,
+because the answers require a kind of context you only acquire by having been responsible.</p>
+
+<table class="cmp">
+<thead><tr><th>Both resumes say</th><th>The passenger says</th><th>The owner says</th></tr></thead>
+<tbody>
+<tr><td>Built and scaled the platform</td><td>Describes the stack</td><td>Describes the problem</td></tr>
+<tr><td>Managed marketing end to end</td><td>Lists the channels</td><td>Says what they stopped</td></tr>
+<tr><td>Ran plant operations</td><td>Talks about the line</td><td>Talks about the trade-offs</td></tr>
+</tbody>
+</table>
+
+<h2>The inverse problem: the difference that is not on the page at all</h2>
+<p>The same logic runs the other way, and this is the part keyword screening can never recover
+from. A consumer brand wanted one person strong in both e-commerce and quick commerce. We
+screened dozens and the combination did not exist in the market at that band, so we went back to
+the client with the screening data rather than sending near-misses for another month.</p>
+<p>The candidate who closed the role had strong e-commerce experience. Quick commerce appeared
+nowhere on his resume. What was on the resume was agency experience, and one of that agency's
+clients was an FMCG brand. A phone call established significant quick-commerce exposure that no
+filter, no boolean string and no ATS would ever have surfaced.</p>
+<p>He was, in the literal sense, unfindable by search. What found him was reading a client list
+and making an inference. Tooling narrows the field. Curiosity closes it.</p>
+
+<h2>What this means for your shortlist</h2>
+<p>If two resumes look the same, that is information about the format, not about the candidates.
+Four things worth doing:</p>
+<ul>
+<li><strong>Agree what "good" means before sourcing starts.</strong> If you have not written down
+what separates the two candidates for this specific role, you will not recognise it in an
+interview either, and you will end up picking on rapport.</li>
+<li><strong>Ask about seams, endings and trade-offs.</strong> Not achievements. Achievements are
+what the resume already claims.</li>
+<li><strong>Treat a thin resume as unscored, not as weak.</strong> On one search a candidate
+surfaced whose resume was a single page holding education, a company name and an internship name.
+Nothing to keyword-match against, so a search would never have returned him. The document had no
+content. That says nothing about the person.</li>
+<li><strong>Ask your agency for the reasoning, not the ranking.</strong> A shortlist without a
+written view on why each person is on it is a forwarding service.</li>
+</ul>
+
+<h2>How we handle it</h2>
+<p>Our AI reads a role the way a hiring manager would and searches on meaning rather than
+keywords, so the top of the funnel is not limited to people who happened to use the right words.
+Candidates are then assessed against a scorecard agreed with you before sourcing begins, and
+every screening decision comes with written reasoning. A human recruiter signs off on every
+shortlist, including a view on culture fit with reservations included. No candidate is ever
+rejected by software alone.</p>
+<p>More on the mechanics in <a href="/blog/how-ai-screening-actually-works/">how AI screening
+actually works</a>, and on what we commit to at <a href="/how-we-work/">how we work</a>.</p>
+""",
+ "related": [("How AI screening actually works", "/blog/how-ai-screening-actually-works/"),
+             ("How we work, and what we commit to", "/how-we-work/")],
+},
 ]
 
 # --------------------------------------------------------------- rendering ---
