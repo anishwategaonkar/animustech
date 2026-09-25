@@ -94,10 +94,10 @@ BODY = """
       <div class="routecard reveal">
         <h3>Looking for a job</h3>
         <p>
-          Open roles are listed with a short application form on each one. If nothing fits
-          today, send a speculative CV and we will keep it against future mandates.
+          We are not listing open roles at the moment. Send us your CV and we will keep it
+          against future mandates, and come back to you when something genuinely fits.
         </p>
-        <a href="/jobs/">See open roles</a>
+        <a href="mailto:admin@animustech.in?subject=Candidate%20application">Send us your CV</a>
       </div>
     </div>
 
