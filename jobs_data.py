@@ -10,8 +10,8 @@ RULES. These are not style preferences, they protect you.
    Google removes sites from Google for Jobs for posting roles that are not
    real or not open. It is also unfair to candidates who apply.
 
-2. EVERY JOB NEEDS A REAL `valid_through` DATE.
-   Google requires it. Once that date passes, the listing stops showing.
+2. EVERY JOB NEEDS AN INTERNAL `valid_through` DATE.
+   It is not shown publicly. Once that date passes, the listing stops showing.
    Delete closed roles from this file and rebuild.
 
 3. NEVER NAME THE CLIENT unless they have agreed in writing.
@@ -32,7 +32,7 @@ employment      FULL_TIME | PART_TIME | CONTRACTOR | TEMPORARY | INTERN
 experience      "5 to 8 years"
 industry        "Manufacturing" | "Software" | "D2C & Consumer"
 posted          "YYYY-MM-DD"
-valid_through   "YYYY-MM-DD"  (delete the job once this passes)
+valid_through   "YYYY-MM-DD"  internal expiry, not shown publicly
 salary_min      annual CTC in rupees, or None
 salary_max      annual CTC in rupees, or None
 client_note     one line about the employer, no names

@@ -20,8 +20,8 @@ ORG_ID = SITE + "/#organization"
 URL    = "/contact/"
 
 TITLE = "Contact Animus Tech | Hiring &amp; Software Enquiries"
-DESC  = ("Contact Animus Tech for recruitment or custom software. Email admin@animustech.in, "
-         "call +91 94225 15047, or send an enquiry. We reply within one working day.")
+DESC  = ("Contact Animus Tech for recruitment or custom software. Email admin@animustech.in "
+         "or send an enquiry. We reply within one working day.")
 
 SCHEMAS = [
 {
@@ -117,15 +117,6 @@ BODY = """
           </div>
           <div class="contact-item">
             <div class="contact-item__ico" aria-hidden="true">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
-            </div>
-            <div>
-              <div class="contact-item__label">Phone</div>
-              <div class="contact-item__val"><a href="tel:+919422515047">+91 94225 15047</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item__ico" aria-hidden="true">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
@@ -211,7 +202,7 @@ THANKS_BODY = """
       <h1 style="font-size:1.8rem;margin-bottom:14px">Thanks, we have it</h1>
       <p>
         Your enquiry has reached us and we will come back within one working day. If it is
-        urgent, call +91 94225 15047 rather than waiting on email.
+        urgent, email admin@animustech.in with "Urgent" in the subject line.
       </p>
       <p style="margin-top:22px">
         <a href="/" class="btn btn--primary">Back to home</a>

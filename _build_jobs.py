@@ -158,7 +158,6 @@ def job_schema(j):
       "description": job_description_html(j),
       "identifier": {"@type": "PropertyValue", "name": "Animus Tech", "value": j["slug"]},
       "datePosted": j["posted"],
-      "validThrough": j["valid_through"] + "T23:59:59+05:30",
       "employmentType": j["employment"],
       "hiringOrganization": {"@id": ORG_ID},
       "directApply": True,
@@ -255,7 +254,7 @@ def build_job(j):
       <p style="margin-top:32px">
         <a href="{apply_url}" class="btn btn--primary">Apply for this role</a>
       </p>
-      <p class="linkrow">Posted {j['posted']} · Open until {j['valid_through']}</p>
+      <p class="linkrow">Applications are reviewed on a rolling basis.</p>
     </article>
   </div>
 </section>

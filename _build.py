@@ -37,7 +37,6 @@ def org_schema():
         "logo": f"{SITE}/logo-dark.svg",
         "image": f"{SITE}/og-image.png",
         "email": "admin@animustech.in",
-        "telephone": "+91-94225-15047",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
