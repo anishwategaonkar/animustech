@@ -17,6 +17,7 @@ SCRIPTS = [
     "_build_software_pages.py",  # /software/ children
     "_build_contact.py",         # /contact/ and thank-you
     "_build_blog.py",            # /blog/
+    "_build_jobs.py",            # /jobs/ and apply flows
     "_build_static.py",          # re-inject header/footer into hand written pages
     "_build_org_schema.py",      # org entity on any page that lacks it
     "_build_analytics.py",       # MUST be last

@@ -44,6 +44,84 @@ nice_to_have      list of strings, can be empty
 """
 
 JOBS = [
+    {
+     "slug": "finance-associate-bengaluru",
+     "title": "Finance Associate",
+     "location": "Bengaluru",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "2 to 5 years",
+     "industry": "Manufacturing",
+     "posted": "2026-09-28",
+     "valid_through": "2026-11-27",
+     "salary_min": None,
+     "salary_max": None,
+     "client_note": "A growing specialty chemicals company hiring for its Bengaluru office.",
+     "summary": ("Join a core finance team focused on accounting operations, financial controls, "
+                 "statutory compliance and maintaining strong finance processes in a fast paced environment."),
+     "responsibilities": [
+         "Manage day to day accounting and finance operations",
+         "Maintain accurate books in the ERP and ensure financial hygiene",
+         "Handle domestic and international payments and bank reconciliations",
+         "Manage vendor invoices, customer invoicing and ledger reconciliations",
+         "Ensure timely statutory compliance and support monthly closures",
+         "Maintain audit ready books and coordinate with auditors and consultants",
+     ],
+     "requirements": [
+         "2 to 5 years of experience in accounting or finance operations",
+         "Strong accounting knowledge with hands on ERP experience",
+         "Experience with bank entries, payment entries, journal entries and bill booking",
+         "Good understanding of accounts payable, accounts receivable, reconciliations, invoicing and ledger scrutiny",
+         "Working knowledge of GST, TDS, PF, ESIC, PTAX and related statutory compliances",
+         "High ownership mindset and ability to work independently",
+     ],
+     "nice_to_have": [
+         "Experience with Microsoft Dynamics ERP",
+         "Exposure to import, export or cross border transactions",
+     ],
+    },
+    {
+     "slug": "rd-team-leader-api-synthesis-bengaluru",
+     "title": "R&D Team Leader, API and Active Ingredient Synthesis",
+     "location": "Bengaluru",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "3 to 15 years, depending on qualification",
+     "industry": "Manufacturing",
+     "posted": "2026-09-28",
+     "valid_through": "2026-11-27",
+     "salary_min": None,
+     "salary_max": None,
+     "client_note": "A growing specialty chemicals company hiring for its Bengaluru R&D team.",
+     "summary": ("Lead process research and development projects for agrochemical active ingredients, "
+                 "manage and mentor scientists, and remain hands on from laboratory development through pilot scale up."),
+     "responsibilities": [
+         "Lead and mentor a team of scientists while remaining hands on in laboratory work and project execution",
+         "Drive process development, optimization, validation and scale up from laboratory to pilot plant",
+         "Lead technology transfer and development of cost effective, scalable and commercially viable manufacturing processes",
+         "Investigate reaction mechanisms, process impurities and impurity profiles, and guide purification strategies",
+         "Interpret analytical data from NMR, mass spectrometry, HPLC and GC, and use literature search tools",
+         "Own technical documentation, cost analysis, route of synthesis evaluation and development reports",
+         "Work with manufacturing, analytical, procurement, EHS and other teams to deliver projects",
+         "Maintain laboratory safety, IP confidentiality and organizational quality standards",
+     ],
+     "requirements": [
+         "PhD in Organic Chemistry with 3 to 5 years of relevant experience, or MSc in Chemistry with 12 to 15 years of relevant experience",
+         "Relevant experience in agrochemical R&D, API synthesis or process development",
+         "Strong experience in chemical process development, optimization, validation and scale up from laboratory to pilot plant",
+         "Experience in the agrochemical or pharmaceutical API industry, including technology transfer and commercialization",
+         "Demonstrated ability to develop cost effective, scalable and commercially viable processes",
+         "Strong understanding of purification methods including distillation, crystallization and chromatography",
+     ],
+     "nice_to_have": [
+         "Experience using SciFinder and Reaxys",
+         "Experience developing commercially viable, non infringing manufacturing processes",
+     ],
+    },
+]
+
+# Previous postings are retained for reference but are not published.
+LEGACY_JOBS = [
     # ---------------------------------------------------------------------
     # EXAMPLE, KEPT COMMENTED SO THE BOARD STARTS EMPTY AND HONEST.
     # Copy this block, fill it in with a real open role, uncomment, rebuild.
