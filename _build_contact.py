@@ -97,7 +97,7 @@ BODY = """
           We are not listing open roles at the moment. Send us your CV and we will keep it
           against future mandates, and come back to you when something genuinely fits.
         </p>
-        <a href="mailto:admin@animustech.in?subject=Candidate%20application">Send us your CV</a>
+        <a href="mailto:anish@animustech.in?subject=Candidate%20application">Send us your CV</a>
       </div>
     </div>
 

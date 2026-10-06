@@ -273,7 +273,7 @@ def build_job(j):
 
 def build_apply(j, loc):
     """The questionnaire a candidate fills in after clicking Apply. Delivered by
-    FormSubmit to admin@animustech.in, same mechanism as the homepage contact form."""
+    FormSubmit to anish@animustech.in, same mechanism as the homepage contact form."""
     url = f"/jobs/{j['slug']}/apply/"
     subject = f"Application: {j['title']} ({j['slug']})"
     thanks_url = f"{SITE}/jobs/{j['slug']}/apply/thank-you/"
@@ -297,7 +297,7 @@ def build_apply(j, loc):
 
 <section class="section">
   <div class="wrap">
-    <form action="https://formsubmit.co/admin@animustech.in" method="POST" class="applyform reveal" enctype="multipart/form-data">
+    <form action="https://formsubmit.co/anish@animustech.in" method="POST" class="applyform reveal" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="{subject}">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -435,7 +435,7 @@ def build_index(live):
           when something fits rather than when we need to fill a quota.
         </p>
         <p style="margin-top:24px">
-          <a href="mailto:admin@animustech.in?subject=Speculative%20application" class="btn btn--primary">Send us your CV</a>
+          <a href="mailto:anish@animustech.in?subject=Speculative%20application" class="btn btn--primary">Send us your CV</a>
         </p>
       </div>"""
         lead = ("We only list roles we are actively recruiting for. If the list is empty, it means "
