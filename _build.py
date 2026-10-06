@@ -36,7 +36,7 @@ def org_schema():
         "url": SITE + "/",
         "logo": f"{SITE}/logo-dark.svg",
         "image": f"{SITE}/og-image.png",
-        "email": "admin@animustech.in",
+        "email": "anish@animustech.org",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",

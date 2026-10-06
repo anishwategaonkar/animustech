@@ -20,7 +20,7 @@ ORG_ID = SITE + "/#organization"
 URL    = "/contact/"
 
 TITLE = "Contact Animus Tech | Hiring &amp; Software Enquiries"
-DESC  = ("Contact Animus Tech for recruitment or custom software. Email admin@animustech.in "
+DESC  = ("Contact Animus Tech for recruitment or custom software. Email anish@animustech.org "
          "or send an enquiry. We reply within one working day.")
 
 SCHEMAS = [
@@ -112,7 +112,7 @@ BODY = """
             </div>
             <div>
               <div class="contact-item__label">Email</div>
-              <div class="contact-item__val"><a href="mailto:admin@animustech.in">admin@animustech.in</a></div>
+              <div class="contact-item__val"><a href="mailto:anish@animustech.org">anish@animustech.org</a></div>
             </div>
           </div>
           <div class="contact-item">
@@ -139,7 +139,7 @@ BODY = """
         </p>
       </div>
 
-      <form action="https://formsubmit.co/admin@animustech.in" method="POST" class="reveal reveal--right">
+      <form action="https://formsubmit.co/anish@animustech.org" method="POST" class="reveal reveal--right">
         <input type="hidden" name="_subject" value="New enquiry from animustech.in contact page">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -202,7 +202,7 @@ THANKS_BODY = """
       <h1 style="font-size:1.8rem;margin-bottom:14px">Thanks, we have it</h1>
       <p>
         Your enquiry has reached us and we will come back within one working day. If it is
-        urgent, email admin@animustech.in with "Urgent" in the subject line.
+        urgent, email anish@animustech.org with "Urgent" in the subject line.
       </p>
       <p style="margin-top:22px">
         <a href="/" class="btn btn--primary">Back to home</a>

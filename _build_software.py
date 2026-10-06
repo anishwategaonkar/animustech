@@ -345,7 +345,7 @@ BODY = """
             </div>
             <div>
               <div class="contact-item__label">Email</div>
-              <div class="contact-item__val"><a href="mailto:admin@animustech.in">admin@animustech.in</a></div>
+              <div class="contact-item__val"><a href="mailto:anish@animustech.org">anish@animustech.org</a></div>
             </div>
           </div>
 
@@ -371,7 +371,7 @@ BODY = """
         </div>
       </div>
 
-      <form action="https://formsubmit.co/admin@animustech.in" method="POST" class="reveal reveal--right">
+      <form action="https://formsubmit.co/anish@animustech.org" method="POST" class="reveal reveal--right">
         <input type="hidden" name="_subject" value="New software enquiry from animustech.in">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
