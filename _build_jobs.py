@@ -132,7 +132,7 @@ def money(n):
     return f"{n/100000:.1f} L".replace(".0 L", " L")
 
 def salary_line(j):
-    if not j.get("salary_min"): return "Not disclosed"
+    if not j.get("salary_min"): return j.get("salary_note", "Not disclosed")
     lo, hi = money(j["salary_min"]), money(j.get("salary_max") or j["salary_min"])
     return f"₹{lo} to ₹{hi}" if hi != lo else f"₹{lo}"
 
@@ -172,8 +172,12 @@ def job_schema(j):
         # the city rather than assuming every role is in Maharashtra.
         city = j["location"].split(",")[0].strip()
         region = j.get("region") or CITY_REGION.get(city.lower())
-        addr = {"@type": "PostalAddress", "addressLocality": city,
-                "addressCountry": "IN"}
+        addr = {"@type": "PostalAddress"}
+        # State wide field roles may not have one reporting city. In that case,
+        # publish the state without incorrectly presenting it as a locality.
+        if not region or city.lower() != region.lower():
+            addr["addressLocality"] = city
+        addr["addressCountry"] = "IN"
         if region:
             addr["addressRegion"] = region
         s["jobLocation"] = {"@type": "Place", "address": addr}
@@ -225,7 +229,7 @@ def build_job(j):
       <div><dt>Location</dt><dd>{loc}</dd></div>
       <div><dt>Experience</dt><dd>{j.get('experience','Not specified')}</dd></div>
       <div><dt>Salary</dt><dd>{salary_line(j)}</dd></div>
-      <div><dt>Type</dt><dd>{j['employment'].replace('_',' ').title()}</dd></div>
+      <div><dt>Type</dt><dd>{j['employment'].replace('_',' ').title()}</dd></div>{f'''\n      <div><dt>Reports to</dt><dd>{j['reports_to']}</dd></div>''' if j.get('reports_to') else ''}
     </dl>
 
     <article class="jobbody reveal">

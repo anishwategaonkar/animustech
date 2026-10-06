@@ -190,9 +190,16 @@
 
   <url>
     <loc>https://animustech.in/jobs/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://animustech.in/jobs/agronomist-field-development-karnataka/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
