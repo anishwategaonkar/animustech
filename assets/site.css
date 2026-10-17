@@ -712,8 +712,16 @@
   [data-theme="dark"] .themebtn .i-sun{display:block}
   [data-theme="dark"] .themebtn .i-moon{display:none}
 
+  /* `.nav a` is more specific than `.btn--primary`, so without this the button
+     inside the nav inherits the muted link colour. Invisible on light. */
+  .nav a.btn--primary,.nav a.btn--primary:hover{color:var(--accent-ink)}
+
   .header__tools{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+  /* One toggle at a time: the header copy on desktop, the in-nav copy on mobile. */
+  .nav .aud{display:none}
   @media (max-width:960px){
     .header__tools .aud{display:none}
     .nav .aud{display:inline-flex;margin:14px 0 4px;align-self:flex-start}
+    /* the stacked mobile nav gives every link a divider, which would cut the pills */
+    .nav .aud a{border-bottom:none;padding:7px 15px}
   }
