@@ -193,6 +193,8 @@ def job_schema(j):
     return s
 
 def build_job(j):
+    reports_to_row = ("\n      <div><dt>Reports to</dt><dd>"
+                      + j["reports_to"] + "</dd></div>") if j.get("reports_to") else ""
     url = f"/jobs/{j['slug']}/"
     schema = [job_schema(j), {
       "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -229,7 +231,7 @@ def build_job(j):
       <div><dt>Location</dt><dd>{loc}</dd></div>
       <div><dt>Experience</dt><dd>{j.get('experience','Not specified')}</dd></div>
       <div><dt>Salary</dt><dd>{salary_line(j)}</dd></div>
-      <div><dt>Type</dt><dd>{j['employment'].replace('_',' ').title()}</dd></div>{f'''\n      <div><dt>Reports to</dt><dd>{j['reports_to']}</dd></div>''' if j.get('reports_to') else ''}
+      <div><dt>Type</dt><dd>{j['employment'].replace('_',' ').title()}</dd></div>{reports_to_row}
     </dl>
 
     <article class="jobbody reveal">
@@ -530,8 +532,14 @@ if __name__ == "__main__":
         for d in os.listdir(jobs_dir):
             full = os.path.join(jobs_dir, d)
             if os.path.isdir(full) and d not in keep:
-                shutil.rmtree(full)
-                print("removed expired/withdrawn:", d)
+                # Some environments cannot unlink inside the mounted folder. A
+                # stale page is worth flagging, not worth aborting the build for.
+                try:
+                    shutil.rmtree(full)
+                    print("removed expired/withdrawn:", d)
+                except OSError as e:
+                    print(f"  ! could not remove stale job page 'jobs/{d}': {e}")
+                    print("  ! delete it by hand, it is no longer in jobs_data.py")
 
     for j in live:
         print("wrote", build_job(j))

@@ -432,10 +432,11 @@ That distinction matters most in technical hiring, where the vocabulary sounds i
 or not the person shipped anything.</p>
 
 <h2>The three-question method for the part AI cannot reach</h2>
-<p>Lokesh, who runs the search side of Animus Tech, is not from an engineering background and
-closes backend and frontend roles anyway. He took recruitment-tech courses to learn which
-skills actually matter per role, then built a verification method that does not require writing
-code himself. It checks three things, in order.</p>
+<p>Our founder, who runs the search side of Animus Tech, has four years in HR and talent
+acquisition behind him and is not from an engineering background. He closes backend and
+frontend roles anyway. He took recruitment-tech courses to learn which skills actually matter
+per role, then built a verification method that does not require writing code himself. It
+checks three things, in order.</p>
 <ul>
 <li><strong>Live project, or not.</strong> Was this shipped and used, or a college assignment, or
 a team product where this candidate's own piece is unclear? Someone who cannot draw that
@@ -451,7 +452,7 @@ fake convincingly across a real conversation. It is also something any hiring ma
 themselves in thirty seconds, AI tooling or not.</p>
 
 <h2>The keyword problem AI alone does not solve</h2>
-<p>On an unrelated search, a candidate surfaced whose CV was, in Lokesh's words, not a resume
+<p>On an unrelated search, a candidate surfaced whose CV was, in our recruiter's words, not a resume
 but a page consisting of education, company name and internship name. No responsibilities
 listed, no achievements, nothing for a keyword match to grab onto. A pure keyword system, human
 or automated, would have skipped that CV entirely, regardless of who the person actually was.</p>
@@ -504,7 +505,7 @@ out before or after you have burned three weeks discovering it the hard way.</p>
 <h2>What genuine scarcity looks like from the inside</h2>
 <p>A factory manager brief we ran asked for someone who owned production, operations and
 dispatch, the whole plant end to end. What the market kept sending back were production people
-who had learned to describe themselves as though they ran the factory. In Anish's own words,
+who had learned to describe themselves as though they ran the factory. In our founder's words,
 candidates were inflating their numbers, their scale, their scope.</p>
 <p>The only way to tell the two apart was to interview past the fluent part of the CV. A
 production person talks confidently about the line. Ask about dispatch scheduling, or the

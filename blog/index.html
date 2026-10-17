@@ -327,6 +327,12 @@
   ]
 }
 </script>
+<script>
+(function(){try{
+  if(localStorage.getItem('at-theme')==='dark')
+    document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDB1N7YPE9"></script>
 <script>
@@ -355,10 +361,10 @@
       <svg class="logo__mark" viewBox="0 0 54 40" aria-hidden="true">
         <defs>
           <linearGradient id="ringRightH" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#c6c0f0"/><stop offset=".45" stop-color="#9d94e0"/><stop offset="1" stop-color="#7a70c4"/>
+            <stop offset="0" stop-color="var(--logo-v-1)"/><stop offset=".45" stop-color="var(--logo-v-2)"/><stop offset="1" stop-color="var(--logo-v-3)"/>
           </linearGradient>
           <linearGradient id="ringLeftH" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#f0d9bd"/><stop offset=".45" stop-color="#dfb78e"/><stop offset="1" stop-color="#c1955f"/>
+            <stop offset="0" stop-color="var(--logo-a-1)"/><stop offset=".45" stop-color="var(--logo-a-2)"/><stop offset="1" stop-color="var(--logo-a-3)"/>
           </linearGradient>
         </defs>
         <circle cx="19" cy="20" r="17" fill="none" stroke="url(#ringLeftH)" stroke-width="3"/>
@@ -370,17 +376,32 @@
       </span>
     </a>
 
-    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
-      <span></span>
-    </button>
-
     <nav class="nav" id="nav">
-      <a href="/">Home</a>
-      <a href="/talent-acquisition/">Talent acquisition</a>
-      <a href="/jobs/">Jobs</a>
-      <a href="/software/">Software</a>
+      <a href="/talent-acquisition/" data-aud="employer">Talent acquisition</a>
+      <a href="/software/" data-aud="employer">Software</a>
+      <a href="/how-we-work/" data-aud="employer">How we work</a>
+      <a href="/jobs/" data-aud="candidate">Open roles</a>
+      <a href="/candidates/#process" data-aud="candidate">How we screen</a>
+      <span class="aud" id="audNavMobile" role="group" aria-label="Choose your view">
+        <a href="/candidates/" data-set-aud="candidate">I am a candidate</a>
+        <a href="/talent-acquisition/" data-set-aud="employer">I am an employer</a>
+      </span>
       <a href="/contact/" class="btn btn--primary">Get in touch</a>
     </nav>
+
+    <div class="header__tools">
+      <span class="aud" id="audNav" role="group" aria-label="Choose your view">
+        <a href="/candidates/" data-set-aud="candidate">I am a candidate</a>
+        <a href="/talent-acquisition/" data-set-aud="employer">I am an employer</a>
+      </span>
+      <button class="themebtn" id="themebtn" type="button" aria-label="Switch between light and dark theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -490,7 +511,16 @@
           <li><a href="/talent-acquisition/#industries">Industries</a></li>
           <li><a href="/talent-acquisition/#process">Process</a></li>
           <li><a href="/how-we-work/">How we work</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>For candidates</h4>
+        <ul>
+          <li><a href="/candidates/">For candidates</a></li>
           <li><a href="/jobs/">Open roles</a></li>
+          <li><a href="/candidates/#process">How we screen</a></li>
+          <li><a href="mailto:anish@animustech.in?subject=Speculative%20application">Send us your CV</a></li>
         </ul>
       </div>
 
@@ -536,7 +566,6 @@
     </div>
   </div>
 </footer>
-
 <script src="/assets/site.js" defer></script>
 </body>
 </html>
