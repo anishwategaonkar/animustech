@@ -6,18 +6,21 @@
     --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
     --shot-bg:#0d1018;          /* product screenshots are a dark UI in both themes */
 
-    /* ---- LIGHT, the default ---- */
-    --bg:#ffffff;
-    --bg-2:#f7f6fc;
+    /* ---- LIGHT, the default ----
+       The page sits on a tinted lavender rather than white, a shade deeper than
+       the old About us band, so cards and fields read as raised white surfaces
+       against it instead of dissolving into the background. */
+    --bg:#eeebf7;
+    --bg-2:#e5e1f2;
     --surface:#ffffff;
-    --surface-2:#f3f1fb;
+    --surface-2:#f8f7fc;
     --border:rgba(22,15,52,.11);
     --border-lit:rgba(22,15,52,.20);
     --border-faint:rgba(22,15,52,.055);
     --border-solid:rgba(22,15,52,.18);
     --text:#15121f;
     --text-2:#4c4863;
-    --text-3:#78748e;
+    --text-3:#656078;
     --accent:#5a46c8;
     --accent-2:#a86a14;
     --accent-ink:#ffffff;
@@ -38,8 +41,8 @@
     --accent-metal-btn:linear-gradient(100deg,#473596 0%,#5a46c8 28%,#7260d8 47%,#5a46c8 66%,#473596 100%);
     --warm-metal:linear-gradient(100deg,#8a5410 0%,#a86a14 26%,#c98a2c 46%,#a86a14 66%,#8a5410 100%);
 
-    --header-bg:rgba(255,255,255,.84);
-    --header-bg-stuck:rgba(255,255,255,.97);
+    --header-bg:rgba(238,235,247,.86);
+    --header-bg-stuck:rgba(238,235,247,.97);
     --shadow-ink:rgba(22,15,52,.13);
     --shadow-ink-2:rgba(22,15,52,.08);
     --btn-shadow:0 9px 24px -12px rgba(90,70,200,.5);
