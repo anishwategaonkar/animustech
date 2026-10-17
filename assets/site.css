@@ -7,55 +7,57 @@
     --shot-bg:#0d1018;          /* product screenshots are a dark UI in both themes */
 
     /* ---- LIGHT, the default ----
-       The page sits on a tinted lavender rather than white, a shade deeper than
-       the old About us band, so cards and fields read as raised white surfaces
-       against it instead of dissolving into the background. */
-    --bg:#eeebf7;
-    --bg-2:#e5e1f2;
-    --surface:#ffffff;
-    --surface-2:#f8f7fc;
-    --border:rgba(22,15,52,.11);
-    --border-lit:rgba(22,15,52,.20);
-    --border-faint:rgba(22,15,52,.055);
-    --border-solid:rgba(22,15,52,.18);
-    --text:#15121f;
-    --text-2:#4c4863;
-    --text-3:#656078;
-    --accent:#5a46c8;
-    --accent-2:#a86a14;
+       Warm grey paper, near black ink, dark purple as the primary accent and
+       brown as the secondary. No lavender and no plain white page: cards sit
+       as near white panels on warm grey so the structure is readable without
+       borders doing all the work. Every text colour clears 4.5:1 on all four
+       surfaces below. */
+    --bg:#e9e7e3;          /* warm grey, the page */
+    --bg-2:#dedbd5;        /* alternating bands, a step deeper */
+    --surface:#faf9f7;     /* cards, near white */
+    --surface-2:#f1efeb;   /* pills, secondary panels */
+    --border:rgba(30,26,22,.14);
+    --border-lit:rgba(30,26,22,.24);
+    --border-faint:rgba(30,26,22,.075);
+    --border-solid:rgba(30,26,22,.22);
+    --text:#17141a;        /* near black */
+    --text-2:#4a4550;
+    --text-3:#625c69;
+    --accent:#4a2f7a;      /* dark purple */
+    --accent-2:#7a4f22;    /* brown */
     --accent-ink:#ffffff;
-    --accent-dim:rgba(90,70,200,.07);
-    --accent-line:rgba(90,70,200,.22);
-    --accent-wash:rgba(90,70,200,.06);
-    --accent-wash-2:rgba(90,70,200,.13);
-    --warm-dim:rgba(168,106,20,.08);
-    --warm-line:rgba(168,106,20,.24);
+    --accent-dim:rgba(74,47,122,.07);
+    --accent-line:rgba(74,47,122,.24);
+    --accent-wash:rgba(74,47,122,.06);
+    --accent-wash-2:rgba(74,47,122,.13);
+    --warm-dim:rgba(122,79,34,.08);
+    --warm-line:rgba(122,79,34,.26);
 
-    --gloss:linear-gradient(180deg,rgba(22,15,52,.028),rgba(22,15,52,0) 60%);
-    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.7);
-    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.9);
-    --sheen:rgba(22,15,52,.04);
-    --sheen-2:rgba(22,15,52,.07);
+    --gloss:linear-gradient(180deg,rgba(30,26,22,.03),rgba(30,26,22,0) 60%);
+    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.75);
+    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.92);
+    --sheen:rgba(30,26,22,.045);
+    --sheen-2:rgba(30,26,22,.075);
 
-    --accent-metal:linear-gradient(100deg,#4433a8 0%,#5a46c8 26%,#7b68e4 46%,#5a46c8 66%,#4433a8 100%);
-    --accent-metal-btn:linear-gradient(100deg,#473596 0%,#5a46c8 28%,#7260d8 47%,#5a46c8 66%,#473596 100%);
-    --warm-metal:linear-gradient(100deg,#8a5410 0%,#a86a14 26%,#c98a2c 46%,#a86a14 66%,#8a5410 100%);
+    --accent-metal:linear-gradient(100deg,#331f58 0%,#4a2f7a 26%,#6a49a4 46%,#4a2f7a 66%,#331f58 100%);
+    --accent-metal-btn:linear-gradient(100deg,#2e1c50 0%,#4a2f7a 28%,#63439a 47%,#4a2f7a 66%,#2e1c50 100%);
+    --warm-metal:linear-gradient(100deg,#573616 0%,#7a4f22 26%,#9c6a33 46%,#7a4f22 66%,#573616 100%);
 
-    --header-bg:rgba(238,235,247,.86);
-    --header-bg-stuck:rgba(238,235,247,.97);
-    --shadow-ink:rgba(22,15,52,.13);
-    --shadow-ink-2:rgba(22,15,52,.08);
-    --btn-shadow:0 9px 24px -12px rgba(90,70,200,.5);
-    --btn-shadow-hover:0 14px 32px -13px rgba(90,70,200,.6);
-    --glow-a:radial-gradient(circle,rgba(90,70,200,.10),transparent 70%);
-    --glow-b:radial-gradient(circle,rgba(120,150,215,.09),transparent 70%);
-    --glow-op:.7;
+    --header-bg:rgba(233,231,227,.88);
+    --header-bg-stuck:rgba(233,231,227,.98);
+    --shadow-ink:rgba(30,26,22,.15);
+    --shadow-ink-2:rgba(30,26,22,.09);
+    --btn-shadow:0 9px 24px -12px rgba(74,47,122,.55);
+    --btn-shadow-hover:0 14px 32px -13px rgba(74,47,122,.65);
+    --glow-a:radial-gradient(circle,rgba(74,47,122,.10),transparent 70%);
+    --glow-b:radial-gradient(circle,rgba(122,79,34,.07),transparent 70%);
+    --glow-op:.6;
     --grain-op:.05;
     --grain-blend:multiply;
     --field-bg:#ffffff;
-    --field-inset:inset 0 1px 2px rgba(22,15,52,.07);
-    --logo-v-1:#7b68e4; --logo-v-2:#5a46c8; --logo-v-3:#3f2f96;
-    --logo-a-1:#c98a2c; --logo-a-2:#a86a14; --logo-a-3:#7d4e0d;
+    --field-inset:inset 0 1px 2px rgba(30,26,22,.08);
+    --logo-v-1:#6a49a4; --logo-v-2:#4a2f7a; --logo-v-3:#2e1c50;
+    --logo-a-1:#9c6a33; --logo-a-2:#7a4f22; --logo-a-3:#573616;
   }
 
   [data-theme="dark"]{
@@ -109,6 +111,10 @@
 
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%;}
+  /* `overflow-x:hidden` on body stops its background propagating to the page
+     canvas, which leaves the scrollbar gutter painted white. Setting it on html
+     as well is what actually fills the viewport edge to edge. */
+  html{background:var(--bg);}
   body{
     margin:0;
     background:var(--bg);
@@ -639,8 +645,10 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   body::after{
+    /* 100vw includes the scrollbar, so centring against it pushed these rules
+       off by half a scrollbar. Percentages measure the body, which is correct. */
     content:"";position:fixed;top:0;bottom:0;left:50%;transform:translateX(-50%);
-    width:min(var(--max),100vw);max-width:100vw;z-index:0;pointer-events:none;
+    width:min(var(--max),100%);max-width:100%;z-index:0;pointer-events:none;
     background-image:repeating-linear-gradient(to right,
       var(--border-faint) 0 1px, transparent 1px calc(100% / 4));
   }
