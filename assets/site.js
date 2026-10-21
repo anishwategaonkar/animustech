@@ -272,3 +272,38 @@
   /* the footer mark may not have begun animating on first pass */
   if (document.readyState !== 'complete') window.addEventListener('load', sync);
 })();
+
+/* ---------- self healing stale page ----------
+   GitHub Pages serves HTML with cache-control: max-age=600 and gives us no way
+   to change that. So for ten minutes after a deploy a returning visitor is
+   handed the previous page, pointing at the previous stylesheet hash. The hash
+   stamping prevents a mismatch, but it cannot defeat a cached HTML file.
+
+   This asks the network for the current page, bypassing the HTTP cache, and
+   compares the stylesheet hash in that copy against the one actually loaded.
+   If they differ, the page we are looking at is stale and we reload once.
+
+   Reloads are capped at one per tab per session, so a server that keeps
+   answering from an edge cache can never put us in a loop. */
+(function () {
+  var link = document.querySelector('link[rel="stylesheet"][href*="site.css?v="]');
+  if (!link || !window.fetch) return;
+
+  var loaded = link.getAttribute('href').split('?v=')[1];
+  if (!loaded) return;
+
+  try {
+    if (sessionStorage.getItem('at-reloaded') === loaded) return;
+  } catch (e) { return; }
+
+  fetch(location.href, { cache: 'no-cache', credentials: 'same-origin' })
+    .then(function (r) { return r.ok ? r.text() : null; })
+    .then(function (html) {
+      if (!html) return;
+      var m = html.match(/site\.css\?v=([0-9a-f]+)/);
+      if (!m || m[1] === loaded) return;
+      try { sessionStorage.setItem('at-reloaded', m[1]); } catch (e) {}
+      location.reload();
+    })
+    .catch(function () { /* offline or blocked: leave the page alone */ });
+})();
