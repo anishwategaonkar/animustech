@@ -287,3 +287,31 @@
     });
   });
 })();
+
+/* ---------- keep every logo mark spinning in step ----------
+   The header and footer marks carry the same 12s rotateY, but a CSS animation
+   starts when its element is first rendered, and the footer is below the fold.
+   The two therefore begin at different moments and stay permanently out of
+   phase: sampled together, one mark was 2.7px wide and the other 12.3px, which
+   is why they never looked like the same logo.
+
+   Pinning both to startTime 0 anchors them to the document timeline instead of
+   to whenever each happened to be painted. */
+(function () {
+  var marks = document.querySelectorAll('.logo__mark');
+  if (!marks.length || typeof marks[0].getAnimations !== 'function') return;
+
+  function sync() {
+    Array.prototype.forEach.call(marks, function (el) {
+      el.getAnimations().forEach(function (a) {
+        if (a.animationName === 'logoRoll' || (a.constructor && a.constructor.name === 'CSSAnimation')) {
+          try { a.startTime = 0; } catch (e) {}
+        }
+      });
+    });
+  }
+
+  sync();
+  /* the footer mark may not have begun animating on first pass */
+  if (document.readyState !== 'complete') window.addEventListener('load', sync);
+})();
