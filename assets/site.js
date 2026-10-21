@@ -179,3 +179,111 @@
   /* landing on a page that belongs to one side settles the preference */
   if (fromPath) { try { localStorage.setItem('at-aud', fromPath); } catch (e) {} }
 })();
+
+/* ---------- AI ring system ----------
+   Built in script rather than written into every template, so the markup
+   stays out of the page source and every hero on the site picks it up.
+   Purely decorative: aria-hidden, pointer-events none, never focusable. */
+(function () {
+  var heroes = document.querySelectorAll('.hero');
+  if (!heroes.length) return;
+
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function dial() {
+    var ticks = '';
+    for (var i = 0; i < 60; i++) {
+      var major = i % 5 === 0;
+      ticks += '<line x1="320" y1="104" x2="320" y2="' + (major ? 118 : 111) +
+               '" transform="rotate(' + (i * 6) + ' 320 320)" ' +
+               'stroke="var(--accent-line)" stroke-width="' + (major ? 1.6 : 1) + '"/>';
+    }
+    /* three gold comets chasing each other round the sweep ring, each with a
+       tail of shrinking, fading dots trailing behind the direction of travel.
+       The group turns clockwise, so "behind" is a negative rotation. */
+    var comets = '';
+    for (var c = 0; c < 3; c++) {
+      var lead = -c * 11;
+      for (var k = 7; k >= 1; k--) {
+        comets += '<circle cx="320" cy="56" r="' + (3.3 - k * 0.33).toFixed(2) +
+                  '" fill="var(--accent-2)" opacity="' + (0.46 - k * 0.055).toFixed(2) +
+                  '" transform="rotate(' + (lead - k * 2.4) + ' 320 320)"/>';
+      }
+      comets += '<circle cx="320" cy="56" r="3.7" fill="var(--accent-2)" ' +
+                'transform="rotate(' + lead + ' 320 320)"/>';
+    }
+
+    /* sonar style waves pushing outward from the centre, staggered */
+    var waves = '';
+    for (var w = 0; w < 3; w++) {
+      waves += '<g class="r-wave" style="animation-delay:' + (w * 2.2) + 's">' +
+               '<circle cx="320" cy="320" r="230" stroke="var(--accent)" ' +
+               'stroke-width="1.2" opacity=".5"/></g>';
+    }
+
+    return '<svg viewBox="0 0 640 640" fill="none" aria-hidden="true" focusable="false">' +
+      '<defs>' +
+        '<linearGradient id="agSweep" x1="0" y1="0" x2="1" y2="0">' +
+          '<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>' +
+          '<stop offset="1" stop-color="var(--accent)" stop-opacity="1"/>' +
+        '</linearGradient>' +
+        '<radialGradient id="agCore">' +
+          '<stop offset="0" stop-color="var(--accent)" stop-opacity=".16"/>' +
+          '<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>' +
+        '</radialGradient>' +
+        /* bloom around the sweep and the comets, so they read as lit rather
+           than drawn. filterUnits has to be generous or the blur gets clipped */
+        '<filter id="agGlow" x="-30%" y="-30%" width="160%" height="160%">' +
+          '<feGaussianBlur stdDeviation="5" result="b"/>' +
+          '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>' +
+          '<feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>' +
+        '<filter id="agGlowGold" x="-40%" y="-40%" width="180%" height="180%">' +
+          '<feGaussianBlur stdDeviation="3.4" result="b"/>' +
+          '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>' +
+          '<feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>' +
+      '</defs>' +
+      '<circle cx="320" cy="320" r="158" fill="url(#agCore)"/>' +
+      waves +
+      '<g class="r-spin"><circle cx="320" cy="320" r="300" stroke="var(--accent-line)" stroke-width="1" stroke-dasharray="2 12"/></g>' +
+      '<g class="r-spin-rev"><circle cx="320" cy="320" r="264" stroke="var(--accent)" stroke-width="1.5" stroke-opacity=".55" stroke-dasharray="150 92 42 92"/></g>' +
+      '<g class="r-sweep" filter="url(#agGlow)"><circle cx="320" cy="320" r="264" stroke="url(#agSweep)" stroke-width="2.4" stroke-dasharray="130 1530" stroke-linecap="round"/></g>' +
+      '<g class="r-tick">' + ticks + '</g>' +
+      '<g class="r-spin"><circle cx="320" cy="320" r="86" stroke="var(--accent-line)" stroke-width="1" stroke-dasharray="1 8"/></g>' +
+      '<g class="r-comets" filter="url(#agGlowGold)">' + comets + '</g>' +
+    '</svg>';
+  }
+
+  Array.prototype.forEach.call(heroes, function (hero) {
+    if (hero.querySelector('.rings')) return;
+    var box = document.createElement('div');
+    box.className = 'rings';
+    box.setAttribute('aria-hidden', 'true');
+    box.innerHTML = dial();
+    hero.insertBefore(box, hero.firstChild);
+
+    if (reduce) return;
+
+    /* cursor parallax, a few pixels only, rAF throttled */
+    var svg = box.querySelector('svg'), queued = false, px = 0, py = 0;
+    hero.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      var r = hero.getBoundingClientRect();
+      px = ((e.clientX - r.left) / r.width - 0.5) * 26;
+      py = ((e.clientY - r.top) / r.height - 0.5) * 20;
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        svg.style.setProperty('--rx', px.toFixed(1) + 'px');
+        svg.style.setProperty('--ry', py.toFixed(1) + 'px');
+        queued = false;
+      });
+    });
+    hero.addEventListener('pointerleave', function () {
+      svg.style.setProperty('--rx', '0px');
+      svg.style.setProperty('--ry', '0px');
+    });
+  });
+})();

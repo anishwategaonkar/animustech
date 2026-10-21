@@ -757,3 +757,77 @@
 /* the step number knocks a hole in the rule above it, so it has to match
    whichever background the section actually uses */
 .section--alt .step::before{background:var(--bg-2)}
+
+/* ---------- AI ring system ----------
+   The two overlapping circles of the logo, set inside a slowly turning
+   instrument dial: concentric arcs, a graduated bezel and a sweep that
+   tracks round the outer ring. It sits behind the hero copy, never over it,
+   and the whole thing stops dead for anyone who asks for reduced motion. */
+.rings{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+  display:grid;align-items:center;justify-items:end}
+.rings svg{
+  /* set to the right of the left aligned copy, part of it running off the
+     edge, so the headline never reads through the middle of the dial */
+  width:min(880px,96%);height:auto;margin-right:-13%;
+  opacity:.6;
+  transform:translate3d(var(--rx,0px),var(--ry,0px),0);
+  transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+.hero--sub .rings svg{width:min(700px,88%);opacity:.34}
+/* the two audience landing pages are entry points in their own right, so they
+   carry the dial at the same strength as the homepage rather than the muted
+   version the deeper sub pages get */
+.hero--aud .rings svg{width:min(880px,96%);opacity:.6}
+/* every group is concentric on 320,320, so rotate about the viewBox, not each
+   group's own bounding box, otherwise the orbiting node spins on the spot */
+.rings .r-spin,.rings .r-spin-rev,.rings .r-sweep,
+.rings .r-comets,.rings .r-tick,.rings .r-wave{transform-box:view-box;transform-origin:320px 320px}
+.rings .r-spin{animation:r-rot 64s linear infinite}
+.rings .r-spin-rev{animation:r-rot 88s linear infinite reverse,
+                   r-pulse 7.4s ease-in-out infinite}
+.rings .r-tick{animation:r-rot 150s linear infinite}
+/* the travelling line breathes: faint, bright, faint again, on a cycle that
+   does not divide into its orbit, so the bright pass lands somewhere new */
+.rings .r-sweep{animation:r-rot 12s linear infinite,
+                r-pulse 5.2s ease-in-out infinite}
+.rings .r-comets{animation:r-rot 17s linear infinite}
+.rings .r-wave{animation:r-wave 6.6s cubic-bezier(.3,.6,.4,1) infinite;opacity:0}
+/* the wave leaves gold and arrives purple. The delay is inherited so the
+   colour stays in step with the group's own expansion. */
+.rings .r-wave circle{
+  animation:r-wave-hue 6.6s cubic-bezier(.3,.6,.4,1) infinite;
+  animation-delay:inherit;
+}
+@keyframes r-rot{to{transform:rotate(360deg)}}
+/* the wave starts tight and pushes out past the bezel as it fades */
+@keyframes r-wave{
+  0%{transform:scale(.42);opacity:0}
+  12%{opacity:.55}
+  100%{transform:scale(1.26);opacity:0}
+}
+@keyframes r-wave-hue{
+  0%{stroke:var(--accent-2)}
+  45%{stroke:var(--accent-2)}
+  100%{stroke:var(--accent)}
+}
+@keyframes r-pulse{0%,100%{opacity:.34}50%{opacity:1}}
+@media (max-width:760px){
+  .rings{justify-items:center}
+  .rings svg,.hero--sub .rings svg{width:min(620px,155%);margin-right:0;opacity:.26}
+}
+@media (prefers-reduced-motion:reduce){
+  .rings *{animation:none !important}
+  .rings svg{transition:none}
+}
+
+/* a small turning ring on every section label, so the motif carries through
+   the page without a HUD sitting behind the reading copy */
+.eyebrow{position:relative;padding-left:22px}
+.eyebrow::after{
+  content:"";position:absolute;left:0;top:50%;width:12px;height:12px;
+  margin-top:-6px;border-radius:50%;
+  border:1.5px solid var(--accent-line);
+  border-top-color:var(--accent);
+  animation:r-rot 5.5s linear infinite;
+}
+@media (prefers-reduced-motion:reduce){.eyebrow::after{animation:none}}

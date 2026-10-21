@@ -98,7 +98,7 @@ EXTRA_CSS = """
 """
 
 BODY = """
-<section class="hero hero--sub">
+<section class="hero hero--sub hero--aud">
   <div class="hero__grid" aria-hidden="true"></div>
   <div class="glow glow--a" aria-hidden="true"></div>
   <div class="wrap hero__inner">
