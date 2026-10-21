@@ -12,10 +12,10 @@
        text colour was rederived against the darker paper: a straight 20%
        darkening dropped muted text to 2.95:1, so the ink moved with it.
        All five foreground colours clear 4.5:1 on all four surfaces. */
-    --bg:#bab9b6;          /* warm grey, the page */
-    --bg-2:#b2afaa;        /* alternating bands */
-    --surface:#c8c7c6;     /* cards */
-    --surface-2:#c1bfbc;   /* pills, secondary panels */
+    --bg:#dfdeda;          /* warm grey, the page */
+    --bg-2:#d6d2cc;        /* alternating bands */
+    --surface:#f0efee;     /* cards */
+    --surface-2:#e8e5e2;   /* pills, secondary panels */
     --border:rgba(26,22,18,.2);
     --border-lit:rgba(26,22,18,.32);
     --border-faint:rgba(26,22,18,.1);
@@ -40,8 +40,8 @@
     --dial-line:rgba(47,30,78,.42);
 
     --gloss:linear-gradient(180deg,rgba(26,22,18,.035),rgba(26,22,18,0) 60%);
-    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.4);
-    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.55);
+    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.6);
+    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.78);
     --sheen:rgba(26,22,18,.05);
     --sheen-2:rgba(26,22,18,.08);
 
@@ -49,8 +49,8 @@
     --accent-metal-btn:linear-gradient(100deg,#231540 0%,#3b2662 28%,#4f397e 47%,#3b2662 66%,#231540 100%);
     --warm-metal:linear-gradient(100deg,#412911 0%,#5c3a18 26%,#775026 46%,#5c3a18 66%,#412911 100%);
 
-    --header-bg:rgba(186,185,182,.9);
-    --header-bg-stuck:rgba(186,185,182,.98);
+    --header-bg:rgba(223,222,218,.9);
+    --header-bg-stuck:rgba(223,222,218,.98);
     --shadow-ink:rgba(20,17,14,.22);
     --shadow-ink-2:rgba(20,17,14,.13);
     --btn-shadow:0 9px 24px -12px rgba(30,20,50,.6);
@@ -60,7 +60,7 @@
     --glow-op:.55;
     --grain-op:.05;
     --grain-blend:multiply;
-    --field-bg:#dedcda;
+    --field-bg:#ffffff;
     --field-inset:inset 0 1px 2px rgba(26,22,18,.12);
     --logo-v-1:#553d86; --logo-v-2:#3b2662; --logo-v-3:#231540;
     --logo-a-1:#775026; --logo-a-2:#5c3a18; --logo-a-3:#412911;
@@ -260,9 +260,10 @@
   .burger.is-open span::after{opacity:0;}
 
   /* ---------- hero ---------- */
-  /* the header sits in normal flow, so this top padding was pure dead space
-     between the nav and the headline. Cut by 90%, 168px down to 17px. */
-  .hero{padding:17px 0 104px;position:relative;overflow:hidden;}
+  /* the header sits in normal flow, so the top padding was pure dead space
+     between the nav and the headline: 168px down to 17px. The bottom came
+     down with it, otherwise the first screen sits visibly lopsided. */
+  .hero{padding:17px 0 44px;position:relative;overflow:hidden;}
   .hero__grid{
     position:absolute;inset:0;z-index:0;opacity:.55;
     background-image:
@@ -583,7 +584,7 @@
     .nav .btn{margin-top:18px;border-bottom:none;}
   }
   @media (max-width:760px){
-    .hero{padding:13px 0 78px;}
+    .hero{padding:13px 0 34px;}
     .section{padding:74px 0;}
     .grid-3,.steps,.pipeline,.benefits{grid-template-columns:1fr;}
     .grid-cards > *{flex-basis:100%;}
@@ -594,7 +595,7 @@
     .human-note{flex-direction:column;gap:14px;}
   }
 /* ============ SUBPAGE ADDITIONS (SEO landing pages) ============ */
-.hero--sub{min-height:auto;padding:13px 0 72px}
+.hero--sub{min-height:auto;padding:13px 0 40px}
 .hero--sub h1{font-size:clamp(2rem,4.4vw,3.15rem);max-width:17ch}
 .hero--sub .hero__lead{max-width:62ch}
 .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:9px;
