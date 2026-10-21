@@ -163,6 +163,47 @@ JOBS = [
          "Experience developing commercially viable, non infringing manufacturing processes",
      ],
     },
+    {
+     "slug": "business-development-associate-remote",
+     "title": "Business Development Associate",
+     "location": "Remote",
+     "remote": True,
+     "employment": "FULL_TIME",
+     "experience": "3 to 6 years",
+     "industry": "Talent Acquisition & Technology Services",
+     "posted": "2026-10-21",
+     "valid_through": "2026-12-20",
+     "salary_min": 500000,
+     "salary_max": 800000,
+     "client_note": "Animus Tech, a Pune based AI enabled talent acquisition and software development firm.",
+     "summary": ("Own new client acquisition for Animus Tech's two core lines: recruitment mandates "
+                 "for D2C manufacturing brands, and software and IT delivery engagements. A fully "
+                 "remote, revenue owning role with direct line to closing deals, not just generating leads."),
+     "responsibilities": [
+         "Identify and prospect target companies in D2C manufacturing and software and IT services",
+         "Build and manage a pipeline of qualified leads across both business lines",
+         "Run outbound outreach by email, LinkedIn and calls to decision makers at target accounts",
+         "Pitch Animus Tech's recruitment and software delivery services to prospective clients",
+         "Lead discovery calls to understand client hiring needs or software project requirements",
+         "Negotiate terms and close new client mandates, owning the deal from first contact to signed agreement",
+         "Maintain accurate pipeline and activity records in the CRM",
+         "Coordinate with the delivery and recruitment teams to hand off closed clients smoothly",
+         "Track market trends in D2C manufacturing and software and IT to spot new opportunities",
+         "Report on pipeline health, conversion rates and revenue against monthly and quarterly targets",
+     ],
+     "requirements": [
+         "3 to 6 years of experience in business development, sales or client acquisition",
+         "Proven track record of hitting or exceeding sales targets",
+         "Comfortable owning the full sales cycle end to end, from prospecting to closing",
+         "Excellent written and verbal communication and negotiation skills",
+         "Self driven and comfortable working remotely with minimal supervision",
+     ],
+     "nice_to_have": [
+         "Experience selling recruitment, staffing or professional services",
+         "Experience selling software or IT services to D2C or manufacturing clients",
+         "Existing network of contacts in D2C manufacturing or the software and IT sector",
+     ],
+    },
 ]
 
 # Previous postings are retained for reference but are not published.

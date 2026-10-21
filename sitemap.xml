@@ -197,7 +197,7 @@
 
   <url>
     <loc>https://animustech.in/jobs/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -219,6 +219,13 @@
   <url>
     <loc>https://animustech.in/jobs/rd-team-leader-api-synthesis-bengaluru/</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://animustech.in/jobs/business-development-associate-remote/</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
