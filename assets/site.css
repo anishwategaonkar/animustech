@@ -850,16 +850,16 @@
 .arm--flat:hover{transform:none;border-color:var(--border);box-shadow:none}
 
 /* ---------- homepage hero, centred ----------
-   Only the homepage. Sub page heroes stay left aligned, because they carry a
-   breadcrumb and longer reading copy that centring would make hard to scan. */
-.hero:not(.hero--sub) .hero__inner{margin-inline:auto;text-align:center}
-.hero:not(.hero--sub) .hero__lead,
-.hero:not(.hero--sub) .hero__kicker{margin-left:auto;margin-right:auto}
-.hero:not(.hero--sub) .hero__cta,
-.hero:not(.hero--sub) .hero__meta{justify-content:center}
+   Keyed to .hero--home, not to :not(.hero--sub). Talent acquisition uses a
+   plain .hero, so the negative selector was centring that page too. */
+.hero--home .hero__inner{margin-inline:auto;text-align:center}
+.hero--home .hero__lead,
+.hero--home .hero__kicker{margin-left:auto;margin-right:auto}
+.hero--home .hero__cta,
+.hero--home .hero__meta{justify-content:center}
 /* with the copy centred, the dial's knockout belongs in the middle too,
    otherwise the glow goes dark on empty space and runs across the headline */
-.hero:not(.hero--sub) .rings{
+.hero--home .rings{
   -webkit-mask-image:radial-gradient(ellipse 58% 64% at 50% 50%,
      transparent 0%,transparent 44%,#000 88%);
   mask-image:radial-gradient(ellipse 58% 64% at 50% 50%,
