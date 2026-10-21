@@ -865,3 +865,14 @@
   mask-image:radial-gradient(ellipse 58% 64% at 50% 50%,
      transparent 0%,transparent 44%,#000 88%);
 }
+
+/* the homepage hero owns the first screen. Without a floor on its height the
+   About us band rode up into the fold, so the two shared the landing view.
+   svh rather than vh so a mobile browser's collapsing toolbar does not make
+   the section jump as you scroll. The 75px is the header, which is in flow. */
+.hero--home{
+  min-height:calc(100vh - 75px);
+  min-height:calc(100svh - 75px);
+  display:flex;align-items:center;
+}
+.hero--home .hero__inner{width:100%}
