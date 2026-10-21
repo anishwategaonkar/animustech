@@ -72,18 +72,8 @@ SCHEMAS = [
 
 EXTRA_CSS = """
 <style>
-.steps--cand{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:46px}
-@media(max-width:900px){.steps--cand{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.steps--cand{grid-template-columns:1fr}}
-
-
-@media(max-width:860px){
-
-
-@media(max-width:760px){.promise{grid-template-columns:1fr}}
-.promise div{padding-top:22px;border-top:1px solid var(--border)}
-.promise h3{font-size:1.04rem;margin-bottom:8px}
-.promise p{color:var(--text-2);font-size:.95rem;line-height:1.7}
+/* page specific only. The steps grid, the promise panels and the dial all
+   live in site.css so they stay consistent with the rest of the site. */
 .faqlist{max-width:780px;margin-top:40px}
 .faqlist details{border-bottom:1px solid var(--border);padding:18px 0}
 .faqlist summary{
@@ -92,7 +82,7 @@ EXTRA_CSS = """
 }
 .faqlist summary::-webkit-details-marker{display:none}
 .faqlist summary::after{content:"+";color:var(--accent);font-weight:400;font-size:1.3rem;line-height:1}
-.faqlist details[open] summary::after{content:"\\2013"}
+.faqlist details[open] summary::after{content:"\\2212"}
 .faqlist p{color:var(--text-2);line-height:1.75;margin-top:12px;font-size:.97rem}
 </style>
 """

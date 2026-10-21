@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=074981fc">
 
 <script type="application/ld+json">
 {
@@ -255,7 +255,7 @@
       <a href="/candidates/#process" data-aud="candidate">How we screen</a>
       <span class="aud" id="audNavMobile" role="group" aria-label="Choose your view">
         <a href="/candidates/" data-set-aud="candidate">I am a candidate</a>
-        <a href="/talent-acquisition/" data-set-aud="employer">I am an employer</a>
+        <a href="/start/" data-set-aud="employer">I am an employer</a>
       </span>
       <a href="/contact/" class="btn btn--primary">Get in touch</a>
     </nav>
@@ -263,7 +263,7 @@
     <div class="header__tools">
       <span class="aud" id="audNav" role="group" aria-label="Choose your view">
         <a href="/candidates/" data-set-aud="candidate">I am a candidate</a>
-        <a href="/talent-acquisition/" data-set-aud="employer">I am an employer</a>
+        <a href="/start/" data-set-aud="employer">I am an employer</a>
       </span>
       <button class="themebtn" id="themebtn" type="button" aria-label="Switch between light and dark theme">
         <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
@@ -287,10 +287,10 @@
     <h1>We hire the people.<br><span class="accent-text">We build the systems.</span></h1>
     <h2 class="hero__kicker">Animus Tech runs two arms: AI enabled talent acquisition, and custom software for operations led businesses</h2>
     <div class="hero__cta" style="margin-top:34px">
-      <a href="#choose" class="btn btn--primary">Choose where to start
+      <a href="/start/" class="btn btn--primary" data-set-aud="employer">Work with us
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="#who-we-are" class="btn btn--ghost">Who we are</a>
+      <a href="/candidates/" class="btn btn--ghost" data-set-aud="candidate">I am a candidate</a>
     </div>
     <ul class="hero__meta">
       <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Two arms, one standard</li>
@@ -352,58 +352,83 @@
   </div>
 </section>
 
-<!-- ============ CHOOSE ============ -->
-<section class="section" id="choose">
+<!-- ============ WHAT WE DO ============ -->
+<section class="section" id="what-we-do">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Pick your side</span>
-      <h2 class="section-title">What brought you here?</h2>
+      <span class="eyebrow">What we do</span>
+      <h2 class="section-title">Two arms, run to the same standard.</h2>
+      <p class="section-lead">
+        We find the people, and we build the systems those people end up working in.
+        Both start the same way, by understanding how the work actually happens before
+        anyone commits to a shortlist or a specification.
+      </p>
     </div>
 
-    <div class="arms">
-      <a class="arm reveal" href="/talent-acquisition/" data-set-aud="employer">
+    <div class="arms" style="margin-top:46px">
+      <div class="arm arm--flat reveal">
         <div class="arm__ico" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3>I am an employer</h3>
+        <h3>Talent acquisition</h3>
         <p>
-          AI enabled recruitment for software, manufacturing and D2C companies across India,
-          plus custom software for the operations a spreadsheet has outgrown. Our AI sources
-          and screens at a scale no manual team can match, then our recruiters judge the fit
-          software still cannot.
+          AI enabled recruitment for software, manufacturing and D2C companies across
+          India. Our AI sources and screens at a scale no manual team can match, then
+          our recruiters judge the fit software still cannot.
         </p>
         <ul class="card__list">
           <li>Permanent, executive and volume hiring</li>
           <li>Short reasoned shortlists, not a stack of CVs</li>
-          <li>Custom software built around your process</li>
+          <li>Published submittal ratios and timelines</li>
         </ul>
-        <span class="arm__cta">Go to the employer view
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
+      </div>
 
-      <a class="arm reveal" href="/candidates/" data-set-aud="candidate">
+      <div class="arm arm--flat reveal">
         <div class="arm__ico" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
         </div>
-        <h3>I am looking for a job</h3>
+        <h3>Software development</h3>
         <p>
-          We list only the roles we are actively recruiting for, each with a short application
-          form. A recruiter reads every application against the scorecard the client signed
-          off, and you hear back either way.
+          Custom software for manufacturing, small enterprises and other operations led
+          businesses. The systems that usually live in a spreadsheet until the
+          spreadsheet breaks, built around the process you already run.
         </p>
         <ul class="card__list">
-          <li>Live roles, with what we can say about each one</li>
-          <li>A person reads your application, not a filter</li>
-          <li>Your CV does not get sprayed around</li>
+          <li>Lead management, job tracking, internal tools</li>
+          <li>Built around your process, not a template</li>
+          <li>You own the code and the data</li>
         </ul>
-        <span class="arm__cta">Go to the candidate view
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
+      </div>
+    </div>
+
+    <p style="margin-top:44px">
+      <a href="/start/" class="btn btn--primary" data-set-aud="employer">Tell us which one you need
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ CANDIDATES ============ -->
+<section class="section section--alt" id="candidates">
+  <div class="wrap">
+    <div class="candidateband reveal">
+      <div>
+        <span class="eyebrow">For candidates</span>
+        <h2 class="section-title" style="font-size:1.5rem;margin-bottom:12px">Here for a job rather than to hire?</h2>
+        <p style="color:var(--text-2);line-height:1.75;max-width:560px">
+          We list only the roles we are actively recruiting for. A recruiter reads every
+          application against the scorecard the client signed off, and you hear back
+          either way.
+        </p>
+      </div>
+      <a href="/candidates/" class="btn btn--primary" data-set-aud="candidate">For candidates
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </div>
 </section>
+
 <!-- ============ WHERE NEXT ============ -->
 <section class="section">
   <div class="wrap">
@@ -430,10 +455,10 @@
           <svg class="logo__mark" viewBox="0 0 54 40" aria-hidden="true">
             <defs>
               <linearGradient id="ringRightF" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#c6c0f0"/><stop offset=".45" stop-color="#9d94e0"/><stop offset="1" stop-color="#7a70c4"/>
+                <stop offset="0" stop-color="var(--logo-v-1)"/><stop offset=".45" stop-color="var(--logo-v-2)"/><stop offset="1" stop-color="var(--logo-v-3)"/>
               </linearGradient>
               <linearGradient id="ringLeftF" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#f0d9bd"/><stop offset=".45" stop-color="#dfb78e"/><stop offset="1" stop-color="#c1955f"/>
+                <stop offset="0" stop-color="var(--logo-a-1)"/><stop offset=".45" stop-color="var(--logo-a-2)"/><stop offset="1" stop-color="var(--logo-a-3)"/>
               </linearGradient>
             </defs>
             <circle cx="19" cy="20" r="17" fill="none" stroke="url(#ringLeftF)" stroke-width="3"/>
@@ -513,6 +538,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=222fef8a" defer></script>
 </body>
 </html>

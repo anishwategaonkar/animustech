@@ -6,58 +6,64 @@
     --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
     --shot-bg:#0d1018;          /* product screenshots are a dark UI in both themes */
 
-    /* ---- LIGHT, the default ----
-       Warm grey paper, near black ink, dark purple as the primary accent and
-       brown as the secondary. No lavender and no plain white page: cards sit
-       as near white panels on warm grey so the structure is readable without
-       borders doing all the work. Every text colour clears 4.5:1 on all four
-       surfaces below. */
-    --bg:#e9e7e3;          /* warm grey, the page */
-    --bg-2:#dedbd5;        /* alternating bands, a step deeper */
-    --surface:#faf9f7;     /* cards, near white */
-    --surface-2:#f1efeb;   /* pills, secondary panels */
-    --border:rgba(30,26,22,.14);
-    --border-lit:rgba(30,26,22,.24);
-    --border-faint:rgba(30,26,22,.075);
-    --border-solid:rgba(30,26,22,.22);
-    --text:#17141a;        /* near black */
-    --text-2:#4a4550;
-    --text-3:#625c69;
-    --accent:#4a2f7a;      /* dark purple */
-    --accent-2:#7a4f22;    /* brown */
+    /* ---- ANIMUS, the light default ----
+       Warm grey paper taken 20% down from the first pass, near black ink,
+       dark purple as the primary accent and brown as the secondary. Every
+       text colour was rederived against the darker paper: a straight 20%
+       darkening dropped muted text to 2.95:1, so the ink moved with it.
+       All five foreground colours clear 4.5:1 on all four surfaces. */
+    --bg:#bab9b6;          /* warm grey, the page */
+    --bg-2:#b2afaa;        /* alternating bands */
+    --surface:#c8c7c6;     /* cards */
+    --surface-2:#c1bfbc;   /* pills, secondary panels */
+    --border:rgba(26,22,18,.2);
+    --border-lit:rgba(26,22,18,.32);
+    --border-faint:rgba(26,22,18,.1);
+    --border-solid:rgba(26,22,18,.3);
+    --text:#141119;
+    --text-2:#35313b;
+    --text-3:#443f4b;
+    --accent:#3b2662;      /* dark purple */
+    --accent-2:#5c3a18;    /* brown */
     --accent-ink:#ffffff;
-    --accent-dim:rgba(74,47,122,.07);
-    --accent-line:rgba(74,47,122,.24);
-    --accent-wash:rgba(74,47,122,.06);
-    --accent-wash-2:rgba(74,47,122,.13);
-    --warm-dim:rgba(122,79,34,.08);
-    --warm-line:rgba(122,79,34,.26);
+    --accent-dim:rgba(59,38,98,.09);
+    --accent-line:rgba(59,38,98,.3);
+    --accent-wash:rgba(59,38,98,.08);
+    --accent-wash-2:rgba(59,38,98,.16);
+    --warm-dim:rgba(92,58,24,.1);
+    --warm-line:rgba(92,58,24,.3);
 
-    --gloss:linear-gradient(180deg,rgba(30,26,22,.03),rgba(30,26,22,0) 60%);
-    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.75);
-    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.92);
-    --sheen:rgba(30,26,22,.045);
-    --sheen-2:rgba(30,26,22,.075);
+    /* the Animus dial runs on its own tokens so it can sit deeper in the
+       background without dragging buttons and headings down with it */
+    --dial:#2f1e4e;
+    --dial-2:#4a2e13;
+    --dial-line:rgba(47,30,78,.42);
 
-    --accent-metal:linear-gradient(100deg,#331f58 0%,#4a2f7a 26%,#6a49a4 46%,#4a2f7a 66%,#331f58 100%);
-    --accent-metal-btn:linear-gradient(100deg,#2e1c50 0%,#4a2f7a 28%,#63439a 47%,#4a2f7a 66%,#2e1c50 100%);
-    --warm-metal:linear-gradient(100deg,#573616 0%,#7a4f22 26%,#9c6a33 46%,#7a4f22 66%,#573616 100%);
+    --gloss:linear-gradient(180deg,rgba(26,22,18,.035),rgba(26,22,18,0) 60%);
+    --gloss-edge:inset 0 1px 0 rgba(255,255,255,.4);
+    --gloss-edge-lit:inset 0 1px 0 rgba(255,255,255,.55);
+    --sheen:rgba(26,22,18,.05);
+    --sheen-2:rgba(26,22,18,.08);
 
-    --header-bg:rgba(233,231,227,.88);
-    --header-bg-stuck:rgba(233,231,227,.98);
-    --shadow-ink:rgba(30,26,22,.15);
-    --shadow-ink-2:rgba(30,26,22,.09);
-    --btn-shadow:0 9px 24px -12px rgba(74,47,122,.55);
-    --btn-shadow-hover:0 14px 32px -13px rgba(74,47,122,.65);
-    --glow-a:radial-gradient(circle,rgba(74,47,122,.10),transparent 70%);
-    --glow-b:radial-gradient(circle,rgba(122,79,34,.07),transparent 70%);
-    --glow-op:.6;
+    --accent-metal:linear-gradient(100deg,#271846 0%,#3b2662 26%,#553d86 46%,#3b2662 66%,#271846 100%);
+    --accent-metal-btn:linear-gradient(100deg,#231540 0%,#3b2662 28%,#4f397e 47%,#3b2662 66%,#231540 100%);
+    --warm-metal:linear-gradient(100deg,#412911 0%,#5c3a18 26%,#775026 46%,#5c3a18 66%,#412911 100%);
+
+    --header-bg:rgba(186,185,182,.9);
+    --header-bg-stuck:rgba(186,185,182,.98);
+    --shadow-ink:rgba(20,17,14,.22);
+    --shadow-ink-2:rgba(20,17,14,.13);
+    --btn-shadow:0 9px 24px -12px rgba(30,20,50,.6);
+    --btn-shadow-hover:0 14px 32px -13px rgba(30,20,50,.7);
+    --glow-a:radial-gradient(circle,rgba(59,38,98,.12),transparent 70%);
+    --glow-b:radial-gradient(circle,rgba(92,58,24,.08),transparent 70%);
+    --glow-op:.55;
     --grain-op:.05;
     --grain-blend:multiply;
-    --field-bg:#ffffff;
-    --field-inset:inset 0 1px 2px rgba(30,26,22,.08);
-    --logo-v-1:#6a49a4; --logo-v-2:#4a2f7a; --logo-v-3:#2e1c50;
-    --logo-a-1:#9c6a33; --logo-a-2:#7a4f22; --logo-a-3:#573616;
+    --field-bg:#dedcda;
+    --field-inset:inset 0 1px 2px rgba(26,22,18,.12);
+    --logo-v-1:#553d86; --logo-v-2:#3b2662; --logo-v-3:#231540;
+    --logo-a-1:#775026; --logo-a-2:#5c3a18; --logo-a-3:#412911;
   }
 
   [data-theme="dark"]{
@@ -254,7 +260,9 @@
   .burger.is-open span::after{opacity:0;}
 
   /* ---------- hero ---------- */
-  .hero{padding:168px 0 104px;position:relative;overflow:hidden;}
+  /* the header sits in normal flow, so this top padding was pure dead space
+     between the nav and the headline. Cut by 90%, 168px down to 17px. */
+  .hero{padding:17px 0 104px;position:relative;overflow:hidden;}
   .hero__grid{
     position:absolute;inset:0;z-index:0;opacity:.55;
     background-image:
@@ -575,7 +583,7 @@
     .nav .btn{margin-top:18px;border-bottom:none;}
   }
   @media (max-width:760px){
-    .hero{padding:132px 0 78px;}
+    .hero{padding:13px 0 78px;}
     .section{padding:74px 0;}
     .grid-3,.steps,.pipeline,.benefits{grid-template-columns:1fr;}
     .grid-cards > *{flex-basis:100%;}
@@ -586,7 +594,7 @@
     .human-note{flex-direction:column;gap:14px;}
   }
 /* ============ SUBPAGE ADDITIONS (SEO landing pages) ============ */
-.hero--sub{min-height:auto;padding:132px 0 72px}
+.hero--sub{min-height:auto;padding:13px 0 72px}
 .hero--sub h1{font-size:clamp(2rem,4.4vw,3.15rem);max-width:17ch}
 .hero--sub .hero__lead{max-width:62ch}
 .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:9px;
@@ -764,32 +772,37 @@
    tracks round the outer ring. It sits behind the hero copy, never over it,
    and the whole thing stops dead for anyone who asks for reduced motion. */
 .rings{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
-  display:grid;align-items:center;justify-items:end}
+  display:grid;place-items:center;
+  /* the copy column is cut out of the dial, so the travelling glow goes dark
+     as it crosses the text and comes back on the far side. It is a mask, not
+     a dimmer: nothing faint is left sitting behind the words. */
+  -webkit-mask-image:radial-gradient(ellipse 54% 62% at 30% 50%,
+     transparent 0%,transparent 46%,#000 88%);
+  mask-image:radial-gradient(ellipse 54% 62% at 30% 50%,
+     transparent 0%,transparent 46%,#000 88%);}
 .rings svg{
-  /* set to the right of the left aligned copy, part of it running off the
-     edge, so the headline never reads through the middle of the dial */
-  width:min(880px,96%);height:auto;margin-right:-13%;
-  opacity:.6;
+  /* centred and carried strong. The hero copy sits on top at z-index 1 and
+     stays near black, so the dial reads through behind it rather than under it */
+  width:min(1120px,128%);height:auto;
+  opacity:.85;
   transform:translate3d(var(--rx,0px),var(--ry,0px),0);
   transition:transform .6s cubic-bezier(.22,1,.36,1);
 }
-.hero--sub .rings svg{width:min(700px,88%);opacity:.34}
+.hero--sub .rings svg{width:min(840px,104%);opacity:.5}
 /* the two audience landing pages are entry points in their own right, so they
    carry the dial at the same strength as the homepage rather than the muted
    version the deeper sub pages get */
-.hero--aud .rings svg{width:min(880px,96%);opacity:.6}
+.hero--aud .rings svg{width:min(1120px,128%);opacity:.85}
 /* every group is concentric on 320,320, so rotate about the viewBox, not each
    group's own bounding box, otherwise the orbiting node spins on the spot */
 .rings .r-spin,.rings .r-spin-rev,.rings .r-sweep,
 .rings .r-comets,.rings .r-tick,.rings .r-wave{transform-box:view-box;transform-origin:320px 320px}
 .rings .r-spin{animation:r-rot 64s linear infinite}
-.rings .r-spin-rev{animation:r-rot 88s linear infinite reverse,
-                   r-pulse 7.4s ease-in-out infinite}
+.rings .r-spin-rev{animation:r-rot 88s linear infinite reverse}
 .rings .r-tick{animation:r-rot 150s linear infinite}
 /* the travelling line breathes: faint, bright, faint again, on a cycle that
    does not divide into its orbit, so the bright pass lands somewhere new */
-.rings .r-sweep{animation:r-rot 12s linear infinite,
-                r-pulse 5.2s ease-in-out infinite}
+.rings .r-sweep{animation:r-rot 12s linear infinite}
 .rings .r-comets{animation:r-rot 17s linear infinite}
 .rings .r-wave{animation:r-wave 6.6s cubic-bezier(.3,.6,.4,1) infinite;opacity:0}
 /* the wave leaves gold and arrives purple. The delay is inherited so the
@@ -810,10 +823,8 @@
   45%{stroke:var(--accent-2)}
   100%{stroke:var(--accent)}
 }
-@keyframes r-pulse{0%,100%{opacity:.34}50%{opacity:1}}
 @media (max-width:760px){
-  .rings{justify-items:center}
-  .rings svg,.hero--sub .rings svg{width:min(620px,155%);margin-right:0;opacity:.26}
+  .rings svg,.hero--sub .rings svg{width:min(640px,150%);opacity:.4}
 }
 @media (prefers-reduced-motion:reduce){
   .rings *{animation:none !important}
@@ -831,3 +842,8 @@
   animation:r-rot 5.5s linear infinite;
 }
 @media (prefers-reduced-motion:reduce){.eyebrow::after{animation:none}}
+
+/* the homepage pitches both arms without being a chooser, so those cards are
+   presentational: no hover lift, no pointer, nothing that invites a click */
+.arm--flat{cursor:default}
+.arm--flat:hover{transform:none;border-color:var(--border);box-shadow:none}

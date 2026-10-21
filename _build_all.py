@@ -15,13 +15,15 @@ SCRIPTS = [
     "_build.py",                 # recruitment landing pages
     "_build_software.py",        # /software/ hub
     "_build_software_pages.py",  # /software/ children
-    "_build_candidates.py",      # /candidates/
+    "_build_candidates.py",
+    "_build_start.py",         # /start/ , the vertical chooser      # /candidates/
     "_build_contact.py",         # /contact/ and thank-you
     "_build_blog.py",            # /blog/
     "_build_jobs.py",            # /jobs/ and apply flows
     "_build_static.py",          # re-inject header/footer into hand written pages
     "_build_org_schema.py",      # org entity on any page that lacks it
     "_build_theme_boot.py",      # pre-paint theme, must be late
+    "_build_assets_version.py",  # cache bust css/js, after every page exists
     "_build_analytics.py",       # MUST be last
 ]
 

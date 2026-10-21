@@ -141,7 +141,7 @@
   }
 
   /* audience: which half of the business the visitor is here for */
-  var EMPLOYER = ['/talent-acquisition', '/software', '/how-we-work', '/services', '/industries',
+  var EMPLOYER = ['/start', '/talent-acquisition', '/software', '/how-we-work', '/services', '/industries',
                   '/recruitment-agency-pune', '/talent-acquisition-firm-pune'];
   var CANDIDATE = ['/candidates', '/jobs'];
 
@@ -197,7 +197,7 @@
       var major = i % 5 === 0;
       ticks += '<line x1="320" y1="104" x2="320" y2="' + (major ? 118 : 111) +
                '" transform="rotate(' + (i * 6) + ' 320 320)" ' +
-               'stroke="var(--accent-line)" stroke-width="' + (major ? 1.6 : 1) + '"/>';
+               'stroke="var(--dial)" stroke-opacity=".5" stroke-width="' + (major ? 2 : 1.2) + '"/>';
     }
     /* three gold comets chasing each other round the sweep ring, each with a
        tail of shrinking, fading dots trailing behind the direction of travel.
@@ -206,11 +206,11 @@
     for (var c = 0; c < 3; c++) {
       var lead = -c * 11;
       for (var k = 7; k >= 1; k--) {
-        comets += '<circle cx="320" cy="56" r="' + (3.3 - k * 0.33).toFixed(2) +
-                  '" fill="var(--accent-2)" opacity="' + (0.46 - k * 0.055).toFixed(2) +
+        comets += '<circle cx="320" cy="56" r="' + (4.2 - k * 0.42).toFixed(2) +
+                  '" fill="var(--dial-2)" opacity="' + (0.72 - k * 0.088).toFixed(2) +
                   '" transform="rotate(' + (lead - k * 2.4) + ' 320 320)"/>';
       }
-      comets += '<circle cx="320" cy="56" r="3.7" fill="var(--accent-2)" ' +
+      comets += '<circle cx="320" cy="56" r="4.6" fill="var(--dial-2)" ' +
                 'transform="rotate(' + lead + ' 320 320)"/>';
     }
 
@@ -218,19 +218,19 @@
     var waves = '';
     for (var w = 0; w < 3; w++) {
       waves += '<g class="r-wave" style="animation-delay:' + (w * 2.2) + 's">' +
-               '<circle cx="320" cy="320" r="230" stroke="var(--accent)" ' +
-               'stroke-width="1.2" opacity=".5"/></g>';
+               '<circle cx="320" cy="320" r="230" stroke="var(--dial)" ' +
+               'stroke-width="1.7" opacity=".75"/></g>';
     }
 
     return '<svg viewBox="0 0 640 640" fill="none" aria-hidden="true" focusable="false">' +
       '<defs>' +
         '<linearGradient id="agSweep" x1="0" y1="0" x2="1" y2="0">' +
-          '<stop offset="0" stop-color="var(--accent)" stop-opacity="0"/>' +
-          '<stop offset="1" stop-color="var(--accent)" stop-opacity="1"/>' +
+          '<stop offset="0" stop-color="var(--dial)" stop-opacity="0"/>' +
+          '<stop offset="1" stop-color="var(--dial)" stop-opacity="1"/>' +
         '</linearGradient>' +
         '<radialGradient id="agCore">' +
-          '<stop offset="0" stop-color="var(--accent)" stop-opacity=".16"/>' +
-          '<stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>' +
+          '<stop offset="0" stop-color="var(--dial)" stop-opacity=".16"/>' +
+          '<stop offset="1" stop-color="var(--dial)" stop-opacity="0"/>' +
         '</radialGradient>' +
         /* bloom around the sweep and the comets, so they read as lit rather
            than drawn. filterUnits has to be generous or the blur gets clipped */
@@ -247,11 +247,11 @@
       '</defs>' +
       '<circle cx="320" cy="320" r="158" fill="url(#agCore)"/>' +
       waves +
-      '<g class="r-spin"><circle cx="320" cy="320" r="300" stroke="var(--accent-line)" stroke-width="1" stroke-dasharray="2 12"/></g>' +
-      '<g class="r-spin-rev"><circle cx="320" cy="320" r="264" stroke="var(--accent)" stroke-width="1.5" stroke-opacity=".55" stroke-dasharray="150 92 42 92"/></g>' +
-      '<g class="r-sweep" filter="url(#agGlow)"><circle cx="320" cy="320" r="264" stroke="url(#agSweep)" stroke-width="2.4" stroke-dasharray="130 1530" stroke-linecap="round"/></g>' +
+      '<g class="r-spin"><circle cx="320" cy="320" r="300" stroke="var(--dial)" stroke-opacity=".4" stroke-width="1.3" stroke-dasharray="2 12"/></g>' +
+      '<g class="r-spin-rev"><circle cx="320" cy="320" r="264" stroke="var(--dial)" stroke-width="2" stroke-opacity=".75" stroke-dasharray="150 92 42 92"/></g>' +
+      '<g class="r-sweep" filter="url(#agGlow)"><circle cx="320" cy="320" r="264" stroke="url(#agSweep)" stroke-width="3.2" stroke-dasharray="130 1530" stroke-linecap="round"/></g>' +
       '<g class="r-tick">' + ticks + '</g>' +
-      '<g class="r-spin"><circle cx="320" cy="320" r="86" stroke="var(--accent-line)" stroke-width="1" stroke-dasharray="1 8"/></g>' +
+      '<g class="r-spin"><circle cx="320" cy="320" r="86" stroke="var(--dial)" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="1 8"/></g>' +
       '<g class="r-comets" filter="url(#agGlowGold)">' + comets + '</g>' +
     '</svg>';
   }
