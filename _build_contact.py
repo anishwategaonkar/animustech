@@ -146,16 +146,32 @@ BODY = """
         <input type="hidden" name="_next" value="https://animustech.in/contact/thank-you/?src=contact">
         <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
 
-        <div class="field">
-          <label for="c-about">What is this about? *</label>
-          <select id="c-about" name="Enquiry type" required>
-            <option value="">Select one</option>
-            <option>Hiring for a role</option>
-            <option>Custom software</option>
-            <option>Both hiring and software</option>
-            <option>Something else</option>
-          </select>
-        </div>
+        <fieldset class="choice">
+          <legend>Which side are you here for? *</legend>
+          <div class="choice__row">
+            <label class="choice__opt">
+              <input type="radio" name="Enquiry type" value="We are hiring" required>
+              <span class="choice__box">
+                <span class="choice__t">We are hiring</span>
+                <span class="choice__d">Permanent, executive or volume roles</span>
+              </span>
+            </label>
+            <label class="choice__opt">
+              <input type="radio" name="Enquiry type" value="We are building software">
+              <span class="choice__box">
+                <span class="choice__t">We are building software</span>
+                <span class="choice__d">A custom tool or internal system</span>
+              </span>
+            </label>
+            <label class="choice__opt">
+              <input type="radio" name="Enquiry type" value="Both">
+              <span class="choice__box">
+                <span class="choice__t">Both</span>
+                <span class="choice__d">People and a system to run them in</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
 
         <div class="field-row">
           <div class="field">

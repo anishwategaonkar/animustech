@@ -200,7 +200,7 @@ PAGE = """<!DOCTYPE html>
       <h2 class="section-title">{cta_title}</h2>
       <p class="section-lead">{cta_lead}</p>
       <p style="margin-top:26px">
-        <a href="/talent-acquisition/#contact" class="btn btn--primary">Start hiring with us
+        <a href="{cta_href}" class="btn btn--primary">{cta_label}
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>
@@ -245,6 +245,8 @@ def render(p):
         desc=html.escape(html.unescape(p["desc"]), quote=True),
         url=p["url"], eyebrow=p["eyebrow"], h1=p["h1"], lead=p["lead"],
         body=p["body"],
+        cta_href=p.get("cta_href", "/talent-acquisition/#contact"),
+        cta_label=p.get("cta_label", "Start hiring with us"),
         cta_title=p.get("cta_title", "Let's talk about the role"),
         cta_lead=p.get("cta_lead",
             "Tell us what you are hiring for and we will come back within one working day "

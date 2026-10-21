@@ -352,6 +352,8 @@ PAGES = [
        links("See also:", [("Software development", "/software/"),
                            ("What we have built", "/software/#what-we-built")]),
        alt=True),
+ "cta_href": "/contact/",
+ "cta_label": "Work with us",
  "cta_title": "Want this run on your role or your build?",
  "cta_lead": ("Tell us what you are hiring for, or what you need built. You will get an honest "
               "read, a realistic timeline, and a straight answer on whether we are the right "
