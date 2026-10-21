@@ -176,9 +176,9 @@ JOBS = [
      "salary_min": 500000,
      "salary_max": 800000,
      "client_note": "Animus Tech, a Pune based AI enabled talent acquisition and software development firm.",
-     "summary": ("Own new client acquisition for Animus Tech's two core lines: recruitment mandates "
-                 "for D2C manufacturing brands, and software and IT delivery engagements. A fully "
-                 "remote, revenue owning role with direct line to closing deals, not just generating leads."),
+     "summary": ("Bring in new clients for Animus Tech, recruitment mandates for D2C manufacturing "
+                 "brands, and software and IT delivery projects. A fully remote, revenue owning role "
+                 "with direct line to closing deals, not just generating leads."),
      "responsibilities": [
          "Identify and prospect target companies in D2C manufacturing and software and IT services",
          "Build and manage a pipeline of qualified leads across both business lines",

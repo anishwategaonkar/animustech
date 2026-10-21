@@ -217,11 +217,6 @@ def build_job(j):
     <p class="jobmeta"><span class="chip">{j['industry']}</span><span class="chip chip--muted">{loc}</span></p>
     <h1>{j['title']}</h1>
     <p class="hero__lead">{j['summary']}</p>
-    <div class="hero__cta">
-      <a href="{apply_url}" class="btn btn--primary">Apply for this role
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
   </div>
 </section>
 
