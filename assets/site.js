@@ -121,61 +121,189 @@
   window.addEventListener('resize', queuePaint, { passive: true });
   queuePaint();
 })();
-/* ---------- theme + audience ---------- */
+/* ---------- theme ----------
+   The audience toggle that used to live here was removed: with no control in
+   the header there was nothing to switch with, so filtering the nav by
+   audience would have hidden links a visitor could never get back. */
 (function () {
-  'use strict';
   var root = document.documentElement;
-
-  /* theme: light is the default, dark is opt in, choice is remembered */
-  function applyTheme(t) {
-    if (t === 'dark') root.setAttribute('data-theme', 'dark');
-    else root.removeAttribute('data-theme');
-  }
   var btn = document.getElementById('themebtn');
-  if (btn) {
-    btn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      try { localStorage.setItem('at-theme', next); } catch (e) {}
-    });
-  }
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    if (next === 'dark') root.setAttribute('data-theme', 'dark');
+    else root.removeAttribute('data-theme');
+    try { localStorage.setItem('at-theme', next); } catch (e) {}
+  });
+})();
 
-  /* audience: which half of the business the visitor is here for */
-  var EMPLOYER = ['/talent-acquisition', '/software', '/how-we-work', '/services', '/industries',
-                  '/recruitment-agency-pune', '/talent-acquisition-firm-pune'];
-  var CANDIDATE = ['/candidates', '/jobs'];
+/* ---------- AI ring system ----------
+   Built in script rather than written into every template, so the markup
+   stays out of the page source and every hero on the site picks it up.
+   Purely decorative: aria-hidden, pointer-events none, never focusable. */
+(function () {
+  var heroes = document.querySelectorAll('.hero');
+  if (!heroes.length) return;
 
-  function audFromPath(p) {
-    for (var i = 0; i < CANDIDATE.length; i++) if (p.indexOf(CANDIDATE[i]) === 0) return 'candidate';
-    for (var j = 0; j < EMPLOYER.length; j++) if (p.indexOf(EMPLOYER[j]) === 0) return 'employer';
-    return null;
-  }
+  var reduce = window.matchMedia &&
+               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function applyAud(a) {
-    root.setAttribute('data-aud', a);
-    var nav = document.getElementById('nav');
-    if (nav) {
-      nav.querySelectorAll('[data-aud]').forEach(function (el) {
-        el.style.display = el.getAttribute('data-aud') === a ? '' : 'none';
-      });
+  function dial() {
+    var ticks = '';
+    for (var i = 0; i < 60; i++) {
+      var major = i % 5 === 0;
+      ticks += '<line x1="320" y1="104" x2="320" y2="' + (major ? 118 : 111) +
+               '" transform="rotate(' + (i * 6) + ' 320 320)" ' +
+               'stroke="var(--dial)" stroke-opacity=".5" stroke-width="' + (major ? 2 : 1.2) + '"/>';
     }
-    document.querySelectorAll('[data-set-aud]').forEach(function (el) {
-      el.classList.toggle('is-on', el.getAttribute('data-set-aud') === a);
-    });
+    /* three gold comets chasing each other round the sweep ring, each with a
+       tail of shrinking, fading dots trailing behind the direction of travel.
+       The group turns clockwise, so "behind" is a negative rotation. */
+    var comets = '';
+    for (var c = 0; c < 3; c++) {
+      var lead = -c * 11;
+      for (var k = 7; k >= 1; k--) {
+        comets += '<circle cx="320" cy="56" r="' + (4.2 - k * 0.42).toFixed(2) +
+                  '" fill="var(--dial-2)" opacity="' + (0.72 - k * 0.088).toFixed(2) +
+                  '" transform="rotate(' + (lead - k * 2.4) + ' 320 320)"/>';
+      }
+      comets += '<circle cx="320" cy="56" r="4.6" fill="var(--dial-2)" ' +
+                'transform="rotate(' + lead + ' 320 320)"/>';
+    }
+
+    /* sonar style waves pushing outward from the centre, staggered */
+    var waves = '';
+    for (var w = 0; w < 3; w++) {
+      waves += '<g class="r-wave" style="animation-delay:' + (w * 2.2) + 's">' +
+               '<circle cx="320" cy="320" r="230" stroke="var(--dial)" ' +
+               'stroke-width="1.7" opacity=".75"/></g>';
+    }
+
+    return '<svg viewBox="0 0 640 640" fill="none" aria-hidden="true" focusable="false">' +
+      '<defs>' +
+        '<linearGradient id="agSweep" x1="0" y1="0" x2="1" y2="0">' +
+          '<stop offset="0" stop-color="var(--dial)" stop-opacity="0"/>' +
+          '<stop offset="1" stop-color="var(--dial)" stop-opacity="1"/>' +
+        '</linearGradient>' +
+        '<radialGradient id="agCore">' +
+          '<stop offset="0" stop-color="var(--dial)" stop-opacity=".16"/>' +
+          '<stop offset="1" stop-color="var(--dial)" stop-opacity="0"/>' +
+        '</radialGradient>' +
+        /* bloom around the sweep and the comets, so they read as lit rather
+           than drawn. filterUnits has to be generous or the blur gets clipped */
+        '<filter id="agGlow" x="-30%" y="-30%" width="160%" height="160%">' +
+          '<feGaussianBlur stdDeviation="5" result="b"/>' +
+          '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>' +
+          '<feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>' +
+        '<filter id="agGlowGold" x="-40%" y="-40%" width="180%" height="180%">' +
+          '<feGaussianBlur stdDeviation="3.4" result="b"/>' +
+          '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>' +
+          '<feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>' +
+      '</defs>' +
+      '<circle cx="320" cy="320" r="158" fill="url(#agCore)"/>' +
+      waves +
+      '<g class="r-spin"><circle cx="320" cy="320" r="300" stroke="var(--dial)" stroke-opacity=".4" stroke-width="1.3" stroke-dasharray="2 12"/></g>' +
+      '<g class="r-spin-rev"><circle cx="320" cy="320" r="264" stroke="var(--dial)" stroke-width="2" stroke-opacity=".75" stroke-dasharray="150 92 42 92"/></g>' +
+      '<g class="r-sweep" filter="url(#agGlow)"><circle cx="320" cy="320" r="264" stroke="url(#agSweep)" stroke-width="3.2" stroke-dasharray="130 1530" stroke-linecap="round"/></g>' +
+      '<g class="r-tick">' + ticks + '</g>' +
+      '<g class="r-spin"><circle cx="320" cy="320" r="86" stroke="var(--dial)" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="1 8"/></g>' +
+      '<g class="r-comets" filter="url(#agGlowGold)">' + comets + '</g>' +
+    '</svg>';
   }
 
-  var fromPath = audFromPath(location.pathname);
-  var stored = null;
-  try { stored = localStorage.getItem('at-aud'); } catch (e) {}
-  applyAud(fromPath || stored || 'employer');
+  Array.prototype.forEach.call(heroes, function (hero) {
+    if (hero.querySelector('.rings')) return;
+    var box = document.createElement('div');
+    box.className = 'rings';
+    box.setAttribute('aria-hidden', 'true');
+    box.innerHTML = dial();
+    hero.insertBefore(box, hero.firstChild);
 
-  /* clicking the toggle records the choice, then the link navigates normally */
-  document.querySelectorAll('[data-set-aud]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      try { localStorage.setItem('at-aud', el.getAttribute('data-set-aud')); } catch (e) {}
+    if (reduce) return;
+
+    /* cursor parallax, a few pixels only, rAF throttled */
+    var svg = box.querySelector('svg'), queued = false, px = 0, py = 0;
+    hero.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      var r = hero.getBoundingClientRect();
+      px = ((e.clientX - r.left) / r.width - 0.5) * 26;
+      py = ((e.clientY - r.top) / r.height - 0.5) * 20;
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        svg.style.setProperty('--rx', px.toFixed(1) + 'px');
+        svg.style.setProperty('--ry', py.toFixed(1) + 'px');
+        queued = false;
+      });
+    });
+    hero.addEventListener('pointerleave', function () {
+      svg.style.setProperty('--rx', '0px');
+      svg.style.setProperty('--ry', '0px');
     });
   });
+})();
 
-  /* landing on a page that belongs to one side settles the preference */
-  if (fromPath) { try { localStorage.setItem('at-aud', fromPath); } catch (e) {} }
+/* ---------- keep every logo mark spinning in step ----------
+   The header and footer marks carry the same 12s rotateY, but a CSS animation
+   starts when its element is first rendered, and the footer is below the fold.
+   The two therefore begin at different moments and stay permanently out of
+   phase: sampled together, one mark was 2.7px wide and the other 12.3px, which
+   is why they never looked like the same logo.
+
+   Pinning both to startTime 0 anchors them to the document timeline instead of
+   to whenever each happened to be painted. */
+(function () {
+  var marks = document.querySelectorAll('.logo__mark');
+  if (!marks.length || typeof marks[0].getAnimations !== 'function') return;
+
+  function sync() {
+    Array.prototype.forEach.call(marks, function (el) {
+      el.getAnimations().forEach(function (a) {
+        if (a.animationName === 'logoRoll' || (a.constructor && a.constructor.name === 'CSSAnimation')) {
+          try { a.startTime = 0; } catch (e) {}
+        }
+      });
+    });
+  }
+
+  sync();
+  /* the footer mark may not have begun animating on first pass */
+  if (document.readyState !== 'complete') window.addEventListener('load', sync);
+})();
+
+/* ---------- self healing stale page ----------
+   GitHub Pages serves HTML with cache-control: max-age=600 and gives us no way
+   to change that. So for ten minutes after a deploy a returning visitor is
+   handed the previous page, pointing at the previous stylesheet hash. The hash
+   stamping prevents a mismatch, but it cannot defeat a cached HTML file.
+
+   This asks the network for the current page, bypassing the HTTP cache, and
+   compares the stylesheet hash in that copy against the one actually loaded.
+   If they differ, the page we are looking at is stale and we reload once.
+
+   Reloads are capped at one per tab per session, so a server that keeps
+   answering from an edge cache can never put us in a loop. */
+(function () {
+  var link = document.querySelector('link[rel="stylesheet"][href*="site.css?v="]');
+  if (!link || !window.fetch) return;
+
+  var loaded = link.getAttribute('href').split('?v=')[1];
+  if (!loaded) return;
+
+  try {
+    if (sessionStorage.getItem('at-reloaded') === loaded) return;
+  } catch (e) { return; }
+
+  fetch(location.href, { cache: 'no-cache', credentials: 'same-origin' })
+    .then(function (r) { return r.ok ? r.text() : null; })
+    .then(function (html) {
+      if (!html) return;
+      var m = html.match(/site\.css\?v=([0-9a-f]+)/);
+      if (!m || m[1] === loaded) return;
+      try { sessionStorage.setItem('at-reloaded', m[1]); } catch (e) {}
+      location.reload();
+    })
+    .catch(function () { /* offline or blocked: leave the page alone */ });
 })();
