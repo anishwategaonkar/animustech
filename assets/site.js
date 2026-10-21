@@ -121,63 +121,20 @@
   window.addEventListener('resize', queuePaint, { passive: true });
   queuePaint();
 })();
-/* ---------- theme + audience ---------- */
+/* ---------- theme ----------
+   The audience toggle that used to live here was removed: with no control in
+   the header there was nothing to switch with, so filtering the nav by
+   audience would have hidden links a visitor could never get back. */
 (function () {
-  'use strict';
   var root = document.documentElement;
-
-  /* theme: light is the default, dark is opt in, choice is remembered */
-  function applyTheme(t) {
-    if (t === 'dark') root.setAttribute('data-theme', 'dark');
-    else root.removeAttribute('data-theme');
-  }
   var btn = document.getElementById('themebtn');
-  if (btn) {
-    btn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      try { localStorage.setItem('at-theme', next); } catch (e) {}
-    });
-  }
-
-  /* audience: which half of the business the visitor is here for */
-  var EMPLOYER = ['/start', '/talent-acquisition', '/software', '/how-we-work', '/services', '/industries',
-                  '/recruitment-agency-pune', '/talent-acquisition-firm-pune'];
-  var CANDIDATE = ['/candidates', '/jobs'];
-
-  function audFromPath(p) {
-    for (var i = 0; i < CANDIDATE.length; i++) if (p.indexOf(CANDIDATE[i]) === 0) return 'candidate';
-    for (var j = 0; j < EMPLOYER.length; j++) if (p.indexOf(EMPLOYER[j]) === 0) return 'employer';
-    return null;
-  }
-
-  function applyAud(a) {
-    root.setAttribute('data-aud', a);
-    var nav = document.getElementById('nav');
-    if (nav) {
-      nav.querySelectorAll('[data-aud]').forEach(function (el) {
-        el.style.display = el.getAttribute('data-aud') === a ? '' : 'none';
-      });
-    }
-    document.querySelectorAll('[data-set-aud]').forEach(function (el) {
-      el.classList.toggle('is-on', el.getAttribute('data-set-aud') === a);
-    });
-  }
-
-  var fromPath = audFromPath(location.pathname);
-  var stored = null;
-  try { stored = localStorage.getItem('at-aud'); } catch (e) {}
-  applyAud(fromPath || stored || 'employer');
-
-  /* clicking the toggle records the choice, then the link navigates normally */
-  document.querySelectorAll('[data-set-aud]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      try { localStorage.setItem('at-aud', el.getAttribute('data-set-aud')); } catch (e) {}
-    });
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    if (next === 'dark') root.setAttribute('data-theme', 'dark');
+    else root.removeAttribute('data-theme');
+    try { localStorage.setItem('at-theme', next); } catch (e) {}
   });
-
-  /* landing on a page that belongs to one side settles the preference */
-  if (fromPath) { try { localStorage.setItem('at-aud', fromPath); } catch (e) {} }
 })();
 
 /* ---------- AI ring system ----------

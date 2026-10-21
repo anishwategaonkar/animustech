@@ -234,7 +234,7 @@ PAGES = [
 {
  "url": "/how-we-work/",
  "title": "How We Work | Animus Tech",
- "desc": "Our process, our numbers, and what we commit to in writing. 40+ screened, 8 shared, 1 hired. A written update every Friday, progress or not.",
+ "desc": "How a search runs and how a build runs, with the numbers and what we commit to in writing. 40+ screened, 8 shared, 1 hired. A written update every Friday, progress or not.",
  "crumbs": [("Home", "/"), ("How we work", None)],
  "eyebrow": "Process &amp; commitments",
  "h1": "How We Work",
@@ -317,11 +317,45 @@ PAGES = [
          "is better off knowing that at intake than at week eight.",
        ]) +
        links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
-                           ("Hiring advisory", "/services/hiring-advisory/")])),
- "cta_title": "Want this run on your role?",
- "cta_lead": ("Tell us what you are hiring for. You will get an honest read on the market, a "
-              "realistic timeline, and a straight answer on whether we are the right firm for it, "
-              "within one working day."),
+                           ("Hiring advisory", "/services/hiring-advisory/")])) +
+
+   # The build arm, so this page is honestly about how the company works rather
+   # than only how a search runs. Deliberately no numbers here: the search side
+   # has real ones, the build side does not yet, and inventing them would undo
+   # the point of the page.
+   sec("The build side", "And how a build runs",
+       "The software arm is run to the same standard, and the first step is the same one: "
+       "understand how the work actually happens before committing to anything.",
+       rolegrid([
+         ("Before we quote", [
+            "We sit with the people who do the job, not only the person buying",
+            "The process gets mapped as it runs today, including the workarounds",
+            "We agree what the software must not change",
+            "You get told if the build is the wrong answer to the problem"]),
+         ("During the build", [
+            "Something working you can open, rather than a status email",
+            "Scope changes priced before they are built, not after",
+            "The people who will use it see it early enough to object",
+            "Early warning when a decision is holding things up"]),
+         ("At handover", [
+            "You own the code and the data outright",
+            "Documented well enough for another developer to pick up",
+            "No licence, no per seat fee, no dependency on us",
+            "We tell you honestly what we would not maintain"]),
+       ]) +
+       prose([
+         "The reason this reads like the hiring commitments above is that it is the same "
+         "company applying the same rule. A search that was scoped from a forwarded job "
+         "description and a build that was quoted from a wish list fail in exactly the same "
+         "way, and for exactly the same reason.",
+       ]) +
+       links("See also:", [("Software development", "/software/"),
+                           ("What we have built", "/software/#what-we-built")]),
+       alt=True),
+ "cta_title": "Want this run on your role or your build?",
+ "cta_lead": ("Tell us what you are hiring for, or what you need built. You will get an honest "
+              "read, a realistic timeline, and a straight answer on whether we are the right "
+              "firm for it, within one working day."),
 },
 
 # ------------------------------------------------- 3. MANUFACTURING ---------

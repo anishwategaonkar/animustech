@@ -226,7 +226,7 @@ BODY = """
         custom software for operations led businesses.
       </p>
       <p style="margin-top:26px">
-        <a href="/talent-acquisition/" class="btn btn--primary" data-set-aud="employer">Go to the employer side
+        <a href="/talent-acquisition/" class="btn btn--primary">Go to the employer side
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>

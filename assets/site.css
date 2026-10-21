@@ -707,18 +707,6 @@
   .slide em{display:block;font-style:normal;margin-top:14px;font-size:.86rem;color:var(--text-3)}
 
   /* ---------- audience + theme toggles ---------- */
-  .aud{
-    display:inline-flex;align-items:center;gap:2px;padding:3px;
-    background:var(--surface-2);border:1px solid var(--border);border-radius:999px;
-  }
-  .aud a{
-    display:inline-flex;align-items:center;white-space:nowrap;
-    padding:7px 15px;border-radius:999px;font-size:.84rem;font-weight:600;
-    color:var(--text-3);transition:color .18s ease,background .18s ease;
-  }
-  .aud a:hover{color:var(--text)}
-  .aud a.is-on{background:var(--accent);color:var(--accent-ink)}
-  .aud a::after{display:none !important}
 
   .themebtn{
     display:grid;place-items:center;width:38px;height:38px;flex:0 0 auto;
@@ -738,12 +726,12 @@
 
   .header__tools{display:flex;align-items:center;gap:12px;flex:0 0 auto}
   /* One toggle at a time: the header copy on desktop, the in-nav copy on mobile. */
-  .nav .aud{display:none}
+  .nav
   @media (max-width:960px){
-    .header__tools .aud{display:none}
-    .nav .aud{display:inline-flex;margin:14px 0 4px;align-self:flex-start}
+    .header__tools
+    .nav
     /* the stacked mobile nav gives every link a divider, which would cut the pills */
-    .nav .aud a{border-bottom:none;padding:7px 15px}
+    .nav
   }
 
 /* ---------- candidates page: process steps and the two promises ---------- */

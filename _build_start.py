@@ -64,7 +64,7 @@ BODY = """
 <section class="section">
   <div class="wrap">
     <div class="arms">
-      <a class="arm reveal" href="/talent-acquisition/" data-set-aud="employer">
+      <a class="arm reveal" href="/talent-acquisition/">
         <div class="arm__ico" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
@@ -84,7 +84,7 @@ BODY = """
         </span>
       </a>
 
-      <a class="arm reveal" href="/software/" data-set-aud="employer">
+      <a class="arm reveal" href="/software/">
         <div class="arm__ico" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
         </div>
@@ -114,7 +114,7 @@ BODY = """
           application and you hear back either way.
         </p>
       </div>
-      <a href="/candidates/" class="btn btn--primary" data-set-aud="candidate">For candidates
+      <a href="/candidates/" class="btn btn--primary">For candidates
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
