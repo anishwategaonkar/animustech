@@ -219,10 +219,10 @@ JOBS = [
      "salary_min": None,
      "salary_max": None,
      "client_note": "A well funded, early stage specialty chemicals company in Bengaluru, founded by IIT and IIM alumni, building an asset light, R&D driven, contract manufacturing brand across agrochemicals, surfactants, flavours and fragrances, and pharmaceuticals.",
-     "summary": ("Own every import and export shipment end to end, from forward planning through to "
-                 "customs clearance and delivery. This is an ownership role, not a coordination role: "
-                 "you will be the single point of contact who knows the status of every shipment and "
-                 "keeps Demand, Supply, Logistics and Finance moving in the same direction."),
+     "summary": ("Own every import and export shipment, start to finish. This is not a coordination "
+                 "seat, it is an ownership seat: plan shipments before they turn urgent, fix them fast "
+                 "when they go sideways, and be the one person who always knows where things stand, "
+                 "pulling Demand, Supply, Logistics and Finance together to get it done."),
      "responsibilities": [
          "Build forward shipment plans from confirmed and expected orders, aligning supplier readiness, documentation, payment terms and logistics slots before they become bottlenecks",
          "Re plan quickly when a vessel is delayed, a document is missing or a supplier slips, finding the next best route or workaround and keeping the customer informed",
