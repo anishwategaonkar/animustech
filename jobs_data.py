@@ -204,6 +204,52 @@ JOBS = [
          "Existing network of contacts in D2C manufacturing or the software and IT sector",
      ],
     },
+    {
+     "slug": "associate-manager-supply-chain-planning-bengaluru",
+     "title": "Associate Manager - Supply Chain Planning (EXIM Operations)",
+     "location": "Bengaluru",
+     "region": "Karnataka",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "1 to 4 years",
+     "industry": "Manufacturing",
+     "reports_to": "A member of the founding team",
+     "posted": "2026-11-03",
+     "valid_through": "2027-01-02",
+     "salary_min": None,
+     "salary_max": None,
+     "client_note": "A well funded, early stage specialty chemicals company in Bengaluru, founded by IIT and IIM alumni, building an asset light, R&D driven, contract manufacturing brand across agrochemicals, surfactants, flavours and fragrances, and pharmaceuticals.",
+     "summary": ("Own every import and export shipment end to end, from forward planning through to "
+                 "customs clearance and delivery. This is an ownership role, not a coordination role: "
+                 "you will be the single point of contact who knows the status of every shipment and "
+                 "keeps Demand, Supply, Logistics and Finance moving in the same direction."),
+     "responsibilities": [
+         "Build forward shipment plans from confirmed and expected orders, aligning supplier readiness, documentation, payment terms and logistics slots before they become bottlenecks",
+         "Re plan quickly when a vessel is delayed, a document is missing or a supplier slips, finding the next best route or workaround and keeping the customer informed",
+         "Maintain a live view of every shipment, including status, timelines, risks and next actions",
+         "Own exports end to end, from order closure to dispatch and customs clearance, meeting each customer's shipment level requirements",
+         "Own imports end to end, coordinating with overseas suppliers and tracking inbound shipments through to clearance and receipt",
+         "Act as the link between Demand, Supply, Logistics, Fulfilment and Finance so every shipment moves as planned",
+         "Be the single point of contact for EXIM status across all teams, covering order closure, supplier fulfilment, payments, advances and receivables",
+         "Spot the few things that will make or break a shipment, whether it is a document, payment, supplier or booking, and raise them early",
+         "Ensure import, export and hazardous cargo documentation is complete and ready for customs clearance",
+         "Build the checklists, trackers and SOPs that make EXIM predictable as the company scales, and turn recurring problems into lasting process fixes",
+     ],
+     "requirements": [
+         "1 to 4 years of experience in supply chain, operations, program management or a similar role; EXIM experience is a plus, not a must",
+         "Understanding of import and export processes and payment terms is helpful; if new to EXIM, a strong willingness to learn it quickly",
+         "Strong stakeholder management across Demand, Supply, Logistics, Finance, suppliers and freight partners, with the ability to push timelines firmly while keeping relationships intact",
+         "High attention to detail, able to catch incorrect documents, missed payment terms and customer specific requirements before they cause delays",
+         "A genuine sense of ownership, comfortable being accountable for a shipment's outcome from order closure to delivery",
+         "Comfortable planning ahead and reacting fast when something breaks",
+         "Calm under pressure, with clear communication when things go wrong",
+     ],
+     "nice_to_have": [
+         "Prior experience specifically in EXIM or international logistics",
+         "Experience in a fast growing, early stage company where processes are still being built",
+         "Exposure to specialty chemicals, agrochemicals or related manufacturing sectors",
+     ],
+    },
 ]
 
 # Previous postings are retained for reference but are not published.
