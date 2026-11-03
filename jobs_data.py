@@ -164,6 +164,51 @@ JOBS = [
          "Exposure to specialty chemicals, agrochemicals or related manufacturing sectors",
      ],
     },
+    {
+     "slug": "qc-analytical-chemist-agro-formulations-bengaluru",
+     "title": "QC Analytical Chemist",
+     "location": "Bengaluru",
+     "region": "Karnataka",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "5 to 10 years",
+     "industry": "Manufacturing",
+     "posted": "2026-11-03",
+     "valid_through": "2027-01-02",
+     "salary_min": None,
+     "salary_max": None,
+     "salary_note": "Up to \u20b912 LPA, performance-linked",
+     "client_note": "A well funded, early stage specialty chemicals company in Bengaluru, founded by IIT and IIM alumni, building an asset light, R&D driven, contract manufacturing brand across agrochemicals, surfactants, flavours and fragrances, and pharmaceuticals.",
+     "summary": ("Own the analytical backbone of our agro formulations business. Characterise active "
+                 "ingredients, raw materials and finished products end to end, build and validate the "
+                 "methods that make our data regulator ready, and be the person R&D and manufacturing "
+                 "both rely on to know exactly what's in a sample and why it matters."),
+     "responsibilities": [
+         "Perform analysis of agrochemical active ingredients, raw materials, intermediates and finished formulations using HPLC, UHPLC, GC, LC-MS/MS, GC-MS, IC, UV-Vis, FTIR, NMR, KF & AT and wet chemical methods",
+         "Develop and validate analytical methods against requirements, and run routine and non-routine testing for assay, impurities and residual solvents",
+         "Interpret analytical data and prepare the reports and documentation that go into regulatory submissions",
+         "Generate the physico-chemical and storage-stability data needed to support product registration",
+         "Support method transfer and quality control at in-house and toll manufacturing sites",
+         "Partner with the formulation R&D team on stability studies and partial validation of methods",
+         "Maintain laboratory instruments and troubleshoot issues to keep testing on schedule",
+         "Maintain proper laboratory records, SOPs and audit readiness across all testing",
+         "Ensure full compliance with laboratory and safety standards at every stage of testing",
+         "Work flexibly across geographies where manufacturing and R&D timelines require it",
+     ],
+     "requirements": [
+         "M.Sc. in Chemistry, with a preferred concentration in an analytical discipline",
+         "5 to 10 years of experience in analytical laboratories, with agrochemical formulation analytical experience mandatory",
+         "Strong hands-on knowledge of chromatography (HPLC, UHPLC, GC) and related analytical techniques",
+         "Clear written and verbal communication in English",
+         "Comfortable working in a team of scientists and collaborating across R&D and manufacturing",
+     ],
+     "nice_to_have": [
+         "Experience with LC-MS/MS, GC-MS, NMR or other advanced instrumentation beyond routine QC",
+         "Prior exposure to regulatory submission data (physico-chemical, storage-stability) for agrochemical products",
+         "Experience in a fast growing, early stage company where processes are still being built",
+     ],
+    },
+
 ]
 
 # Previous postings are retained for reference but are not published.
