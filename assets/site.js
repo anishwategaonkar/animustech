@@ -17,13 +17,21 @@
     burger.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
   }
-  burger.addEventListener('click', function () {
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();          // or the document handler below closes it again
     var open = nav.classList.toggle('is-open');
-    burger.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
   });
   nav.addEventListener('click', function (e) {
     if (e.target.tagName === 'A') closeMenu();
+  });
+  /* tap anywhere outside the panel to dismiss it. pointerdown rather than
+     click so it closes on touch down, which feels immediate on a phone, and
+     fires before any link underneath can activate. */
+  document.addEventListener('pointerdown', function (e) {
+    if (!nav.classList.contains('is-open')) return;
+    if (nav.contains(e.target) || burger.contains(e.target)) return;
+    closeMenu();
   });
   window.addEventListener('resize', function () {
     if (window.innerWidth > 960) closeMenu();

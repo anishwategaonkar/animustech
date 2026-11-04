@@ -255,9 +255,8 @@
   }
   .burger span::before{top:-6px;}
   .burger span::after{top:6px;}
-  .burger.is-open span{transform:rotate(45deg);}
-  .burger.is-open span::before{transform:translateY(6px) rotate(-90deg);}
-  .burger.is-open span::after{opacity:0;}
+  /* the bars no longer morph into a cross. The panel is dismissed by tapping
+     anywhere outside it, so the icon stays a stable, recognisable menu mark. */
 
   /* ---------- hero ---------- */
   /* the header sits in normal flow, so the top padding was pure dead space
@@ -574,11 +573,32 @@
       flex-direction:column;align-items:stretch;gap:0;
       background:var(--bg-2);border-bottom:1px solid var(--border);
       padding:12px 26px 24px;
-      transform:translateY(-14px);opacity:0;pointer-events:none;
-      transition:opacity .2s ease,transform .2s ease;
       max-height:calc(100vh - 74px);overflow-y:auto;
+      /* a curtain drawn out of the burger: the panel is clipped to a circle
+         centred on the icon, which grows to cover it and shrinks back in.
+         clip-path animates on the compositor, so it stays smooth on a phone. */
+      --origin-x:calc(100% - 40px);
+      clip-path:circle(0px at var(--origin-x) 0);
+      opacity:0;pointer-events:none;
+      /* Closing retraces the opening exactly. The two easings are mirrors of
+         each other: reversing cubic-bezier(x1,y1,x2,y2) gives
+         (1-x2, 1-y2, 1-x1, 1-y1), so (.22,1,.36,1) opening pairs with
+         (.64,0,.78,0) closing. Reusing one ease-out both ways would make the
+         curtain leave on a different curve than it arrived on. */
+      transition:clip-path .5s cubic-bezier(.64,0,.78,0),
+                 opacity .4s cubic-bezier(.64,0,.78,0);
     }
-    .nav.is-open{transform:none;opacity:1;pointer-events:auto;}
+    .nav.is-open{
+      clip-path:circle(145% at var(--origin-x) 0);
+      opacity:1;pointer-events:auto;
+      transition:clip-path .5s cubic-bezier(.22,1,.36,1),
+                 opacity .4s cubic-bezier(.22,1,.36,1);
+    }
+    @media (prefers-reduced-motion:reduce){
+      .nav{transition:opacity .15s ease;clip-path:none;}
+      .nav:not(.is-open){visibility:hidden;}
+      .nav.is-open{clip-path:none;}
+    }
     .nav a{padding:14px 0;border-bottom:1px solid var(--border);font-size:1rem;}
     .nav a:not(.btn)::after{display:none;}
     .nav .btn{margin-top:18px;border-bottom:none;}
@@ -734,12 +754,6 @@
   .header__tools{display:flex;align-items:center;gap:12px;flex:0 0 auto}
   /* One toggle at a time: the header copy on desktop, the in-nav copy on mobile. */
   .nav
-  @media (max-width:960px){
-    .header__tools
-    .nav
-    /* the stacked mobile nav gives every link a divider, which would cut the pills */
-    .nav
-  }
 
 /* ---------- candidates page: process steps and the two promises ---------- */
 /* The candidate copy runs longer than the four-across steps used elsewhere,
