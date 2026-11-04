@@ -578,21 +578,22 @@
          centred on the icon, which grows to cover it and shrinks back in.
          clip-path animates on the compositor, so it stays smooth on a phone. */
       --origin-x:calc(100% - 40px);
+      /* A fixed pixel radius, not a percentage. A percentage resolves against
+         the panel's own box, so the browser recomputed it every frame; 920px
+         covers any phone and is constant. */
       clip-path:circle(0px at var(--origin-x) 0);
       opacity:0;pointer-events:none;
-      /* Closing retraces the opening exactly. The two easings are mirrors of
-         each other: reversing cubic-bezier(x1,y1,x2,y2) gives
-         (1-x2, 1-y2, 1-x1, 1-y1), so (.22,1,.36,1) opening pairs with
-         (.64,0,.78,0) closing. Reusing one ease-out both ways would make the
-         curtain leave on a different curve than it arrived on. */
-      transition:clip-path .5s cubic-bezier(.64,0,.78,0),
-                 opacity .4s cubic-bezier(.64,0,.78,0);
+      /* One symmetric easing for both directions. The mirrored ease-out pair
+         this replaces was a true time-reverse, but its tail crawled the last
+         0.4% across six frames, which is where it stuttered on arrival, and
+         the two halves felt like different motions. A symmetric curve makes
+         closing the exact visual rewind of opening. */
+      transition:clip-path .5s cubic-bezier(.65,0,.35,1),
+                 opacity .34s cubic-bezier(.65,0,.35,1);
     }
     .nav.is-open{
-      clip-path:circle(145% at var(--origin-x) 0);
+      clip-path:circle(920px at var(--origin-x) 0);
       opacity:1;pointer-events:auto;
-      transition:clip-path .5s cubic-bezier(.22,1,.36,1),
-                 opacity .4s cubic-bezier(.22,1,.36,1);
     }
     @media (prefers-reduced-motion:reduce){
       .nav{transition:opacity .15s ease;clip-path:none;}
