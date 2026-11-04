@@ -311,7 +311,7 @@ JOBS = [
 
     {
      "slug": "hr-manager-chandigarh",
-     "title": "HR Manager",
+     "title": "HR Executive / Manager",
      "location": "Chandigarh",
      "region": "Chandigarh",
      "remote": False,
