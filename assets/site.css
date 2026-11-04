@@ -661,7 +661,14 @@
     background-image:repeating-linear-gradient(to right,
       var(--border-faint) 0 1px, transparent 1px calc(100% / 4));
   }
-  main,.header,.footer{position:relative;z-index:2}
+  /* The header has to out-rank main, or the open mobile menu paints beneath
+     the page content: both sat at z-index 2 and main comes later in the DOM,
+     so main won. It stays position:relative rather than reverting to the
+     fixed/z-100 rule above, because the layout below assumes the header
+     occupies space in the flow. */
+  main,.footer{position:relative;z-index:2}
+  .header{position:relative;z-index:60}
+  .nav{z-index:59}
   @media (max-width:760px){ body::after{display:none} }
 
   /* ---------- alternating story slides ---------- */
