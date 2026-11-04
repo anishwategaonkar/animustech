@@ -209,6 +209,53 @@ JOBS = [
      ],
     },
 
+    {
+     "slug": "business-development-manager-chandigarh",
+     "title": "Business Development Manager",
+     "location": "Chandigarh",
+     "region": "Chandigarh",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "3 to 6 years",
+     "industry": "Marketing & SaaS",
+     "posted": "2026-11-04",
+     "valid_through": "2027-01-03",
+     "salary_min": 800000,
+     "salary_max": 1200000,
+     "client_note": "A technical marketing company based in Sector 17, Chandigarh, working with SaaS, AI and cloud product companies on cloud marketplace listings, AI-driven discovery and demand generation.",
+     "summary": ("Own the full sales cycle for a marketing partner that gets SaaS, AI and cloud products "
+                 "listed and selling across the major cloud marketplaces. You will find the technology "
+                 "companies that need that visibility, build the relationship, shape the proposal with the "
+                 "content and SDR teams, and close it. This suits someone who can hold a credible "
+                 "conversation about cloud marketplaces and AI discovery, not just run a pipeline."),
+     "responsibilities": [
+         "Identify and qualify new business opportunities with SaaS, AI and cloud technology companies",
+         "Own the end to end sales cycle, from prospecting and discovery through negotiation and close",
+         "Run market research and competitive analysis to sharpen targeting and positioning",
+         "Present marketplace listing, AI visibility and content services to technical and marketing decision makers",
+         "Build and nurture client relationships that grow into larger, longer term accounts",
+         "Work with the internal marketing, content and SDR teams to tailor proposals and presentations",
+         "Manage client onboarding and stay involved through to account growth",
+         "Maintain a healthy pipeline in the CRM and report on sales performance metrics",
+         "Contribute to local business development strategy across the Chandigarh region",
+     ],
+     "requirements": [
+         "3 to 6 years in business development, B2B sales or account management within technology or SaaS",
+         "Proven track record in lead generation and pipeline management, with hands on CRM discipline",
+         "Strong relationship building, negotiation and stakeholder communication skills, with the ability to influence decision makers",
+         "Comfortable with market research, competitive analysis and GTM strategy for cloud and AI solutions",
+         "Able to present complex technical and marketing services clearly, with basic familiarity with cloud marketplaces and AI platforms",
+         "Bachelor's degree in Business, Marketing, Technology or a related field, or equivalent practical experience",
+         "Able to work on site in Chandigarh, with strong organisational skills, self motivation and a results oriented approach",
+     ],
+     "nice_to_have": [
+         "Direct experience selling SaaS, cloud or AI products",
+         "Hands on exposure to cloud marketplaces such as AWS, Azure, GCP, Salesforce, Databricks, Snowflake, Oracle or SAP",
+         "Familiarity with AI discovery platforms and how brands surface in tools like ChatGPT, Gemini, Claude and Perplexity",
+         "Experience collaborating closely with technical and content teams on proposals",
+     ],
+    },
+
 ]
 
 # Previous postings are retained for reference but are not published.

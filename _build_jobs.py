@@ -51,6 +51,11 @@ CITY_REGION = {
     "chandigarh": "Chandigarh",
 }
 
+# Places where the locality and the region share a name on purpose. For these the
+# JobPosting should carry BOTH addressLocality and addressRegion, unlike a state
+# wide role where repeating the state as a locality would be wrong.
+CITY_STATES = {"chandigarh", "delhi", "puducherry", "pondicherry"}
+
 TODAY = datetime.date.today().isoformat()
 
 EXTRA_CSS = """
@@ -158,6 +163,9 @@ def job_schema(j):
       "description": job_description_html(j),
       "identifier": {"@type": "PropertyValue", "name": "Animus Tech", "value": j["slug"]},
       "datePosted": j["posted"],
+      # Tells Google when to retire the listing by itself. Without it a role
+      # keeps surfacing until the next recrawl 404s, which is a worse signal.
+      "validThrough": j["valid_through"],
       "employmentType": j["employment"],
       "hiringOrganization": {"@id": ORG_ID},
       "directApply": True,
@@ -175,7 +183,9 @@ def job_schema(j):
         addr = {"@type": "PostalAddress"}
         # State wide field roles may not have one reporting city. In that case,
         # publish the state without incorrectly presenting it as a locality.
-        if not region or city.lower() != region.lower():
+        # City states and union territories legitimately share one name for both
+        # the locality and the region, so keep both fields for those.
+        if not region or city.lower() != region.lower() or city.lower() in CITY_STATES:
             addr["addressLocality"] = city
         addr["addressCountry"] = "IN"
         if region:
