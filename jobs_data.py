@@ -256,6 +256,59 @@ JOBS = [
      ],
     },
 
+    {
+     "slug": "marketing-manager-chandigarh",
+     "title": "Marketing Manager",
+     "location": "Chandigarh",
+     "region": "Chandigarh",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "3 to 6 years",
+     "industry": "Marketing & SaaS",
+     "posted": "2026-11-04",
+     "valid_through": "2027-01-03",
+     "salary_min": 800000,
+     "salary_max": 1200000,
+     "client_note": "A B2B growth and AWS partnership acceleration company based in Sector 17, Chandigarh, helping technology and cloud businesses strengthen their AWS presence, build go to market strategies and generate qualified pipeline.",
+     "summary": ("A hybrid marketing and sales development role. You will pick the accounts worth winning, "
+                 "work out who inside them matters, and run the outreach that turns that research into booked "
+                 "meetings. Expect to split your time between campaign work and hands on prospecting, with "
+                 "performance measured on qualified leads and discovery calls as much as on campaign reach. "
+                 "A strong fit if you want real exposure to ABM, outbound and AWS focused go to market in one seat."),
+     "responsibilities": [
+         "Research and activate high value target accounts that match the ideal customer profile",
+         "Map decision makers across founders, CEOs, sales, alliance, cloud and AWS, and marketing leadership",
+         "Build and run multi touch ABM campaigns across LinkedIn, email, content and direct outreach",
+         "Prospect and generate qualified B2B leads through LinkedIn, email, calls, databases and events",
+         "Write personalised outreach messages and run structured follow up until a prospect qualifies or closes",
+         "Qualify prospects on fit, authority, requirement and opportunity, and book discovery calls for the business development team",
+         "Re engage dormant leads and previously contacted accounts",
+         "Support outbound campaigns targeting AWS Partners, cloud companies, SaaS companies, ISVs, MSPs and technology service providers",
+         "Help plan and execute demand generation campaigns across email, LinkedIn, webinars, events and partner marketing",
+         "Coordinate marketing collateral such as one pagers, case studies, blogs, eBooks and presentations",
+         "Build, clean and segment prospect databases, and keep CRM records accurate and current",
+         "Track outreach activity, response rates, meetings booked and campaign performance, and report weekly and monthly",
+     ],
+     "requirements": [
+         "3 to 6 years in B2B marketing, lead generation, sales development or account based marketing",
+         "Strong written and verbal communication, with the ability to write personalised outreach and marketing copy",
+         "Able to research companies and identify the right decision makers inside them",
+         "Hands on experience with LinkedIn prospecting and email outreach",
+         "Solid understanding of lead qualification and B2B sales funnels",
+         "Good working knowledge of Excel or Google Sheets, and of CRM and database management",
+         "Able to run multiple campaigns and target accounts at the same time",
+         "Analytical mindset, and comfortable being measured on pipeline and campaign metrics",
+         "Currently based in Chandigarh, as this role is open to local candidates only",
+     ],
+     "nice_to_have": [
+         "Experience working with IT services, SaaS, cloud or AWS technology companies",
+         "Familiarity with the AWS Partner ecosystem and cloud services",
+         "Experience with LinkedIn Sales Navigator and other prospecting or data intelligence tools",
+         "Familiarity with CRM and marketing automation platforms",
+         "A track record executing ABM or targeted outbound campaigns",
+     ],
+    },
+
 ]
 
 # Previous postings are retained for reference but are not published.
