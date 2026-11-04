@@ -309,6 +309,58 @@ JOBS = [
      ],
     },
 
+    {
+     "slug": "hr-manager-chandigarh",
+     "title": "HR Manager",
+     "location": "Chandigarh",
+     "region": "Chandigarh",
+     "remote": False,
+     "employment": "FULL_TIME",
+     "experience": "2 to 5 years",
+     "industry": "Marketing & SaaS",
+     "posted": "2026-11-04",
+     "valid_through": "2027-01-03",
+     "salary_min": None,
+     "salary_max": None,
+     "client_note": "A specialist technical marketing company based in Sector 17, Chandigarh, working with SaaS, AI and cloud brands on cloud marketplace listings, AI driven discovery and demand generation, with a team growing across marketing, content and sales development.",
+     "summary": ("Own the HR function for a growing technical marketing team. This is a standalone, hands on "
+                 "role covering the full employee lifecycle, from hiring and onboarding through performance, "
+                 "engagement and compliance. A good fit if you want the scope to build HR processes rather "
+                 "than inherit them, and the visibility that comes with working directly alongside leadership."),
+     "responsibilities": [
+         "Own end to end HR operations for a growing technical marketing team",
+         "Run recruitment and onboarding, from identifying talent needs with leadership through to a new joiner's first weeks",
+         "Design and implement HR policies, and keep HR documentation accurate and audit ready",
+         "Manage performance review cycles and support career progression frameworks aligned to business goals",
+         "Handle employee relations, resolving workplace issues fairly and in confidence",
+         "Coordinate payroll with the finance team and administer employee benefits",
+         "Support workforce planning alongside the leadership team",
+         "Coordinate training and development initiatives that build skills and engagement",
+         "Organise employee engagement programmes and help build an inclusive culture",
+         "Maintain compliance with local labour laws and regulations",
+         "Report on HR metrics and use them to inform decisions",
+     ],
+     "requirements": [
+         "2 to 5 years across core HR functions including recruitment, onboarding, performance management and employee relations",
+         "Experience developing HR policy and maintaining HR documentation",
+         "Working knowledge of local labour laws and compliance requirements",
+         "Able to coordinate payroll and administer benefits",
+         "Strong communication, interpersonal and conflict resolution skills, with the ability to build trust across teams",
+         "Experience coordinating training, learning and development, and employee engagement initiatives",
+         "Proficiency with HRIS or similar HR software tools",
+         "Bachelor's degree in Human Resources, Business Administration or a related field",
+         "Able to work independently, handle sensitive information discreetly and make data informed decisions",
+         "Comfortable in a fast paced, high growth setting supporting cross functional teams",
+         "Based in Chandigarh, as this is a full time on site role",
+     ],
+     "nice_to_have": [
+         "HR certifications",
+         "Prior experience managing HR in a technology, marketing or professional services company",
+         "Experience building HR processes from scratch in a growing team",
+         "Familiarity with HR analytics and reporting tools",
+     ],
+    },
+
 ]
 
 # Previous postings are retained for reference but are not published.
