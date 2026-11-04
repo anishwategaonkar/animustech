@@ -361,6 +361,51 @@ JOBS = [
      ],
     },
 
+    {
+     "slug": "alliance-manager-remote",
+     "title": "Alliance Manager",
+     "location": "Remote",
+     "remote": True,
+     "employment": "FULL_TIME",
+     "experience": "3+ years",
+     "industry": "Marketing & SaaS",
+     "posted": "2026-11-04",
+     "valid_through": "2027-01-03",
+     "salary_min": 2000000,
+     "salary_max": 2000000,
+     "client_note": "A specialist technical marketing company working with SaaS, AI and cloud brands on cloud marketplace listings, AI driven discovery and demand generation, with a growing AWS and cloud partnership practice. Based in Sector 17, Chandigarh, with this role open fully remote across India.",
+     "summary": ("Own the AWS relationship end to end. This is the person who drives tier advancement, "
+                 "competencies and service delivery programs, finds the co-sell and joint GTM opportunities, "
+                 "and turns a partner logo into actual sourced pipeline. Fully remote across India, and priced "
+                 "for the scarcity of the skill rather than the years on the CV."),
+     "responsibilities": [
+         "Own and manage strategic relationships with AWS and other technology partners, building partnerships that last",
+         "Drive cloud partner programs, tier advancements, competencies and service delivery programs from planning through completion",
+         "Work with cloud partner teams to identify co-sell opportunities, joint business opportunities, funding programs and go to market initiatives",
+         "Partner with sales and presales to identify, qualify and develop partner led opportunities and cloud solutions",
+         "Coordinate across sales, presales, delivery, marketing and leadership to execute alliance initiatives and partner commitments",
+         "Lead partner audits, compliance, documentation and evidence collection, meeting every program requirement on time",
+         "Develop and run joint GTM activity including campaigns, webinars, customer engagements, case studies and partner marketing",
+         "Track and report pipeline, revenue contribution, partner sourced opportunities, program milestones and alliance performance",
+         "Identify gaps and opportunities in the partner ecosystem and build strategies to grow engagement, capability and market presence",
+         "Act as the main point of coordination between the business and its strategic partners",
+     ],
+     "requirements": [
+         "3+ years in alliance management, partner management, cloud partnerships, channel management or cloud business development",
+         "Strong hands on experience with the AWS and/or Google Cloud partner ecosystems",
+         "Direct experience with AWS Partner Network (APN), competencies, service delivery programs, partner tiers or co-sell initiatives",
+         "Solid understanding of cloud services across migration, modernisation, managed services, infrastructure, security, data and AI",
+         "Excellent stakeholder management, communication, negotiation and presentation skills",
+         "Able to build trust with partner teams and hold them to shared commitments",
+     ],
+     "nice_to_have": [
+         "Experience taking an organisation through an APN tier advancement or competency approval",
+         "Exposure to AWS Marketplace listings and co-sell motions",
+         "Background in a consulting, managed services or technical marketing partner",
+         "Experience working fully remote across distributed sales and delivery teams",
+     ],
+    },
+
 ]
 
 # Previous postings are retained for reference but are not published.
