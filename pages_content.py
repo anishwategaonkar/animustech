@@ -363,12 +363,12 @@ PAGES = [
 # ------------------------------------------------- 3. MANUFACTURING ---------
 {
  "url": "/industries/manufacturing-recruitment-pune/",
- "title": "Manufacturing Recruitment Agency in Pune | Animus Tech",
- "desc": "Manufacturing recruitment across Pune, Chakan, Talegaon and Ranjangaon. Production, quality, maintenance and plant leadership, screened for joining ratio.",
- "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), ("Manufacturing recruitment", None)],
- "eyebrow": "Chakan · Talegaon · Ranjangaon · Pimpri-Chinchwad",
- "h1": "Manufacturing &amp; Engineering Recruitment in Pune",
- "lead": ("Pune sits in one of India's densest industrial corridors. Plant hiring here has its own rules, and "
+ "title": "Manufacturing Recruitment Agency in India | Animus Tech",
+ "desc": "Manufacturing recruitment across India. Production, quality, maintenance and plant leadership, screened for joining ratio, not just CVs.",
+ "crumbs": [("Home", "/"), ("Recruitment agency", "/recruitment-agency-pune/"), ("Manufacturing recruitment", None)],
+ "eyebrow": "Auto · Engineering · Process · EV",
+ "h1": "Manufacturing &amp; Engineering Recruitment in India",
+ "lead": ("Plant hiring has its own rules, and "
           "most recruitment agencies apply software hiring logic to it and wonder why the offer acceptance "
           "rate is poor. We screen for the things that actually decide whether someone joins and stays."),
  "body":
@@ -376,11 +376,11 @@ PAGES = [
        "A CV tells you whether someone can do the job. In manufacturing, that is rarely the thing that goes wrong.",
        prose([
          "What goes wrong is the offer declined three days before joining, or the maintenance engineer who "
-         "leaves in month four because the commute from Wakad to Ranjangaon turned out to be ninety minutes "
-         "each way in monsoon. Four factors decide manufacturing hires, and none of them are visible on a resume.",
+         "leaves in month four because the daily commute to a plant on the edge of town turned out to be ninety minutes "
+         "each way. Four factors decide manufacturing hires, and none of them are visible on a resume.",
        ]) +
        cards([
-         ("Commute reality", "Plant locations in Chakan, Talegaon and Ranjangaon are an hour or more from most residential Pune. Company transport routes, shift timings and where the candidate actually lives decide whether an offer sticks. We check this at screening, not after the offer."),
+         ("Commute reality", "Most plants sit in industrial estates an hour or more from where people actually live. Company transport routes, shift timings and where the candidate actually lives decide whether an offer sticks. We check this at screening, not after the offer."),
          ("Shift tolerance", "Rotational shifts, night shifts and six day weeks are ordinary in production and maintenance. A candidate who has only worked general shift will often accept and then reconsider. We ask directly and verify against their history."),
          ("Counter-offer exposure", "Notice periods of 60 to 90 days give the current employer a long window. We track engagement through the notice period rather than closing the file at offer acceptance."),
          ("Process discipline", "An engineer from an unstructured shop floor moving into a tier-1 supplier with audited processes is a real transition. It is screenable, and it is usually not screened."),
@@ -427,8 +427,8 @@ PAGES = [
        prose([
          "Automotive and auto components, industrial and capital equipment, electrical and electronics, "
          "precision engineering and machining, EV and battery systems, packaging, and process industries. "
-         "The Pune belt is dense in tier-1 and tier-2 auto suppliers, and hiring patterns there differ "
-         "meaningfully from capital equipment or process plants. We scope the search accordingly.",
+         "Auto supplier clusters, capital equipment makers and process plants each hire differently, "
+         "and the patterns that work for one fail in the others. We scope the search accordingly.",
        ]), alt=True) +
 
    sec("Our AI", "How AI helps in manufacturing hiring specifically", "",
@@ -444,15 +444,15 @@ PAGES = [
 
    sec("Coverage", "Locations we cover", "",
        prose([
-         "Chakan MIDC, Talegaon MIDC, Ranjangaon MIDC, Bhosari MIDC, Pimpri-Chinchwad, Hinjewadi, Shirwal, "
-         "Baramati and the wider Pune to Nashik and Pune to Mumbai industrial corridors. For plant leadership and "
+         "We hire for plants across India's industrial clusters: the auto and engineering belts of "
+         "Maharashtra, Gujarat, Tamil Nadu, Karnataka, Haryana and beyond. For plant leadership and "
          "specialist roles we search nationally, since the local pool for some specialisms is genuinely thin.",
        ]) +
-       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+       links("See also:", [("Recruitment agency", "/recruitment-agency-pune/"),
                            ("Volume &amp; project hiring", "/services/bulk-hiring/"),
                            ("IT &amp; software recruitment", "/industries/it-software-recruitment-pune/")]),
        alt=True),
- "cta_title": "Hiring for a plant in the Pune belt?",
+ "cta_title": "Hiring for a plant?",
  "cta_lead": ("Tell us the role, the location and the shift pattern. We will come back within one working day "
               "with a view on the local pool, a realistic timeline, and an honest read on whether the "
               "compensation band will clear."),
