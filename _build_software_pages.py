@@ -34,7 +34,6 @@ def service_schema(name, desc, url):
         "provider": {"@id": ORG_ID},
         "areaServed": [
             {"@type": "Country", "name": "India"},
-            {"@type": "City", "name": "Pune"},
         ],
         "url": SITE + url,
     }

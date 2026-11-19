@@ -287,7 +287,7 @@ is the part worth holding them to.</p>
 you.</p>
 """,
  "related": [("How we work, and what we commit to", "/how-we-work/"),
-             ("Manufacturing recruitment in Pune", "/industries/manufacturing-recruitment-pune/")],
+             ("Manufacturing recruitment", "/industries/manufacturing-recruitment-pune/")],
 },
 {
  "slug": "what-drives-the-cost-of-custom-software",
@@ -389,7 +389,7 @@ number, a shorter timeline, and something in real use sooner.</p>
 <p>And ask what is deliberately excluded from the quote. That answer tells you more about
 whether a firm has understood your problem than the price does.</p>
 """,
- "related": [("Custom software development in Pune", "/software/custom-software-development-pune/"),
+ "related": [("Custom software development", "/software/custom-software-development-pune/"),
              ("Manufacturing software", "/software/manufacturing-software/")],
 },
 
@@ -473,10 +473,10 @@ just a label.</p>
 <p>More on how we structure a search end to end is on <a href="/how-we-work/">how we work</a>,
 and what we look for role by role is on our
 <a href="/talent-acquisition/">talent acquisition</a> page. For software roles specifically, see
-<a href="/industries/it-software-recruitment-pune/">IT and software recruitment in Pune</a>.</p>
+<a href="/industries/it-software-recruitment-pune/">IT and software recruitment</a>.</p>
 """,
  "related": [("How we work, and what we commit to", "/how-we-work/"),
-             ("IT and software recruitment in Pune", "/industries/it-software-recruitment-pune/")],
+             ("IT and software recruitment", "/industries/it-software-recruitment-pune/")],
 },
 
 {
@@ -591,7 +591,7 @@ delay shows up when a role is genuinely hard to fill is in
  "tag": "Screening",
  "title": "Two Candidates, the Same Resume | Animus Tech",
  "h1": "Two candidates, the same resume. What actually separates them",
- "desc": "Two people list the same years, the same titles and the same tools. One is right for the role and one is not. Here is what the difference is, and the questions that surface it.",
+ "desc": "Two people list the same years, titles and tools. One is right for the role and one is not. What the difference is, and the questions that surface it.",
  "lead": ("Put two shortlisted resumes side by side and they are often indistinguishable. Same "
           "years, same titles, same tools, same channels. One of those people will do the job "
           "and the other will not. The difference is real, it is consistent, and it is never "

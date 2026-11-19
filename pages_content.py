@@ -45,12 +45,12 @@ def links(label, pairs):
 
 # ============================================================== FAQ content ==
 RAP_FAQ = [
-    ("What does a recruitment agency in Pune charge?",
-     "Most Pune recruitment agencies charge a contingency fee of 8.33% to 16.67% of the candidate's annual CTC, "
+    ("What does a recruitment agency in India charge?",
+     "Most recruitment agencies in India charge a contingency fee of 8.33% to 16.67% of the candidate's annual CTC, "
      "payable on joining, with a replacement guarantee of 60 to 90 days. Leadership and executive search is usually "
      "retained, billed in stages. Volume hiring is typically priced per hire at a lower rate. We scope fees to the "
      "role rather than applying a flat rate, and confirm them in writing at intake."),
-    ("How long does it take to fill a role in Pune?",
+    ("How long does it take to fill a role?",
      "A first shortlist typically reaches you within 5 to 7 working days. Time to offer depends on the role: "
      "mid-level software and manufacturing roles usually close in 3 to 5 weeks, leadership and niche searches in "
      "6 to 10 weeks. Notice periods in India then add 30 to 90 days before joining, which is why joining ratio "
@@ -65,10 +65,10 @@ RAP_FAQ = [
      "scorecard agreed at intake and writes out the reasoning for each ranking. Assessment runs role specific "
      "skill tests scored on the same rubric for every candidate. A recruiter reviews every shortlist before it "
      "reaches you, and no candidate is ever rejected by software alone."),
-    ("Do you hire for manufacturing plants around Pune?",
-     "Yes. We recruit across the Pune industrial corridor including Chakan, Talegaon, Ranjangaon, Bhosari and "
-     "Pimpri-Chinchwad, covering design and R&D, production, quality, maintenance, supply chain and plant "
-     "leadership. Plant hiring has its own rules around shift realities, commute distance and joining ratios, "
+    ("Do you hire for manufacturing companies?",
+     "Yes. We recruit for plants across India's industrial clusters, covering design and R&D, production, "
+     "quality, maintenance, supply chain and plant leadership, as well as the sales and marketing roles a "
+     "manufacturing business needs to grow. Plant hiring has its own rules around shift realities, commute distance and joining ratios, "
      "and we screen for those explicitly rather than treating it as generic hiring."),
     ("What is the difference between a recruitment agency and a talent acquisition firm?",
      "In practice the terms overlap, but the distinction that matters is scope. A recruitment agency typically "
@@ -84,19 +84,19 @@ PAGES = [
 # ---------------------------------------------------- 1. MONEY PAGE ---------
 {
  "url": "/recruitment-agency-pune/",
- "title": "Recruitment Agency in Pune | Animus Tech",
- "desc": "AI enabled recruitment agency in Pune for software, manufacturing and D2C hiring. Shortlists in 5 to 7 days, screened for skills and culture fit.",
- "crumbs": [("Home", "/"), ("Recruitment agency in Pune", None)],
- "eyebrow": "Pune · Maharashtra",
- "h1": "Recruitment Agency in Pune for Software, Manufacturing &amp; D2C",
- "lead": ("Animus Tech is an AI enabled recruitment agency in Pune. Our AI sources, screens and assesses "
+ "title": "Recruitment Agency in India | Animus Tech",
+ "desc": "AI enabled recruitment agency hiring across India for software, manufacturing and D2C. Shortlists in 5 to 7 days, screened for skills and fit.",
+ "crumbs": [("Home", "/"), ("Recruitment agency", None)],
+ "eyebrow": "India wide",
+ "h1": "Recruitment Agency in India for Software, Manufacturing &amp; D2C",
+ "lead": ("Animus Tech is an AI enabled recruitment agency hiring for companies across India. Our AI sources, screens and assesses "
           "candidates at a scale no manual team can match. Our recruiters then do the part software still "
           "cannot: judging whether a person will genuinely work well inside your team. What reaches your "
           "inbox is a short list, not a stack of resumes."),
  "faq": RAP_FAQ,
  "body":
-   sec("Why us", "Why companies in Pune work with us",
-       "Most recruitment agencies in Pune compete on volume. We compete on what reaches your inbox.",
+   sec("Why us", "Why companies work with us",
+       "Most recruitment agencies compete on volume. We compete on what reaches your inbox.",
        prose([
          "Most agencies forward whatever the job board returns and let you do the filtering. That model has a "
          "hard ceiling, because one recruiter can only read so many profiles in a day, and the ones they read "
@@ -139,7 +139,7 @@ PAGES = [
        links("Read more:", [("How our AI screening works", "/talent-acquisition/#ai"),
                             ("AI assessment as a service", "/services/ai-candidate-assessment/")])) +
 
-   sec("What we do", "Recruitment services we offer in Pune", "",
+   sec("What we do", "Recruitment services we offer", "",
        cards([
          ('<a href="/services/permanent-recruitment/">Permanent recruitment</a>',
           "End to end hiring for full time roles, from role definition through to offer acceptance and joining."),
@@ -150,7 +150,7 @@ PAGES = [
          ('<a href="/services/ai-candidate-assessment/">AI assessment as a service</a>',
           "Already have a pipeline? Send us your candidates and we return a scored report on each."),
          ('<a href="/services/hiring-advisory/">Hiring advisory</a>',
-          "Job descriptions that attract the right people, interview loops that actually discriminate, and honest salary benchmarks for the Pune market."),
+          "Job descriptions that attract the right people, interview loops that actually discriminate, and honest salary benchmarks for your market and city."),
        ])) +
 
    sec("Where we specialise", "Industries we recruit for",
@@ -158,19 +158,19 @@ PAGES = [
        "recruiter adds, and it is also what we train our screening criteria on. A generalist agency is guessing.",
        cards([
          ('<a href="/industries/it-software-recruitment-pune/">Software &amp; technology</a>',
-          "Engineering, data, product, design, QA, DevOps and SRE across Hinjewadi, Kharadi, Magarpatta and Baner, for product companies, SaaS teams, GCCs and services firms."),
+          "Engineering, data and product, plus the sales, business development and customer success roles software companies run on, for product companies, SaaS teams, GCCs and services firms."),
          ('<a href="/industries/manufacturing-recruitment-pune/">Manufacturing &amp; engineering</a>',
-          "Design, R&amp;D and NPD through production, quality, maintenance and plant leadership, across the Chakan, Talegaon, Ranjangaon and Pimpri-Chinchwad belt."),
+          "Plant roles from design and production through quality and maintenance, plus the sales, marketing and leadership roles a manufacturing business needs."),
          ('<a href="/industries/d2c-consumer-recruitment/">D2C &amp; consumer brands</a>',
-          "Growth, performance marketing, category and brand, supply chain and founder's office roles for fast moving consumer brands."),
+          "Growth and performance marketing, e-commerce, design and creative, category, supply chain and founder's office roles for fast moving consumer brands."),
        ]), alt=True) +
 
-   sec("Coverage", "Areas we cover around Pune", "",
+   sec("Coverage", "Where we hire", "",
        prose([
-         "We recruit across Pune city and the surrounding industrial and technology corridors, including "
-         "Hinjewadi, Kharadi, Magarpatta, Baner, Viman Nagar, Pimpri-Chinchwad, Bhosari, Chakan, Talegaon and "
-         "Ranjangaon. For leadership and niche roles we search nationally and relocate candidates into Pune "
-         "where the local pool is genuinely thin, which for some specialisms it is.",
+         "We hire for companies across India, from the technology hubs of Bengaluru, Hyderabad, Mumbai, "
+         "Chennai, Pune and the NCR to the industrial clusters of Gujarat, Tamil Nadu, Maharashtra, Punjab and "
+         "Haryana. For leadership and niche roles we search nationally and support relocation where the "
+         "local pool is genuinely thin, which for some specialisms it is.",
        ])) +
 
    sec("Questions", "Frequently asked questions", "", faq_html(RAP_FAQ), alt=True),
@@ -179,11 +179,11 @@ PAGES = [
 # ------------------------------------------- 2. TALENT ACQUISITION FIRM -----
 {
  "url": "/talent-acquisition-firm-pune/",
- "title": "Talent Acquisition Firm in Pune | Animus Tech",
- "desc": "Talent acquisition firm in Pune working from role definition through to joining. Market mapping, scorecard design, AI screening and culture fit assessment.",
- "crumbs": [("Home", "/"), ("Talent acquisition firm in Pune", None)],
- "eyebrow": "Pune · Maharashtra",
- "h1": "Talent Acquisition Firm in Pune",
+ "title": "Talent Acquisition Firm in India | Animus Tech",
+ "desc": "Talent acquisition firm working with companies across India, from role definition to joining. Market mapping, scorecards, AI screening and culture fit.",
+ "crumbs": [("Home", "/"), ("Talent acquisition firm", None)],
+ "eyebrow": "India wide",
+ "h1": "Talent Acquisition Firm in India",
  "lead": ("Most failed hires trace back to a badly defined role, not a badly sourced candidate. We engage "
           "before the search starts, building the scorecard and mapping the market, then run AI powered "
           "sourcing and screening against it with human judgement on culture fit."),
@@ -222,11 +222,11 @@ PAGES = [
    sec("Who we work with", "Three industries, three different games",
        "We stay narrow because sector knowledge is what our screening criteria are built on.",
        cards([
-         ('<a href="/industries/it-software-recruitment-pune/">Software &amp; technology</a>', "Product companies, SaaS teams, GCCs and services firms across the Pune tech corridor."),
-         ('<a href="/industries/manufacturing-recruitment-pune/">Manufacturing &amp; engineering</a>', "Automotive, capital equipment, precision engineering and EV across the Pune industrial belt."),
+         ('<a href="/industries/it-software-recruitment-pune/">Software &amp; technology</a>', "Product companies, SaaS teams, GCCs and services firms, from engineering to sales and customer success."),
+         ('<a href="/industries/manufacturing-recruitment-pune/">Manufacturing &amp; engineering</a>', "Automotive, capital equipment, precision engineering and EV, from the plant floor to the sales floor."),
          ('<a href="/industries/d2c-consumer-recruitment/">D2C &amp; consumer</a>', "Fast moving brands who need people that can own a number without a playbook."),
        ]) +
-       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+       links("See also:", [("Recruitment agency", "/recruitment-agency-pune/"),
                            ("Hiring advisory", "/services/hiring-advisory/")])),
 },
 
@@ -234,7 +234,7 @@ PAGES = [
 {
  "url": "/how-we-work/",
  "title": "How We Work | Animus Tech",
- "desc": "How a search runs and how a build runs, with the numbers and what we commit to in writing. 40+ screened, 8 shared, 1 hired. A written update every Friday, progress or not.",
+ "desc": "How a search runs and how a build runs, with real numbers and what we commit to in writing. 40+ screened, 8 shared, 1 hired. A written update every Friday.",
  "crumbs": [("Home", "/"), ("How we work", None)],
  "eyebrow": "Process &amp; commitments",
  "h1": "How We Work",
@@ -316,7 +316,7 @@ PAGES = [
          "search quietly drifting, and because a client who cannot commit to three-day feedback "
          "is better off knowing that at intake than at week eight.",
        ]) +
-       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+       links("See also:", [("Recruitment agency", "/recruitment-agency-pune/"),
                            ("Hiring advisory", "/services/hiring-advisory/")])) +
 
    # The build arm, so this page is honestly about how the company works rather
@@ -465,13 +465,14 @@ PAGES = [
 # ---------------------------------------------------- 4. IT / SOFTWARE ------
 {
  "url": "/industries/it-software-recruitment-pune/",
- "title": "IT &amp; Software Recruitment | Animus Tech",
- "desc": "IT and software recruitment across India. Backend, frontend, data, ML, cloud, DevOps and engineering leadership for product companies, SaaS teams and GCCs.",
- "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), ("IT &amp; software recruitment", None)],
- "eyebrow": "India wide · Pune based",
- "h1": "IT &amp; Software Recruitment",
- "lead": ("Engineering, data, product, design, QA, DevOps and SRE for product companies, SaaS teams, GCCs and "
-          "services firms. We read a stack seriously and do not confuse keyword matches with capability."),
+ "title": "IT &amp; Software Recruitment in India | Animus Tech",
+ "desc": "Software company hiring across India: engineering, data, product, sales, customer success and business development, for SaaS, product firms and GCCs.",
+ "crumbs": [("Home", "/"), ("Recruitment agency", "/recruitment-agency-pune/"), ("IT &amp; software recruitment", None)],
+ "eyebrow": "Engineering · Product · Sales · Customer success",
+ "h1": "IT &amp; Software Recruitment in India",
+ "lead": ("We hire for every role a software company runs, not just engineering: developers, data and "
+          "product people, and the sales, business development and customer success teams that win and keep "
+          "revenue. We read a stack seriously and do not confuse keyword matches with capability."),
  "body":
    sec("The core problem", "Why keyword matching fails on engineering CVs",
        "The best candidate for your role often does not use your vocabulary.",
@@ -485,8 +486,11 @@ PAGES = [
          "ranked where they did, including the gaps worth asking about in interview.",
        ]), alt=True) +
 
-   sec("Roles", "Roles we hire for", "",
+   sec("Roles", "Roles we hire for, codebase to customer",
+       "Not only engineering. We hire across every function a software company needs to grow.",
        rolegrid([
+         ("Sales &amp; business development", ["Business development and inside sales", "Account executives and enterprise sales", "Pre-sales and solutions consultants", "Partnerships and alliances"]),
+         ("Customer success &amp; marketing", ["Customer success managers", "Onboarding and implementation", "Account management and support", "Product and digital marketing"]),
          ("Engineering", ["Backend, frontend, full stack", "Mobile: iOS, Android, React Native", "Architects and principal engineers", "Engineering managers and directors"]),
          ("Data &amp; AI", ["Data engineering and platforms", "Machine learning and MLOps", "Analytics and business intelligence", "Data science"]),
          ("Infrastructure", ["Cloud: AWS, Azure, GCP", "DevOps, SRE and platform engineering", "Security and application security", "Database and reliability"]),
@@ -555,17 +559,16 @@ PAGES = [
        "The same title means different things across these four, and screening should reflect that.",
        cards([
          ("Product companies &amp; SaaS", "Smaller teams where individual ownership is high and a mis-hire is felt immediately. We screen hard for autonomy and for people who have shipped rather than maintained."),
-         ("Global capability centres", "Pune has one of India's largest GCC concentrations. Hiring here turns on whether a candidate can operate across time zones with a distant parent org, which is a distinct skill from working in a colocated team."),
+         ("Global capability centres", "Hiring for a GCC turns on whether a candidate can operate across time zones with a distant parent org, which is a distinct skill from working in a colocated team."),
          ("Services &amp; consulting firms", "Client facing delivery under commercial pressure. Breadth, ramp-up speed and communication carry more weight than depth in any single stack."),
        ]), alt=True) +
 
-   sec("Coverage", "Pune technology locations", "",
+   sec("Coverage", "Where we hire", "",
        prose([
-         "Hinjewadi Phases 1, 2 and 3, Kharadi and EON, Magarpatta and Hadapsar, Baner and Balewadi, Viman "
-         "Nagar, Yerwada and the Pune city centre. We also place remote and hybrid roles nationally where the "
-         "team is distributed, which for engineering it increasingly is.",
+         "Across India's technology hubs, including Bengaluru, Hyderabad, Pune, Chennai, Mumbai and the NCR, "
+         "and for remote and hybrid teams wherever they sit, which for software companies they increasingly do.",
        ]) +
-       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
+       links("See also:", [("Recruitment agency", "/recruitment-agency-pune/"),
                            ("Leadership &amp; executive search", "/services/executive-search/"),
                            ("AI candidate assessment", "/services/ai-candidate-assessment/")])),
 },
@@ -573,19 +576,21 @@ PAGES = [
 # ------------------------------------------------------------- 5. D2C -------
 {
  "url": "/industries/d2c-consumer-recruitment/",
- "title": "D2C &amp; Consumer Brand Recruitment | Animus Tech",
- "desc": "Hiring for D2C and consumer brands across India. Growth, performance marketing, category, supply chain and founder's office roles, screened for ownership.",
- "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), ("D2C &amp; consumer", None)],
- "eyebrow": "India wide",
- "h1": "D2C &amp; Consumer Brand Recruitment",
- "lead": ("Fast moving brands need people who can own a number without a playbook. We look for ownership and "
+ "title": "D2C &amp; Consumer Brand Recruitment in India | Animus Tech",
+ "desc": "Hiring for D2C and consumer brands across India. Growth, e-commerce, design and creative, category, supply chain and leadership roles, screened for ownership.",
+ "crumbs": [("Home", "/"), ("Recruitment agency", "/recruitment-agency-pune/"), ("D2C &amp; consumer", None)],
+ "eyebrow": "Growth · E-commerce · Design · Operations",
+ "h1": "D2C &amp; Consumer Brand Recruitment in India",
+ "lead": ("We hire for every role a consumer brand runs: growth and performance marketers, e-commerce and "
+          "marketplace managers, and the graphic designers and content creators whose work every listing and "
+          "campaign depends on. Fast moving brands need people who can own a number without a playbook. We look for ownership and "
           "comfort with ambiguity, not just a familiar logo on the CV."),
  "body":
    sec("The core problem", "Why brand-name pedigree misleads in D2C",
        "The same job title describes two completely different people.",
        prose([
          "Someone who ran paid social at a large consumer company had a large budget, an agency executing, a "
-         "brand that people already searched for, and a analytics team answering questions. Someone who ran "
+         "brand that people already searched for, and an analytics team answering questions. Someone who ran "
          "paid social at a young D2C brand had a small budget, built the creative themselves, and found out "
          "within a week whether it worked because the money was visibly gone.",
          "Both CVs say performance marketing. Only one of them has done the job you are hiring for. We screen "
@@ -619,8 +624,11 @@ PAGES = [
          "every shortlist we send.",
        ]), alt=True) +
 
-   sec("Roles", "Roles we hire for", "",
+   sec("Roles", "Roles we hire for, first design to final delivery",
+       "Not only marketing heads. The designers and creators behind every listing and campaign matter just as much, and we hire for them with the same care.",
        rolegrid([
+         ("E-commerce &amp; marketplaces", ["E-commerce and marketplace managers", "Amazon, Flipkart and quick commerce", "Catalogue and listing management", "Website and D2C store operations"]),
+         ("Design &amp; creative", ["Graphic and visual designers", "Social media and content creators", "Video editors and motion designers", "Packaging and product designers"]),
          ("Growth &amp; marketing", ["Performance marketing and paid media", "Growth and retention", "CRM and lifecycle", "Content, social and influencer"]),
          ("Category &amp; brand", ["Category management", "Brand management", "Product and merchandising", "Pricing and revenue"]),
          ("Operations &amp; supply chain", ["Supply chain and planning", "Warehousing and fulfilment", "Procurement and vendor management", "Quality and sourcing"]),
@@ -636,8 +644,8 @@ PAGES = [
          "Every shortlist includes a written view on fit with reservations included. You get an honest read, "
          "not a sales pitch.",
        ]) +
-       links("See also:", [("Recruitment agency in Pune", "/recruitment-agency-pune/"),
-                           ("Talent acquisition firm in Pune", "/talent-acquisition-firm-pune/")]),
+       links("See also:", [("Recruitment agency", "/recruitment-agency-pune/"),
+                           ("Talent acquisition firm", "/talent-acquisition-firm-pune/")]),
        alt=True),
 },
 
@@ -663,15 +671,15 @@ def service_page(url, title, desc, h1, eyebrow, lead, what, when, get, service_n
     page = {
         "url": url, "title": title, "desc": desc, "h1": h1, "eyebrow": eyebrow, "lead": lead,
         "service": service_name,
-        "crumbs": [("Home", "/"), ("Recruitment agency in Pune", "/recruitment-agency-pune/"), (h1, None)],
+        "crumbs": [("Home", "/"), ("Recruitment agency", "/recruitment-agency-pune/"), (h1, None)],
         "body":
             sec("What it is", "What this covers", "", prose(what), alt=True) +
             sec("When you need it", "When companies come to us for this", "", cards(when)) +
             sec("What you get", "What you get", "", rolegrid(get), alt=True) +
             extra +
             sec("", "", "", links("See also:", also or [
-                ("Recruitment agency in Pune", "/recruitment-agency-pune/"),
-                ("Talent acquisition firm in Pune", "/talent-acquisition-firm-pune/")])),
+                ("Recruitment agency", "/recruitment-agency-pune/"),
+                ("Talent acquisition firm", "/talent-acquisition-firm-pune/")])),
     }
     if faq:
         page["faq"] = faq
@@ -914,7 +922,7 @@ service_page(
   ("You are building an in-house function", "Setting the standard your internal recruiters will work to.")],
  [("JD &amp; scorecard", ["Written to filter, not to flatter", "Success criteria for year one", "Must-have vs nice-to-have split", "Scorecard interviewers can use"]),
   ("Interview design", ["Loop that discriminates", "Structured questions per competency", "Interviewer briefing", "Decision framework"]),
-  ("Compensation", ["Pune market benchmarks", "Band recommendation by level", "Honest read on whether it will clear", "Equity and variable structuring"]),
+  ("Compensation", ["Market salary benchmarks by city", "Band recommendation by level", "Honest read on whether it will clear", "Equity and variable structuring"]),
   ("Process", ["Funnel diagnosis", "Drop-off analysis", "Candidate experience review", "Offer to joining protection"])],
  "Hiring advisory",
  how=["When a role has been open four months the instinct is to add another agency. Usually that "

@@ -53,8 +53,8 @@ def org_schema():
             {"@type": "City", "name": "Hyderabad"},
             {"@type": "City", "name": "Chennai"},
             {"@type": "City", "name": "Ahmedabad"},
-            {"@type": "City", "name": "Pimpri-Chinchwad"},
-            {"@type": "Place", "name": "Chakan Industrial Area"},
+            {"@type": "City", "name": "Kolkata"},
+            {"@type": "City", "name": "Chandigarh"},
         ],
         "knowsAbout": [
             "Recruitment", "Talent acquisition", "AI resume screening",
@@ -93,7 +93,7 @@ def org_schema():
                      "url": f"{SITE}{u}"}}
                     for n, u in [
                         ("Custom software development", "/software/"),
-                        ("Custom software development in Pune",
+                        ("Custom software development for small businesses",
                          "/software/custom-software-development-pune/"),
                         ("Manufacturing software development",
                          "/software/manufacturing-software/"),
@@ -135,7 +135,7 @@ def service_schema(name, desc, url):
         "name": name,
         "description": desc,
         "provider": {"@id": ORG_ID},
-        "areaServed": {"@type": "City", "name": "Pune"},
+        "areaServed": {"@type": "Country", "name": "India"},
         "url": SITE + url,
     }
 

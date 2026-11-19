@@ -62,7 +62,6 @@ SCHEMAS = [
   "provider": {"@id": ORG_ID},
   "areaServed": [
       {"@type": "Country", "name": "India"},
-      {"@type": "City", "name": "Pune"},
       {"@type": "City", "name": "Mumbai"},
       {"@type": "City", "name": "Bengaluru"},
   ],
@@ -469,7 +468,7 @@ BODY = """
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </p>
-      <p class="linkrow">See also: <a href="/software/custom-software-development-pune/">Custom software development in Pune</a> · <a href="/software/manufacturing-software/">Manufacturing software</a> · <a href="/software/ai-solutions/">Custom AI</a> · <a href="/software/internal-tools/">Internal tools</a> · <a href="/how-we-work/">How we work</a></p>
+      <p class="linkrow">See also: <a href="/software/custom-software-development-pune/">Custom software development</a> · <a href="/software/manufacturing-software/">Manufacturing software</a> · <a href="/software/ai-solutions/">Custom AI</a> · <a href="/software/internal-tools/">Internal tools</a> · <a href="/how-we-work/">How we work</a></p>
     </div>
   </div>
 </section>

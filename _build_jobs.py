@@ -488,7 +488,7 @@ def build_index(live):
       <h2 class="section-title">Need to fill a role?</h2>
       <p class="section-lead">We work with software, manufacturing and D2C companies across India. Tell us what you are hiring for.</p>
       <p style="margin-top:26px"><a href="/talent-acquisition/#contact" class="btn btn--primary">Talk to us about hiring</a></p>
-      <p class="linkrow">See also: <a href="/how-we-work/">How we work</a> · <a href="/recruitment-agency-pune/">Recruitment agency in Pune</a></p>
+      <p class="linkrow">See also: <a href="/how-we-work/">How we work</a> · <a href="/recruitment-agency-pune/">Recruitment agency</a></p>
     </div>
   </div>
 </section>

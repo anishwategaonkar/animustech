@@ -106,11 +106,11 @@
     },
     {
       "@type": "City",
-      "name": "Pimpri-Chinchwad"
+      "name": "Kolkata"
     },
     {
-      "@type": "Place",
-      "name": "Chakan Industrial Area"
+      "@type": "City",
+      "name": "Chandigarh"
     }
   ],
   "knowsAbout": [
@@ -197,7 +197,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Custom software development in Pune",
+            "name": "Custom software development for small businesses",
             "url": "https://animustech.in/software/custom-software-development-pune/"
           }
         },
@@ -235,25 +235,6 @@
   if(localStorage.getItem('at-theme')==='dark')
     document.documentElement.setAttribute('data-theme','dark');
 }catch(e){}})();
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDB1N7YPE9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JDB1N7YPE9');
-
-  // Enquiry conversions. Every form redirects to a thank-you page, so the
-  // arrival on that page is the conversion. ?src= tells us which form it was.
-  (function () {
-    if (location.pathname.indexOf('thank-you') === -1) return;
-    var src = new URLSearchParams(location.search).get('src') || 'contact';
-    gtag('event', 'generate_lead', {
-      form_source: src,
-      page_path: location.pathname
-    });
-  })();
 </script>
 </head>
 <body>
@@ -377,7 +358,7 @@
       <div>
         <h4>Recruitment across India</h4>
         <ul>
-          <li><a href="/recruitment-agency-pune/">Recruitment agency in Pune</a></li>
+          <li><a href="/recruitment-agency-pune/">Recruitment agency</a></li>
           <li><a href="/talent-acquisition-firm-pune/">Talent acquisition firm</a></li>
           <li><a href="/industries/manufacturing-recruitment-pune/">Manufacturing recruitment</a></li>
           <li><a href="/industries/it-software-recruitment-pune/">IT &amp; software recruitment</a></li>
@@ -406,6 +387,4 @@
     </div>
   </div>
 </footer>
-<script src="/assets/site.js?v=5a509a83" defer></script>
-</body>
-</html>
+<script src="/assets/site.js?v=5a509a83" defer></sc

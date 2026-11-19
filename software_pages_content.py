@@ -17,13 +17,13 @@ PAGES = []
 # ============================================ /software/custom-software-development-pune/
 PAGES.append({
     "url": "/software/custom-software-development-pune/",
-    "title": "Custom Software Development Company in Pune | Animus Tech",
-    "desc": ("Custom software development in Pune for manufacturing and small businesses. "
+    "title": "Custom Software Development Company in India | Animus Tech",
+    "desc": ("Custom software for manufacturing and small businesses across India. "
              "Job tracking, invoicing and internal tools. You own the code and the data."),
     "crumbs": [("Home", "/"), ("Software", "/software/"),
-               ("Custom software development in Pune", None)],
-    "eyebrow": "Custom software development, Pune",
-    "h1": "Custom software development company in Pune",
+               ("Custom software development", None)],
+    "eyebrow": "Custom software development, India",
+    "h1": "Custom software development company in India",
     "lead": ("We build the operational software small businesses actually run on. Job tracking, "
              "invoicing, lead management and internal tools, fitted to the process you already "
              "have. A complete working system, in real use fast, and you own the code and "
@@ -34,7 +34,7 @@ PAGES.append({
                  "working day with an honest view, including whether we are the right people "
                  "for it."),
     "faq": [
-        ("How much does custom software cost in Pune?",
+        ("How much does custom software cost?",
          "It depends almost entirely on scope, and the honest answer at first contact is a range "
          "rather than a number. What moves the figure is how many distinct workflows the tool has "
          "to carry, whether it needs to talk to systems you already run, and how many people use "
@@ -50,9 +50,8 @@ PAGES.append({
          "Yes. You own the code and the data, and we commit to that in writing before any work "
          "starts. There is no lock-in and no dependency on us to keep it running. If you later "
          "want to take it in house or to another developer, you can."),
-        ("Do you work with businesses outside Pune?",
-         "Yes. We are based in Pune and know the industrial belt around it well, which is why a "
-         "lot of our work sits there, but we build for small and mid-size businesses across "
+        ("Do you work with businesses across India?",
+         "Yes. We are based in Pune, and we build for small and mid-size businesses across "
          "India. Most of the work is remote either way, with on-site time where understanding "
          "the process needs it."),
         ("Why not just use off the shelf software?",
@@ -81,7 +80,7 @@ PAGES.append({
                 "without asking someone. That is the point at which a proper system pays for "
                 "itself, and it is exactly what we build: the whole process, start to end, "
                 "not another patch on top of the last one.",
-                "Pune has a very large number of businesses in exactly that position. Engineering "
+                "India has a very large number of businesses in exactly that position. Engineering "
                 "firms, job shops, service and maintenance operations, agencies, distributors. "
                 "Big enough that the informal system is straining, not big enough to want an "
                 "enterprise ERP priced and scoped for someone else entirely.",
@@ -272,7 +271,7 @@ PAGES.append({
             "",
             faq_html(MFG_FAQ)),
         links("See also:", [
-            ("Custom software development in Pune", "/software/custom-software-development-pune/"),
+            ("Custom software development", "/software/custom-software-development-pune/"),
             ("What we have built", "/software/#what-we-built"),
             ("Manufacturing recruitment", "/industries/manufacturing-recruitment-pune/"),
         ]),
@@ -397,7 +396,7 @@ PAGES.append({
                  "capacity to check it, we would rather not build it."),
             ]), alt=True),
         links("See also:", [
-            ("Custom software development in Pune", "/software/custom-software-development-pune/"),
+            ("Custom software development", "/software/custom-software-development-pune/"),
             ("Internal tools", "/software/internal-tools/"),
             ("What we have built", "/software/#what-we-built"),
         ]),
@@ -515,7 +514,7 @@ PAGES.append({
         links("See also:", [
             ("Manufacturing software", "/software/manufacturing-software/"),
             ("Custom AI development", "/software/ai-solutions/"),
-            ("Custom software development in Pune", "/software/custom-software-development-pune/"),
+            ("Custom software development", "/software/custom-software-development-pune/"),
         ]),
     ),
 })
