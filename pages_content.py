@@ -251,8 +251,12 @@ PAGES = [
          ("1", "Hired, from the second batch. Eight submittals per hire."),
        ]) +
        prose([
-         "Eight submittals to one hire. The common industry range is ten to twenty per hire, and "
-         "plenty of agencies send considerably more, because when you are paid only on placement "
+         "<strong>On sample size:</strong> this is one completed search. We are a new firm and we "
+         "would rather show you one real funnel than quote an industry statistic we did not "
+         "measure. These numbers will be updated as more searches close, including the ones that "
+         "go badly.",
+         "Eight submittals to one hire. In our experience, agencies often send far more than that "
+         "per hire, because when you are paid only on placement "
          "the rational move is to flood several clients and see what sticks. The cost of that "
          "model is not paid by the agency. It is paid by the hiring manager reading forty CVs on "
          "a Sunday.",
@@ -260,10 +264,6 @@ PAGES = [
          "about them, then four more shaped by that feedback. It is slower to start and faster to "
          "finish, and it means the second batch is genuinely better than the first rather than "
          "just longer.",
-         "<strong>On sample size:</strong> this is one completed search. We are a new firm and we "
-         "would rather show you one real funnel than quote an industry statistic we did not "
-         "measure. These numbers will be updated as more searches close, including the ones that "
-         "go badly.",
        ]), alt=True) +
 
    sec("Our commitments", "What we commit to, in writing", "",
