@@ -364,13 +364,14 @@ PAGES = [
 {
  "url": "/industries/manufacturing-recruitment-pune/",
  "title": "Manufacturing Recruitment Agency in India | Animus Tech",
- "desc": "Manufacturing recruitment across India. Production, quality, maintenance and plant leadership, screened for joining ratio, not just CVs.",
+ "desc": "Recruitment for manufacturing companies across India. Plant, sales, marketing and leadership roles, screened for joining ratio, not just CVs.",
  "crumbs": [("Home", "/"), ("Recruitment agency", "/recruitment-agency-pune/"), ("Manufacturing recruitment", None)],
- "eyebrow": "Auto · Engineering · Process · EV",
+ "eyebrow": "Plant · Sales · Marketing · Leadership",
  "h1": "Manufacturing &amp; Engineering Recruitment in India",
- "lead": ("Plant hiring has its own rules, and "
-          "most recruitment agencies apply software hiring logic to it and wonder why the offer acceptance "
-          "rate is poor. We screen for the things that actually decide whether someone joins and stays."),
+ "lead": ("We hire for every role a manufacturing company runs, not just the plant floor: sales associates "
+          "and sales heads, marketing and digital marketing managers, client managers, and plant leadership. "
+          "Most agencies apply software hiring logic to industrial roles and wonder why offers do not stick. "
+          "We screen for the things that actually decide whether someone joins and stays."),
  "body":
    sec("The real problem", "Why plant hiring breaks generic recruitment",
        "A CV tells you whether someone can do the job. In manufacturing, that is rarely the thing that goes wrong.",
@@ -415,8 +416,11 @@ PAGES = [
        links("More on this:", [("How we work, and what we commit to", "/how-we-work/")]),
        alt=True) +
 
-   sec("Roles", "Roles we hire for", "",
+   sec("Roles", "Roles we hire for, plant floor to sales floor",
+       "Not only plant roles. We hire across every function a manufacturing business needs to grow.",
        rolegrid([
+         ("Sales &amp; business development", ["Sales associates and sales engineers", "Client and key account managers", "Dealer and channel sales", "Regional and national sales heads"]),
+         ("Marketing &amp; growth", ["Marketing managers", "Digital and performance marketing", "Brand and product marketing", "Business consultants"]),
          ("Design, R&amp;D &amp; NPD", ["Design engineers: CAD, CAE, GD&amp;T", "NPD and product development", "Simulation and validation", "Tooling and fixture design"]),
          ("Production &amp; operations", ["Production engineers, shift in-charge", "Industrial engineering, lean, TPM", "Assembly and machine shop leadership", "Plant and manufacturing managers"]),
          ("Quality &amp; maintenance", ["QA, QC and supplier quality", "Customer quality and warranty", "Mechanical, electrical, instrumentation", "Reliability and preventive maintenance"]),
