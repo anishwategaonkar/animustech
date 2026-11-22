@@ -16,7 +16,6 @@ SCRIPTS = [
     "_build_software.py",        # /software/ hub
     "_build_software_pages.py",  # /software/ children
     "_build_candidates.py",
-    "_build_start.py",         # /start/ , the vertical chooser      # /candidates/
     "_build_contact.py",         # /contact/ and thank-you
     "_build_blog.py",            # /blog/
     "_build_jobs.py",            # /jobs/ and apply flows

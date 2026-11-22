@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=a4853951">
 
 <style>
 .jobcard{background:var(--surface);border:1px solid var(--border);border-radius:15px;
@@ -300,6 +300,25 @@
     document.documentElement.setAttribute('data-theme','dark');
 }catch(e){}})();
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDB1N7YPE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JDB1N7YPE9');
+
+  // Enquiry conversions. Every form redirects to a thank-you page, so the
+  // arrival on that page is the conversion. ?src= tells us which form it was.
+  (function () {
+    if (location.pathname.indexOf('thank-you') === -1) return;
+    var src = new URLSearchParams(location.search).get('src') || 'contact';
+    gtag('event', 'generate_lead', {
+      form_source: src,
+      page_path: location.pathname
+    });
+  })();
+</script>
 </head>
 <body>
 <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
@@ -320,13 +339,12 @@
       </svg>
       <span>
         Animus Tech
-        <span class="logo__sub">Hiring &amp; Software</span>
+        <span class="logo__sub">Talent Acquisition</span>
       </span>
     </a>
 
     <nav class="nav" id="nav">
       <a href="/talent-acquisition/">Talent acquisition</a>
-      <a href="/software/">Software</a>
       <a href="/how-we-work/">How we work</a>
       <a href="/jobs/">Open roles</a>
       <a href="/candidates/#process">How we screen</a>
@@ -418,12 +436,11 @@
             <circle cx="19" cy="20" r="17" fill="none" stroke="url(#ringLeftF)" stroke-width="3"/>
             <circle cx="35" cy="20" r="17" fill="none" stroke="url(#ringRightF)" stroke-width="3"/>
           </svg>
-          <span>Animus Tech<span class="logo__sub">Hiring &amp; Software</span></span>
+          <span>Animus Tech<span class="logo__sub">Talent Acquisition</span></span>
         </a>
         <p>
-          Animus Tech works with companies across India, running two arms: AI enabled talent
-          acquisition for software, manufacturing and D2C companies, and custom software
-          development for manufacturing and small enterprises.
+          Animus Tech is an AI enabled talent acquisition firm working with software,
+          manufacturing and D2C companies across India.
         </p>
       </div>
 
@@ -450,12 +467,9 @@
       </div>
 
       <div>
-        <h4>Software development</h4>
+        <h4>Our other business</h4>
         <ul>
-          <li><a href="/software/">Software development</a></li>
-          <li><a href="/software/#what-we-built">What we have built</a></li>
-          <li><a href="/software/#software-approach">How we work</a></li>
-          <li><a href="/software/#software-contact">Software enquiry</a></li>
+          <li><a href="/software/">Animus software development</a></li>
         </ul>
       </div>
 
@@ -478,7 +492,6 @@
           <li><a href="/contact/">Contact us</a></li>
           <li><a href="mailto:anish@animustech.org">anish@animustech.org</a></li>
           <li><a href="/talent-acquisition/#contact">Hire with us</a></li>
-          <li><a href="/software/#software-contact">Software enquiry</a></li>
           <li><a href="mailto:anish@animustech.in?subject=Candidate%20application">Send us your CV</a></li>
           <li>Pune, Maharashtra, India</li>
         </ul>
@@ -491,6 +504,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=5a509a83" defer></script>
 </body>
 </html>
